@@ -1,0 +1,42 @@
+[tools]
+biome = "latest"
+fd = "latest"
+"github:kristoff-it/ziggy" = "latest"
+"github:kristoff-it/zine" = "latest"
+"github:neurocyte/flow" = "latest"
+"github:pratyay360/md2smd" = "main"
+node = "latest"
+"npm:surge" = "latest"
+superhtml = "latest"
+
+[settings]
+experimental = true
+
+
+[tasks.fetch]
+run = "node scripts/fetch.js"
+description = "fetch the latest posts"
+
+[tasks.build]
+run = ["zine release -f", "npx -y pagefind --site public"]
+description = "build the site"
+
+[tasks.dev]
+run = "zine"
+description = "start the dev server"
+
+[tasks.deploy-cf]
+run = "wrangler pages deploy public/ --project-name pratyay"
+description = "deploy the site"
+
+
+[tasks.deploy1]
+run = "surge public/ publish www.pratyay.qzz.io"
+description = "deploy the site"
+
+
+[tasks.deploy]
+run = [
+    "surge public/ publish pratyay.bond",
+]
+description = "deploy the site"

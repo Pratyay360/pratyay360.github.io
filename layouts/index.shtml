@@ -1,0 +1,34 @@
+<extend template="footer.shtml">
+<main id="main">
+	<h1 :text="$page.title" class="txt-ctr"></h1>
+	<div :html="$page.content()"></div>
+	<ctx alt="$page.alternative('rss-all')">
+		<p class="txt-ctr">
+			<a href="$ctx.alt.link()">RSS feed (all posts)</a>
+			|
+			<a href="$site.page('blog').alternative('rss').link()">Blog RSS</a>
+			|
+			<a href="$site.page('notes').alternative('rss').link()">Notes RSS</a>
+		</p>
+	</ctx>
+	<p class="wt-600">latest posts</p>
+	<ul :loop="$site.page('blog').subpages()">
+		<li>
+			<time class="flt-r fgshade3 font-mono wt-300 ft-size-s"
+			      datetime="$loop.it.date.format('2006-01-02')"
+			      :text="$loop.it.date.format('Jan 02, 2006')"
+			></time>
+			<a class="wt-500" href="$loop.it.link()" :text="$loop.it.title"></a>
+		</li>
+	</ul>
+	<p class="wt-600">Notes</p>
+	<ul :loop="$site.page('notes').subpages()">
+		<li>
+			<time class="flt-r fgshade3 font-mono wt-300 ft-size-s"
+			      datetime="$loop.it.date.format('2006-01-02')"
+			      :text="$loop.it.date.format('Jan 02, 2006')"
+			></time>
+			<a :text="$loop.it.title" class="wt-500" href="$loop.it.link()"></a>
+		</li>
+	</ul>
+</main>
