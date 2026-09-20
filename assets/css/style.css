@@ -5,6 +5,8 @@ h4,
 h5 {
   color: #ddd;
   font-family: "Verdana", sans-serif;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 html {
@@ -36,7 +38,7 @@ html {
 
 body {
   max-width: 800px;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -57,7 +59,7 @@ nav {
 }
 
 pre {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 img {

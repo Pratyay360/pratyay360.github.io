@@ -10,12 +10,8 @@
 
 import { codeToHtml } from "https://esm.sh/shiki@3.0.0";
 
-// Dual themes: Shiki emits CSS vars for both, highlight.css switches
-// between them via prefers-color-scheme.
-const THEMES = {
-  light: "github-light",
-  dark: "github-dark",
-};
+// Theme configuration: Gruvbox dark matches the site's retro palette and Giscus setup
+const THEME = "gruvbox-dark-hard";
 
 // Zine/tree-sitter language names -> Shiki language ids.
 const LANG_ALIASES = {
@@ -40,6 +36,37 @@ function resolveLang(raw) {
   return LANG_ALIASES[name] ?? name;
 }
 
+function createCopyButton(code) {
+  const button = document.createElement("button");
+  button.className = "code-copy-btn";
+  button.type = "button";
+  button.setAttribute("aria-label", "Copy code to clipboard");
+  button.innerHTML = `
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>
+    <span>Copy</span>
+  `;
+
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      button.classList.add("copied");
+      const label = button.querySelector("span");
+      if (label) label.textContent = "Copied!";
+      setTimeout(() => {
+        button.classList.remove("copied");
+        if (label) label.textContent = "Copy";
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy code:", err);
+    }
+  });
+
+  return button;
+}
+
 async function highlightBlock(pre, codeEl) {
   const lang = resolveLang(codeEl.className);
   if (lang === null) return; // e.g. inlined =html, leave alone
@@ -49,41 +76,59 @@ async function highlightBlock(pre, codeEl) {
   const code = codeEl.textContent.replace(/\n$/, "");
 
   try {
-    const html = await codeToHtml(code, { lang, themes: THEMES });
+    const html = await codeToHtml(code, { lang, theme: THEME });
     const tpl = document.createElement("template");
     tpl.innerHTML = html.trim();
     const shikiPre = tpl.content.firstElementChild;
     if (!shikiPre) return;
-    // Keep Zine's language class for debugging / CSS hooks.
+
     shikiPre.dataset.lang = lang;
-    pre.replaceWith(shikiPre);
+
+    const container = document.createElement("div");
+    container.className = "code-block-container";
+    container.appendChild(shikiPre);
+    container.appendChild(createCopyButton(code));
+
+    pre.replaceWith(container);
   } catch {
-    // Unknown language in Shiki (or network failure): fall back to
-    // plaintext so the block still renders instead of breaking.
+    // Fallback to plaintext if language is unknown
     if (lang !== "plaintext") {
       try {
-        const html = await codeToHtml(code, { lang: "plaintext", themes: THEMES });
+        const html = await codeToHtml(code, { lang: "plaintext", theme: THEME });
         const tpl = document.createElement("template");
         tpl.innerHTML = html.trim();
         const shikiPre = tpl.content.firstElementChild;
         if (shikiPre) {
           shikiPre.dataset.lang = lang;
-          pre.replaceWith(shikiPre);
+          const container = document.createElement("div");
+          container.className = "code-block-container";
+          container.appendChild(shikiPre);
+          container.appendChild(createCopyButton(code));
+          pre.replaceWith(container);
+          return;
         }
       } catch {
         /* leave Zine's tree-sitter output as-is */
       }
+    }
+
+    // If Shiki failed completely, preserve tree-sitter output but wrap with copy button
+    if (!pre.classList.contains("shiki-fallback")) {
+      pre.classList.add("shiki-fallback");
+      const container = document.createElement("div");
+      container.className = "code-block-container";
+      pre.replaceWith(container);
+      container.appendChild(pre);
+      container.appendChild(createCopyButton(code));
     }
   }
 }
 
 async function highlightAll() {
   const blocks = document.querySelectorAll("pre > code");
-  // Sequential to reuse Shiki's in-memory theme/lang cache warm-up
-  // in order; could be parallel but this avoids request bursts.
   for (const codeEl of blocks) {
     const pre = codeEl.parentElement;
-    if (pre?.tagName === "PRE" && !pre.classList.contains("shiki")) {
+    if (pre?.tagName === "PRE" && !pre.classList.contains("shiki") && !pre.classList.contains("shiki-fallback")) {
       await highlightBlock(pre, codeEl);
     }
   }
