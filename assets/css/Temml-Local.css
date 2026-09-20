@@ -40,7 +40,7 @@ math.tml-display { display: block; }
 }
 
 math .mathscr {
-  font-family: "Temml";
+  font-family: "Temml", math;
 }
 
 mo.tml-prime {
