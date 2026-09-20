@@ -1,37 +1,48 @@
-:root {
-  --light-yellow: #e5c07b;
-  --dark-yellow: #d19a66;
-  --blue: #61afef;
-  --cyan: #56b6c2;
-  --light-red: #e06c75;
-  --dark-red: #be5046;
-  --comment-gray: #5c6370;
-  --magenta: #c678dd;
-}
+/* Shiki syntax highlighting (client-side, see js/shiki-highlight.js).
+   Shiki emits <pre class="shiki"> with inline CSS vars for dual themes.
+   The vars switch via prefers-color-scheme below. */
 
-pre {
+pre.shiki,
+pre:has(> code) {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  padding: 10px 5px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
-code.ziggy {
-  color: var(--cyan);
+pre.shiki {
+  background-color: var(--shiki-light-bg);
 }
 
-code.ziggy .keyword,
-code.ziggy .type {
-  color: var(--light-yellow);
+pre.shiki code {
+  background: transparent;
+  padding: 0;
+  display: grid;
 }
 
-code.ziggy .string {
-  color: var(--dark-yellow);
+/* Light theme is default; switch to dark vars on dark-mode systems. */
+@media (prefers-color-scheme: dark) {
+
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+    font-style: var(--shiki-dark-font-style);
+    font-weight: var(--shiki-dark-font-weight);
+    text-decoration: var(--shiki-dark-text-decoration);
+  }
+
+  pre.shiki {
+    background-color: var(--shiki-dark-bg);
+  }
 }
 
-code.ziggy .numeric.constant {
-  color: var(--magenta);
-}
-
-code.ziggy .function {
-  color: var(--blue);
+/* Fallback: Zine's server-side tree-sitter output shown before Shiki
+   loads (or if the CDN is unreachable). Keep it readable. */
+pre>code:not(.shiki *) {
+  color: #e6edf3;
+  background-color: #1e2024;
 }

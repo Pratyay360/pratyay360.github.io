@@ -1,10 +1,10 @@
 [tools]
 biome = "latest"
-fd = "latest"
 "github:kristoff-it/ziggy" = "latest"
 "github:kristoff-it/zine" = "latest"
 "github:neurocyte/flow" = "latest"
 "github:pratyay360/md2smd" = "main"
+"github:sass/dart-sass" = "latest"
 node = "latest"
 "npm:surge" = "latest"
 superhtml = "latest"

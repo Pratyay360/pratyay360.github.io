@@ -25,13 +25,13 @@ a {
 }
 
 html {
-  color: #ccc;
+  color: #f9c509;
   font-family: "Georgia", serif;
   font-size: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #26391d;
+  background-color: #412d03;
 }
 
 body {
@@ -207,7 +207,7 @@ footer hr {
   padding: 2px 4px;
   border-radius: 3px;
   font-family: 'Courier New', monospace;
-  color: #0f0;
+  color: rgb(107, 253, 107);
 }
 
 .post-error {
@@ -341,7 +341,7 @@ footer hr {
   font-size: 0.78rem;
   color: #e2b866;
   text-decoration: none;
-  border: 1px solid #596b3d;
+  border: 1px solid #3d536b;
   padding: 0.45rem 0.85rem;
   border-radius: 0;
   font-family: monospace;
@@ -351,8 +351,8 @@ footer hr {
 
 .post-nav-center a:hover {
   color: #172414;
-  border-color: #e2b866;
-  background: #e2b866;
+  border-color: #91e266;
+  background: #8be266;
 }
 
 @media (max-width: 640px) {
