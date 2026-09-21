@@ -1,4 +1,5 @@
 [tools]
+argc = "latest"
 biome = "latest"
 "github:kristoff-it/ziggy" = "latest"
 "github:kristoff-it/zine" = "latest"

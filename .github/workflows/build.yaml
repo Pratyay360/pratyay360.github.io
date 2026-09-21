@@ -27,7 +27,7 @@ jobs:
             mise deps
             mise run fetch
             mise run build
-            mise run deploy
+            # mise run deploy
             # mise run deploy1
 
         env:
