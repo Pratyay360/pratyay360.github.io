@@ -1,12 +1,10 @@
 ---
-.title = "Notes",
+.title = "Release Notes",
 .date = .date("1990-01-01T00:00:00"),
-.layout = "notes.shtml",
+.layout = "releasenotes.shtml",
 .alternatives = [.{
     .name = "rss",
-    .layout = "notes.xml",
-    .output = "section.xml",
+    .layout = "releasenotes.xml",
+    .output = "releasenotes.xml",
 }],
 ---
-
-
