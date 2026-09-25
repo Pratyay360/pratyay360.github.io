@@ -6,9 +6,9 @@
 	<meta name="generator" content="Zine">
 	<meta property="og:title" content="$page.title">
 	<meta property="og:url" content="$site.host_url">
-	<meta property="og:type" content="personal website">
-	<meta property="og:site_name" content="Pratyay">
-	<meta property="og:description" content="pratyay mitra mustafi's personal website">
+	<meta property="og:type" content="blog">
+	<meta property="og:site_name" content="pratyay's blog">
+	<meta property="og:description" content="personal site of pratyay mustafi">
 	<meta property="og:gravatar" content="https://gravatar.com/almost81692c7c17">
 	<meta property="og:locale" content="en_US">
 	<ctx :if="$site.page('').isCurrent()">

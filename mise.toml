@@ -1,6 +1,7 @@
 [tools]
 argc = "latest"
 biome = "latest"
+devcontainer-cli = "latest"
 "github:kristoff-it/ziggy" = "latest"
 "github:kristoff-it/zine" = "latest"
 "github:neurocyte/flow" = "latest"
