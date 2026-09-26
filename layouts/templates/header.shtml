@@ -1,6 +1,6 @@
 <extend template="head.shtml">
 <header id="header">
-	<nav>
+	<nav aria-label="Main Navigation">
 		<a href="$site.page('').link()">Home</a>
 		&nbsp; • &nbsp;
 		<a href="$site.page('blog').link()">Blog</a>

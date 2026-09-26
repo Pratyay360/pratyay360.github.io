@@ -11,7 +11,7 @@
 			<a href="$site.page('notes').alternative('rss').link()">Notes RSS</a>
 		</p>
 	</ctx>
-	<p class="wt-600">latest posts</p>
+	<h2 class="wt-600">Latest Posts</h2>
 	<ul :loop="$site.page('blog').subpages()">
 		<li>
 			<time class="flt-r fgshade3 font-mono wt-300 ft-size-s"
@@ -21,7 +21,7 @@
 			<a class="wt-500" href="$loop.it.link()" :text="$loop.it.title"></a>
 		</li>
 	</ul>
-	<p class="wt-600">Notes</p>
+	<h2 class="wt-600">Notes</h2>
 	<ul :loop="$site.page('notes').subpages()">
 		<li>
 			<time class="flt-r fgshade3 font-mono wt-300 ft-size-s"
