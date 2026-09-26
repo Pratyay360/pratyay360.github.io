@@ -2,15 +2,24 @@
 
 <head id="head">
 	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="Zine">
+	<meta name="author" content="Pratyay Mustafi">
+	<meta name="description" content="$page.description.len().gt(0).then($page.description, 'The blog of a hobbyist navigating the seas of the internet')">
+	<link rel="canonical" href="$site.host_url.addPath($page.link())">
 	<meta property="og:title" content="$page.title">
-	<meta property="og:url" content="$site.host_url">
-	<meta property="og:type" content="blog">
-	<meta property="og:site_name" content="pratyay's blog">
-	<meta property="og:description" content="personal site of pratyay mustafi">
-	<meta property="og:gravatar" content="https://gravatar.com/almost81692c7c17">
+	<meta property="og:description" content="$page.description.len().gt(0).then($page.description, 'The blog of a hobbyist navigating the seas of the internet')">
+	<meta property="og:url" content="$site.host_url.addPath($page.link())">
+	<meta property="og:type" content="$page.isSection().then('website', 'article')">
+	<meta property="og:site_name" content="$site.title">
 	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="$site.host_url.addPath($site.asset('fanzine.jpg').link())">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="$page.title">
+	<meta name="twitter:description" content="$page.description.len().gt(0).then($page.description, 'The blog of a hobbyist navigating the seas of the internet')">
+	<meta name="twitter:image" content="$site.host_url.addPath($site.asset('fanzine.jpg').link())">
+	<meta name="theme-color" content="#1a1a1a">
+	<link rel="icon" href="$site.asset('favicon.ico').link()">
 	<ctx :if="$site.page('').isCurrent()">
 		<title :text="$site.title"></title>
 	</ctx>

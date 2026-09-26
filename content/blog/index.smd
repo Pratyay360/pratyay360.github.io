@@ -1,5 +1,6 @@
 ---
 .title = "Blog",
+.description = "Blog posts by Pratyay Mustafi",
 .date = .date("1990-01-01T00:00:00"),
 .layout = "blog.shtml",
 .alternatives = [.{
@@ -8,4 +9,3 @@
     .output = "section.xml",
 }],
 ---
-

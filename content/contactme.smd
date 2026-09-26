@@ -1,5 +1,6 @@
 ---
 .title = "Contact",
+.description = "Contact Pratyay Mustafi — how to reach me",
 .date = .date("2026-01-01T00:00:00"),
 .authors = ["Pratyay Mustafi"],
 .layout = "page.shtml",
@@ -20,12 +21,3 @@ Don't hesitate to drop a little message, I'm looking to learn alot from people.
 - [Bluesky]($link.url("https://bsky.app/profile/pratyaymustafi.bsky.social").new(true)): Bluesky
 - [Resume]($link.url("https://www.dropbox.com/scl/fo/1wtu0usazywvp64y7kcbq/ABvH9jWZGzaGdfMP38mkMcE?rlkey=lyfzar4bw3trg9k47hpt66k9w&st=fha8i1o1&dl=0").new(true)): Also you can refer me    to your company
 - [Support Me]($link.url("https://pratyayupi.surge.sh").new(true)): Support Me (financially)
-
-
-
-
-
-
-
-
-
