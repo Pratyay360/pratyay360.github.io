@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@main
+      - name: Cache
+        uses: actions/cache@main
+        with:
+          path: /
+          key: mise
 
       - name: Install dependencies & deploy
         run: |
