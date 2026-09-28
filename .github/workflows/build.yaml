@@ -22,7 +22,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@main
       - name: Cache mise installs
-        uses: actions/cache@v4
+        uses: actions/cache@main
         with:
           path: |
             ~/.local/share/mise
@@ -58,11 +58,11 @@ jobs:
 
 
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
-        with:
-          path: ./public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@main
+#         with:
+#           path: ./public
+#
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@main
