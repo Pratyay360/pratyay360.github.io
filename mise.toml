@@ -39,6 +39,6 @@ description = "deploy the site"
 
 [tasks.deploy]
 run = [
-    "surge public/ publish www.pratyay.online",
+    "surge public/ publish pratyay.online",
 ]
 description = "deploy the site"
