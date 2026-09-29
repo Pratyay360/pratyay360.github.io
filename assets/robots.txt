@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /search/
-
-Sitemap: https://www.pratyay.online/sitemap.xml
+Sitemap: /sitemap.xml
