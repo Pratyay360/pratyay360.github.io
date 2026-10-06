@@ -23,7 +23,7 @@
 				<img src="$site.asset('buttons/nosmoking.png').link()" alt="No Smoking" width="88" height="31" loading="lazy" decoding="async">
 				<a href="$site.index().alternative('rss-all').link()"><img src="$site.asset('buttons/rss.png').link()"
 						alt="RSS Feed (all posts)" width="80" height="15" loading="lazy" decoding="async"></a>
-				<a href="https://tally.so/r/eqk1Mk"><img src="$site.asset('buttons/contact.png').link()"
+				<a href="https://app.youform.com/forms/8kgi7jvm"><img src="$site.asset('buttons/contact.png').link()"
 						alt="Contact" width="88" height="31" loading="lazy" decoding="async"></a>
 			</div>
 			<div id="wcb" class="carbonbadge"></div>
