@@ -1,13 +1,11 @@
 [tools]
 argc = "latest"
-biome = "latest"
-devcontainer-cli = "latest"
 "github:kristoff-it/ziggy" = "latest"
 "github:kristoff-it/zine" = "latest"
 "github:neurocyte/flow" = "latest"
 "github:pratyay360/md2smd" = "1.6"
 "github:sass/dart-sass" = "latest"
-node = "latest"
+node = "24"
 "npm:surge" = "latest"
 superhtml = "latest"
 
