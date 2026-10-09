@@ -19,7 +19,6 @@ jobs:
     container:
       image: ghcr.io/jdx/mise:2026.9.6
     env:
-      # Explicit paths keep actions/cache and container processes in sync.
       MISE_DATA_DIR: ${{ github.workspace }}/.ci-cache/mise/data
       MISE_CACHE_DIR: ${{ github.workspace }}/.ci-cache/mise/cache
       NPM_CONFIG_CACHE: ${{ github.workspace }}/.ci-cache/npm
@@ -72,23 +71,13 @@ jobs:
 
       - name: Build site
         # The build task already runs fetch; never cache externally updated content.
-        run: mise run build
-
-      - name: Save npm downloads
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@main
-        with:
-          path: ${{ env.NPM_CONFIG_CACHE }}
-          key: ${{ steps.npm-cache.outputs.cache-primary-key }}
-
-      - name: Deploy site
-        run: mise run deploy
+        run: |
+            mise run build
+            mise run deploy
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
-
 
 #       - name: Upload artifact
 #         uses: actions/upload-pages-artifact@main
