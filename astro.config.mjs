@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
 export default defineConfig({
-	site: "https://docs.lightcms.me",
+	site: "https://pratyay360.github.io/docs",
 
 	integrations: [
 		starlight({
