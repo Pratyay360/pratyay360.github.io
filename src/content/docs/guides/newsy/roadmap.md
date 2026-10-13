@@ -17,7 +17,7 @@ In the future, i have some plans to add things like
 
 These two are done now you can use one instance with multiple users .. db is there just to store the installation id.
 
-## [To use the hosted instance of newsy kindly visit: https://newsy.surge.sh/](https://newsy.surge.sh/)
+## [To use the hosted instance of newsy kindly visit: https://newsy.lightcms.me/](https://newsy.lightcms.me)
 
 Or you can deploy your own instance on vercel
 
