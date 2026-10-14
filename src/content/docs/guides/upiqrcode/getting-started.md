@@ -1,48 +1,109 @@
 ---
-title: "Getting Started"
-description: "Learn how to use Dynamic UPI to generate instant payment QR codes."
-
+title: "Getting Started with Dynamic UPI QR Code Generator"
+description: "Learn how to generate instant, client-side UPI payment QR codes and deep links using Dynamic UPI and the WebAssembly upiqrcode library."
+tags:
+  - upi
+  - qrcode
+  - payments
+  - webassembly
+  - wasm
+  - npm
+  - rust
+sidebar:
+  label: "Getting Started"
 ---
 
-# Getting Started
-
-Welcome to **Dynamic UPI** — an open-source tool for generating instant, shareable UPI payment QR codes directly in your browser.
+Welcome to **Dynamic UPI** — a high-performance, open-source tool and WebAssembly library designed for generating instant, customizable, and shareable UPI payment QR codes directly inside the browser.
 
 ## What is Dynamic UPI?
 
-Dynamic UPI lets anyone create a QR code that links directly to a UPI payment intent. You can customize the payee name, UPI ID, amount, and note. The generated QR code can be scanned by any UPI app (PhonePe, GPay, Paytm, BHIM, etc.) to complete the payment.
+**Dynamic UPI** allows developers, merchants, and creators to generate standard-compliant Unified Payments Interface (UPI) QR codes on the fly. Unlike static QR codes, dynamic UPI QR codes can encode:
 
-## Key Features
+- **Payee Virtual Payment Address (VPA / UPI ID)**: e.g., `merchant@upi` or `name@okicici`
+- **Payee Name**: Verified merchant or personal account name
+- **Pre-filled Transaction Amount**: Exact payment amount in INR
+- **Transaction Note**: Payment reference, order number, or purpose (e.g., `Invoice #1042`)
 
-- **Instant QR generation** — no signup or app download required.
-- **Customizable fields** — set name, UPI ID, amount, and transaction note.
-- **UPI App deep link** — generates both a scannable QR image and a direct app link.
-- **Privacy-first** — all processing happens in your browser. No data is stored or sent to a server.
-- **Dark mode** — comfortable to use in any lighting.
+Any UPI-enabled application (Google Pay, PhonePe, Paytm, BHIM, CRED, Navi) can immediately scan the generated QR code or open the accompanying deep-link intent to execute the transaction without manual data entry.
 
-## Try It Now
+## Key Features & Benefits
 
-Jump straight into an interactive demo below — each one showcases the same Rust-to-WASM `upiqrcode` library running inside a different rendering framework:
+- ⚡ **Instant Client-Side Generation**: Zero server latency. Vector SVG QR codes and `upi://pay` intent links are generated directly in browser memory.
+- 🔒 **Privacy-First & Zero Backend**: No transaction amounts, UPI IDs, or customer notes ever leave the user's device or touch an external server.
+- 📱 **Universal App Compatibility**: Works seamlessly with all NPCI-compliant payment apps including PhonePe, Google Pay (GPay), Paytm, BHIM, CRED, and mobile banking apps.
+- 🦀 **Powered by Rust & WebAssembly**: Compiled from Rust to lightweight WebAssembly (`upiqrcode`) for sub-millisecond execution and minimal bundle size.
+- 🎨 **Framework Agnostic**: Usable via npm or CDN across React, Vue, Svelte, Angular, Astro, or plain Vanilla JavaScript.
 
-- [React Demo](https://dynamic-upi-qr.netlify.app/react) — React with hooks managing CDN-loaded WebAssembly
-- [Vue Demo](https://dynamic-upi-qr.netlify.app/vue) — Vue 3 Composition API
-- [Svelte Demo](https://dynamic-upi-qr.netlify.app/svelte) — Svelte reactive template
-- [Plain HTML Demo](https://dynamic-upi-qr.netlify.app/html) — Vanilla JavaScript, no framework
+## Quick Start: How to Generate a UPI QR Code
 
-Or visit the [Overview](https://dynamic-upi-qr.netlify.app) for the full architecture showcase.
+Follow these simple steps to generate a payment QR code:
 
-## How It Works
+1. **Enter Payee VPA**: Provide a valid UPI ID (e.g., `business@upi`). Must be at least 5 characters and include an `@` symbol.
+2. **Enter Payee Name**: Enter the merchant or recipient name as registered with the bank (minimum 4 characters).
+3. **Specify Amount (Optional)**: Set a fixed transaction amount (e.g., `249.00`). Leaving this blank produces an open-amount QR code where payers enter their own amount.
+4. **Add a Transaction Note (Optional)**: Provide a context note (e.g., `Order #8921` or `Coffee donation`).
+5. **Generate & Share**: Click **Generate QR Code**. Scan the rendered SVG QR code with any UPI app, or click the **Open in App** intent link on mobile devices to launch the preferred payment application directly.
 
-The library is compiled from Rust to WebAssembly. When you generate a QR code, the WASM module runs entirely inside your browser's memory sandbox — no server round-trips, no tracking, no data retention.
+## Supported UPI Apps & Payment Specifications
 
-1. Enter the **UPI VPA** (e.g. `success@upi`) and **payee name**.
-2. Optionally set an **amount** and a **transaction note**.
-3. Click **Generate QR Code** — the WASM module builds a vector SVG and a `upi://pay` intent link instantly.
-4. Scan the QR with any UPI app, or tap **Open in App** to launch your payment app directly.
+The generated QR codes and deep links adhere strictly to the National Payments Corporation of India (NPCI) UPI linking specifications:
 
-## Learn More
+| Payment App | QR Code Scan | Deep Link (`upi://pay`) |
+| :--- | :--- | :--- |
+| **PhonePe** | Supported | Supported |
+| **Google Pay (GPay)** | Supported | Supported |
+| **Paytm** | Supported | Supported |
+| **BHIM UPI** | Supported | Supported |
+| **CRED** | Supported | Supported |
+| **Amazon Pay** | Supported | Supported |
+| **Banking UPI Apps (HDFC, ICICI, SBI)** | Supported | Supported |
 
-- [How to Use](/how-to-use/) — step-by-step usage instructions
-- [UPI QR Format](/upi-format/) — the data format behind the QR codes and intent links
-- [Privacy](/privacy/) — what data is (not) collected
-- [FAQ](/faq/) — frequently asked questions
+## Interactive Framework Demos
+
+Explore live demos powered by the CDN-loaded `@1.5.5` WebAssembly build across multiple modern frontend frameworks:
+
+- **[React Demo](https://dynamic-upi-qr.netlify.app/react)** — React implementation with custom hooks managing CDN WebAssembly.
+- **[Vue 3 Demo](https://dynamic-upi-qr.netlify.app/vue)** — Vue 3 Composition API integration.
+- **[Svelte Demo](https://dynamic-upi-qr.netlify.app/svelte)** — Svelte reactive bindings.
+- **[Vanilla HTML / JS Demo](https://dynamic-upi-qr.netlify.app/html)** — Minimal vanilla JavaScript implementation without a frontend build step.
+
+For an end-to-end architectural overview, visit the [Dynamic UPI Live Showcase](https://dynamic-upi-qr.netlify.app).
+
+## Developer Installation: NPM & CDN
+
+Integrate client-side UPI QR generation directly into your own web application:
+
+### Install via NPM
+
+```bash
+npm install upiqrcode
+```
+
+### Quick Code Example
+
+```javascript
+import { upiqrcode } from 'upiqrcode';
+
+async function createPaymentQR() {
+  const paymentData = await upiqrcode({
+    payeeVPA: 'merchant@upi',
+    payeeName: 'Acme Store',
+    amount: '499.00',
+    currency: 'INR',
+    transactionNote: 'Order #1024',
+  });
+
+  // paymentData.qr     -> Vector SVG string ready to render
+  // paymentData.intent -> Standardized upi://pay?... URI deep link
+  console.log('Intent URL:', paymentData.intent);
+}
+```
+
+## Related Guides & Documentation
+
+Explore detailed technical guides and format specifications:
+
+- **[Step-by-Step Usage Guide](/guides/upiqrcode/how-to-use/)** — Comprehensive guide with edge cases and input validation rules.
+- **[UPI QR Format & Deep-Link Spec](/guides/upiqrcode/upi-format/)** — In-depth breakdown of `upi://pay` URI parameters and NPCI guidelines.
+- **[Privacy & Security Architecture](/guides/upiqrcode/privacy/)** — How the client-side sandbox protects customer payment data.
+- **[Frequently Asked Questions (FAQ)](/guides/upiqrcode/faq/)** — Common questions regarding transaction limits, fees, and compatibility.

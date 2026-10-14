@@ -12,7 +12,7 @@ and `astro dev logs`.
 ## Documentation
 
 Full documentation:
-<https://docs.astro.build>
+[https://docs.astro.build](https://docs.astro.build)
 
 Consult these guides before working on related tasks:
 

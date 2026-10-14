@@ -7,10 +7,11 @@ import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
 export default defineConfig({
 	site: "https://pratyay360.github.io",
+	compressHTML: true,
 	integrations: [
 		starlight({
-			title: "Docs (managed with lightcms)",
-			description: "Docs With astro starlight",
+			title: "Docs for projects by pratyay",
+			description: "Developer documentation, setup guides, and technical reference for Ensor, Dynamic UPI, Drawy, Newsy, and open-source tools.",
 			components: {
 				Footer: "./src/components/Footer.astro",
 			},
@@ -19,12 +20,12 @@ export default defineConfig({
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/Pratyay360/docs",
+					href: "https://github.com/Pratyay360/pratyay360.github.io",
 				},
 				{
 					icon: "rss",
 					label: "Website",
-					href: "https://pratyay.qzz.io",
+					href: "https://pratyay.online",
 				},
 			],
 
@@ -55,6 +56,27 @@ export default defineConfig({
 					attrs: {
 						property: "og:type",
 						content: "website",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						property: "og:site_name",
+						content: "Pratyay's Docs",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "twitter:card",
+						content: "summary_large_image",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "robots",
+						content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
 					},
 				},
 			],
@@ -101,5 +123,15 @@ export default defineConfig({
 
 	vite: {
 		plugins: [tailwindcss()],
+		build: {
+			minify: "esbuild",
+			cssMinify: true,
+		},
+		esbuild: {
+			legalComments: "none",
+			minifyWhitespace: true,
+			minifyIdentifiers: true,
+			minifySyntax: true,
+		},
 	},
 });

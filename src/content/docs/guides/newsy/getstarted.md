@@ -1,24 +1,21 @@
 ---
-title: getting started
-description: Getting started with Newsy
-date: '2026-12-01T00:28:00Z'
-draft: false
-weight: 0
+title: "Getting Started with Newsy: GitHub-Powered Newsletters"
+description: "Deploy and self-host Newsy, a serverless newsletter platform powered entirely by Go, WebAssembly, and GitHub Issues."
+sidebar:
+  label: "Getting Started"
 tags:
   - newsy
   - newsletter
   - modern solution
   - free newsletter
-isCJKLanguage: false
-headless: false
+  - github
+  - golang
+  - webassembly
 ---
-# Newsy
 
-Introducing [**Newsy**](https://newsy.lightcms.me), a newsletter platform powered entirely by GitHub.
+Introducing [**Newsy**](https://newsy.lightcms.me), an open-source newsletter platform powered entirely by GitHub.
 
 Newsy is heavily inspired by tools like [Utterances](https://utteranc.es), [Giscus](https://giscus.app), and [Gitalk](https://gitalk.github.io), which reimagined commenting for static sites using GitHub Issues. Newsy takes the same GitHub-driven approach and brings it to newsletters: instead of relying on external services or maintaining a separate mailing list, your newsletter lives right alongside your code in your GitHub repository.
-
-New here? Read the [Getting Started](getstarted.html) guide.
 
 ---
 
@@ -44,7 +41,7 @@ Written in **Go**, Newsy is lightweight, simple to deploy, and designed to run v
 - **Deploys serverless** (e.g., Vercel, AWS Lambda) for production.
 - **WebAssembly support**: Host on any serverless runtime even on JavaScript/TypeScript-only platforms by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
-A video walkthrough of the local setup is available in the [video guide](/video.html).
+A video walkthrough of the local setup is available in the [video guide](/guides/newsy/video/).
 
 ---
 
@@ -90,7 +87,7 @@ ssh -R 80:localhost:3000 localhost.run
 
 ![Webhook configuration](https://s6.imgcdn.dev/YgEOzv.png)
 
-*(If you run into issues, refer to the [video guide](/video.html) or try an alternative tunneling provider.)*
+*(If you run into issues, refer to the [video guide](/guides/newsy/video/) or try an alternative tunneling provider.)*
 
 4. Choose an **App name** (preferably unique).
 5. Paste the tunnel URL into the **Webhook URL** field and submit.
@@ -121,7 +118,7 @@ You can test Newsy directly using the hosted version:
 
 👉 [**https://newsy.surge.sh/**](https://newsy.surge.sh/)
 
-![[Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://youtu.be/3d1xLYkeVsA?si=1Z3wLYqQMd6FECkv)
+[![Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://youtu.be/3d1xLYkeVsA)
 
 ---
 
@@ -165,4 +162,4 @@ You can customize and style the button using [Primer CSS](https://cdnjs.com/libr
 
 ![Locking the conversation](https://s6.imgcdn.dev/YgXhaN.png)
 
-For further details on permissions, refer to the [required permissions](list-of-all-permission.html) documentation.
+For further details on permissions, refer to the [required permissions](/guides/newsy/list-of-all-permission/) documentation.
