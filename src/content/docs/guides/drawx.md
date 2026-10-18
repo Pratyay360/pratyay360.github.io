@@ -1,8 +1,8 @@
 ---
 title: 'Drawx: 100% Private, Standalone Desktop Whiteboard App'
 description: >-
-  Native, offline-first Excalidraw desktop app for Linux, macOS, and Windows
-  with CrabNebula Cloud auto-updates and local data privacy.
+  Native, offline first desktop app for Linux, macOS, and Windows for planning,
+  drawing, and brainstorming .
 date: '2026-10-17T13:27:00Z'
 draft: false
 weight: 0
@@ -21,9 +21,9 @@ headless: false
 ---
 ## What is Drawx?
 
-[**Drawx**](https://github.com/Pratyay360/drawx) is an offline first native like desktop application built with Tauri, bringing the full power of Excalidraw directly to Linux, macOS, and Windows offline .
+[**Drawx**](https://github.com/Pratyay360/drawx) is an offline first native like desktop application built with Tauri v2, bringing the full power of Excalidraw directly to Linux, macOS, and Windows offline .
 
-Unlike cloud based diagramming tools that upload your canvases to remote servers, Drawx executes 100% locally on your machine. Your drawings, sensitive system architectures, product ++mockups++, and personal brainstorming canvases never leave your computer unless you explicitly export them. 
+Unlike cloud based diagramming tools that upload your canvases to remote servers, Drawx executes 100% locally on your machine. Your drawings, sensitive system architectures, product ++mock ups++, and personal brainstorming canvases never leave your computer unless you explicitly export them. 
 
 
 
@@ -55,4 +55,4 @@ Ready-to-use binaries are available for all major platforms:
 Need real-time web collaboration with teammates? Check out the web editions:
 
 - [**Drawy (Supabase Real time)**](/guides/drawy/) — Full-stack collaborative web app with multi-board management.
-- [**DrawyParty (Cloudflare’s PartyKit)**](/guides/drawy-party/) — Edge-distributed WebSocket collaboration for ultra-low latency.
+- [**DrawyParty (Cloudflare’s PartyKit)**](/guides/drawy-party/) — Edge distributed WebSocket collaboration for ultra-low latency.
