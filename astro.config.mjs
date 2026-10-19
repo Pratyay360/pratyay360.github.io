@@ -131,14 +131,8 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 		build: {
-			minify: "esbuild",
-			cssMinify: true,
-		},
-		esbuild: {
-			legalComments: "none",
-			minifyWhitespace: true,
-			minifyIdentifiers: true,
-			minifySyntax: true,
+			minify: "oxc",
+			cssMinify: "lightningcss",
 		},
 	},
 });
