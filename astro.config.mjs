@@ -47,6 +47,13 @@ export default defineConfig({
 				{
 					tag: "meta",
 					attrs: {
+						name: "ahrefs-site-verification",
+						content: "d3773a4e761cae81cfc313a1f250e863c527544e86f99edc96fd82d01cceb2cb",
+					},
+        },
+				{
+					tag: "meta",
+					attrs: {
 						name: "msvalidate.01",
 						content: "C348576BB92261CC55029F04F308DB94",
 					},
@@ -55,14 +62,14 @@ export default defineConfig({
 					tag: "meta",
 					attrs: {
 						property: "og:type",
-						content: "website",
+						content: "documentation",
 					},
 				},
 				{
 					tag: "meta",
 					attrs: {
 						property: "og:site_name",
-						content: "Pratyay's Docs",
+						content: "Pratyay project Docs",
 					},
 				},
 				{
