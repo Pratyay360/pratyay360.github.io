@@ -1,8 +1,11 @@
 ---
-title: "Drawy: Self-Hostable Collaborative Whiteboard with Supabase"
-description: "Deploy and self-host Drawy, a multi-tenant collaborative whiteboard web application powered by Excalidraw, Supabase Realtime WebSockets, and Nitro."
-sidebar:
-  label: "Drawy (Web & Supabase)"
+title: 'Drawy: Self Hostable Collaborative Whiteboard with Supabase'
+description: >-
+  Deploy and self-host Drawy, a multi-tenant collaborative whiteboard web
+  application powered by Excalidraw, Supabase Realtime WebSockets, and Nitro.
+date: '2026-10-01T13:31:00Z'
+draft: false
+weight: 0
 tags:
   - drawy
   - excalidraw
@@ -12,8 +15,9 @@ tags:
   - tanstack-start
   - nitro
   - selfhosted
+isCJKLanguage: false
+headless: false
 ---
-
 > Effortless, multi-tenant capable, collaborative whiteboards powered by Excalidraw and Supabase. Easily self-hostable, serverless-ready, and 100% free and open source.
 >
 > 🚀 **Live Demo**: [**drawy.pratyay.online**](https://drawy.pratyay.online) | 📦 **GitHub**: [**Pratyay360/drawy**](https://github.com/Pratyay360/drawy)
@@ -22,9 +26,10 @@ tags:
 
 ## What is Drawy?
 
-[**Drawy**](https://github.com/Pratyay360/drawy) is a modern, full-featured collaborative drawing web application that packages the complete [Excalidraw canvas](https://npmx.dev/package/@excalidraw/excalidraw) into a lightweight, multi-tenant capable, and serverless-friendly architecture.
+[**Drawy**](https://github.com/Pratyay360/drawy) is a modern, full-featured collaborative drawing web application that packages the complete [Excalidraw canvas](https://npmx.dev/package/@excalidraw/excalidraw) into a lightweight, multi-tenant capable, and serverless friendly architecture.
 
 While Excalidraw is an exceptional visual tool, self-hosting it typically comes with frustrating trade-offs:
+
 - **Single-board limitations** that require spinning up separate instances for each diagram.
 - **Paid collaboration tiers** or proprietary hosted services for team syncing.
 - **Complex Docker setups** requiring multi-container networking, reverse proxies, and stateful socket servers.
@@ -33,7 +38,7 @@ While Excalidraw is an exceptional visual tool, self-hosting it typically comes 
 
 ---
 
-## Key Features & Highlights
+## Key Features &amp; Highlights
 
 - 🎨 **Full Excalidraw Experience**: Includes all standard Excalidraw tools, handwriting styles, shapes, arrow bindings, and full compatibility with the official [Excalidraw Libraries](https://libraries.excalidraw.com/?theme=light&sort=default).
 - 🗂️ **Unlimited Multi-Board Management**: Create, categorize, organize, and rename multiple independent whiteboards from a unified dashboard.
@@ -47,17 +52,19 @@ While Excalidraw is an exceptional visual tool, self-hosting it typically comes 
 
 Drawy is engineered with a modern, high-performance web stack:
 
-| Component | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Canvas Engine** | `@excalidraw/excalidraw` | Industry-standard vector drawing and sketching |
-| **Frontend Framework** | TanStack Start + Vite | SSR-capable, type-safe full-stack application |
-| **Server Engine** | [Nitro Engine](https://nitro.build/) | Universal deployment adapters for any cloud runtime |
-| **Database & Auth** | PostgreSQL (Supabase) | User accounts, board metadata, and document storage |
-| **Realtime Sync** | Supabase Realtime | Low-latency WebSockets for multi-user stroke broadcast |
+
+| Component               | Technology                           | Purpose                                                |
+| :----------------------- | :------------------------------------ | :------------------------------------------------------ |
+| **Canvas Engine**       | `@excalidraw/excalidraw`             | Industry-standard vector drawing and sketching         |
+| **Frontend Framework**  | TanStack Start + Vite                | SSR-capable, type-safe full-stack application          |
+| **Server Engine**       | [Nitro Engine](https://nitro.build/) | Universal deployment adapters for any cloud runtime    |
+| **Database &amp; Auth** | PostgreSQL (Supabase)                | User accounts, board metadata, and document storage    |
+| **Realtime Sync**       | Supabase Realtime                    | Low latency WebSockets for multi user stroke broadcast |
+
 
 ---
 
-## Quickstart & Self-Hosting Guide
+## Quickstart &amp; Self-Hosting Guide
 
 Deploy your own instance of Drawy in minutes:
 
@@ -107,8 +114,9 @@ npm run dev
 
 Looking for different deployment patterns or offline capability? Explore the complete Drawy lineup:
 
-| Edition | Description | Sync Backend | Best For |
-| :--- | :--- | :--- | :--- |
-| **[Drawy](/guides/drawy/)** | Full web collaboration app | Supabase (PostgreSQL + Realtime) | Team workspaces and multi-board setups |
-| **[DrawyParty](/guides/drawy-party/)** | Ultra-low latency edge whiteboard | Cloudflare PartyKit + PostgreSQL | High-speed global collaboration |
-| **[DrawX](/guides/drawx/)** | Native desktop application | 100% Offline (Local disk) | Air-gapped privacy and personal sketching |
+
+| Edition                                | Description                       | Sync Backend                     | Best For                                  |
+| :-------------------------------------- | :--------------------------------- | :-------------------------------- | :----------------------------------------- |
+| [**Drawy**](/guides/drawy/)            | Full web collaboration app        | Supabase (PostgreSQL + Realtime) | Team workspaces and multi-board setups    |
+| [**DrawyParty**](/guides/drawy-party/) | Ultra-low latency edge whiteboard | Cloudflare PartyKit + PostgreSQL | High-speed global collaboration           |
+| [**DrawX**](/guides/drawx/)            | Native desktop application        | 100% Offline                     | Air gapped privacy and personal sketching |
