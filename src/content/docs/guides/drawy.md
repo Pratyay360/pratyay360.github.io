@@ -119,4 +119,4 @@ Looking for different deployment patterns or offline capability? Explore the com
 | :-------------------------------------- | :--------------------------------- | :-------------------------------- | :----------------------------------------- |
 | [**Drawy**](/guides/drawy/)            | Full web collaboration app        | Supabase (PostgreSQL + Realtime) | Team workspaces and multi-board setups    |
 | [**DrawyParty**](/guides/drawy-party/) | Ultra-low latency edge whiteboard | Cloudflare PartyKit + PostgreSQL | High-speed global collaboration           |
-| [**DrawX**](/guides/drawx/)            | Native desktop application        | 100% Offline                     | Air gapped privacy and personal sketching |
+| [**Drawx**](/guides/drawx/)            | Native desktop application        | 100% Offline                     | Air gapped privacy and personal sketching |
