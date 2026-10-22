@@ -4,11 +4,22 @@ import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
+// import sitemap from '@astrojs/sitemap';
+import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 
 export default defineConfig({
 	site: "https://pratyay360.github.io",
 	compressHTML: true,
-	integrations: [
+  integrations: [
+    sitemap({
+      serialize(item) {
+        if (/blog/.test(item.url)) {
+          item.changefreq = ChangeFreqEnum.DAILY;
+        }
+
+        return item;
+      },
+    } ),
 		starlight({
 			title: "Docs for projects by pratyay",
 			description: "Developer documentation, setup guides, and technical reference for Ensor, Dynamic UPI, Drawy, Newsy, and open-source tools.",

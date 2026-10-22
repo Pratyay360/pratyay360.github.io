@@ -10,10 +10,11 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.10",
+		"@astrojs/check": "^0.9.12",
+		"@astrojs/sitemap": "^3.7.4",
 		"@astrojs/starlight": "^0.42.6",
 		"@tailwindcss/vite": "^4.3.3",
-		"astro": "^7.4.0",
+		"astro": "^7.4.2",
 		"astro-mermaid": "^2.1.0",
 		"mermaid": "^11.17.2",
 		"sharp": "^0.35.5",
@@ -25,11 +26,11 @@
 		"tailwindcss": "^4.3.3",
 		"typescript": "^6.0.3"
 	},
-	"packageManager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457",
+	"packageManager": "bun@1.4.3+sha512.12f410d9d509962c632a026379766f76c1d45882a755f62e7eb40d0c76befb460ce1792c4381ad1a87c47519d04a2c8da7fc945a25fa4a5a92f33ba0642a3ed8",
 	"devEngines": {
 		"packageManager": {
-			"name": "pnpm",
-			"version": "^12.3.4",
+			"name": "bun",
+			"version": "^1.4.3",
 			"onFail": "warn"
 		}
 	}
