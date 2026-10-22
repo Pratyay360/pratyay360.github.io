@@ -29,10 +29,10 @@ Unlike cloud based diagramming tools that upload your canvases to remote servers
 
 ## Why Choose Drawx?
 
-- 🔒 **Zero-Cloud Privacy Guarantee**: No external network requests, analytics, or telemetry. Works completely air-gapped without an internet connection.
+- 🔒 **Zero Cloud. 100% Privacy Guaranteed**: No external network requests, analytics, or telemetry. Works completely air gapped without an internet connection.
 - ⚡ **Instant Launch &amp; Native Performance**: Lightweight desktop runtime with near-instant boot times and smooth 60fps canvas panning and zooming.
-- 🔄 **Seamless Auto-Updates**: Built with CrabNebula Cloud integration to ensure smooth, secure, and automatic background updates across all operating systems.
-- 📦 **Standard File Formats**: Save, open, and export files in native `.excalidraw` format, vector SVG, or high-resolution PNG.
+- 🔄 **Seamless Auto Updates**: Built with CrabNebula Cloud integration to ensure smooth, secure, and automatic background updates across all operating systems.
+- 📦 **Standard File Formats**: Save, open, and export files in native `.excalidraw` format, vector SVG, or high resolution PNG.
 
 ## Download Drawx for Your Operating System
 
