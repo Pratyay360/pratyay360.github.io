@@ -10,14 +10,15 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.10",
-		"@astrojs/starlight": "^0.42.5",
+		"@astrojs/check": "^0.9.12",
+		"@astrojs/sitemap": "^3.7.4",
+		"@astrojs/starlight": "^0.42.6",
 		"@tailwindcss/vite": "^4.3.3",
-		"astro": "^7.3.6",
+		"astro": "^7.4.2",
 		"astro-mermaid": "^2.1.0",
 		"mermaid": "^11.17.2",
 		"sharp": "^0.35.5",
-		"starlight-image-zoom": "^0.16.0",
+		"starlight-image-zoom": "^0.16.2",
 		"starlight-kbd": "^0.4.0",
 		"starlight-tags": "^2.0.0",
 		"starlight-theme-exquisitus": "^1.2.0",
@@ -25,11 +26,11 @@
 		"tailwindcss": "^4.3.3",
 		"typescript": "^6.0.3"
 	},
-	"packageManager": "pnpm@12.9.1+sha512.06b055fff5cd20dc12781de173ced3310ce0951bf2ec620211a16045d5444d5c93a663210764ef29a653a610459ba0368f0e74f84d80c54723cf95aae7bc0d6d",
+	"packageManager": "bun@1.4.3+sha512.12f410d9d509962c632a026379766f76c1d45882a755f62e7eb40d0c76befb460ce1792c4381ad1a87c47519d04a2c8da7fc945a25fa4a5a92f33ba0642a3ed8",
 	"devEngines": {
 		"packageManager": {
-			"name": "pnpm",
-			"version": "^12.3.4",
+			"name": "bun",
+			"version": "^1.4.3",
 			"onFail": "warn"
 		}
 	}

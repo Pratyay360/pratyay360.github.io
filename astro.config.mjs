@@ -4,14 +4,25 @@ import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
+// import sitemap from '@astrojs/sitemap';
+import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 
 export default defineConfig({
-	site: "https://docs.lightcms.me",
+	site: "https://pratyay360.github.io",
+	compressHTML: true,
+  integrations: [
+    sitemap({
+      serialize(item) {
+        if (/blog/.test(item.url)) {
+          item.changefreq = ChangeFreqEnum.DAILY;
+        }
 
-	integrations: [
+        return item;
+      },
+    } ),
 		starlight({
-			title: "Docs (managed with lightcms)",
-			description: "Docs With astro starlight",
+			title: "Docs for projects by pratyay",
+			description: "Developer documentation, setup guides, and technical reference for Ensor, Dynamic UPI, Drawy, Newsy, and open-source tools.",
 			components: {
 				Footer: "./src/components/Footer.astro",
 			},
@@ -20,12 +31,12 @@ export default defineConfig({
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/Pratyay360/docs",
+					href: "https://github.com/Pratyay360/pratyay360.github.io",
 				},
 				{
 					icon: "rss",
 					label: "Website",
-					href: "https://pratyay.qzz.io",
+					href: "https://pratyay.online",
 				},
 			],
 
@@ -47,6 +58,13 @@ export default defineConfig({
 				{
 					tag: "meta",
 					attrs: {
+						name: "ahrefs-site-verification",
+						content: "d3773a4e761cae81cfc313a1f250e863c527544e86f99edc96fd82d01cceb2cb",
+					},
+        },
+				{
+					tag: "meta",
+					attrs: {
 						name: "msvalidate.01",
 						content: "C348576BB92261CC55029F04F308DB94",
 					},
@@ -55,7 +73,28 @@ export default defineConfig({
 					tag: "meta",
 					attrs: {
 						property: "og:type",
-						content: "website",
+						content: "documentation",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						property: "og:site_name",
+						content: "Pratyay project Docs",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "twitter:card",
+						content: "summary_large_image",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "robots",
+						content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
 					},
 				},
 			],
@@ -102,5 +141,9 @@ export default defineConfig({
 
 	vite: {
 		plugins: [tailwindcss()],
+		build: {
+			minify: "oxc",
+			cssMinify: "lightningcss",
+		},
 	},
 });

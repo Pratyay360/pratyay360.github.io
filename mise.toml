@@ -1,9 +1,8 @@
 [tools]
-node = "latest"
 bun = "latest"
-"npm:surge" = "latest"
-markdownlint-cli2 = "latest"
 biome = "latest"
+node = "24"
+nub = "latest"
 
 
 [settings]
@@ -24,6 +23,6 @@ description = "Preview the project"
 [tasks.deploy]
 run = '''
 mise run build
-surge dist/ publish docs.lightcms.me
+# surge dist/ publish docs.lightcms.me
 '''
 description = "GitHub Pages"
