@@ -1,9 +1,7 @@
 [tools]
 bun = "latest"
 biome = "latest"
-node = "24"
-nub = "latest"
-
+node = "25"
 
 [settings]
 experimental = true
