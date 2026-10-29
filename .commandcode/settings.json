@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(mise run build && ls dist/*sitemap* 2>/dev/null; echo \"---\"; ls dist | head -30)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
