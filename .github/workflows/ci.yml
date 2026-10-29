@@ -38,9 +38,8 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@main
-        shell: bash
       - run: |
-          mise trust mise.toml
+          mise trust
           mise deps
           mise install
           mise run build
