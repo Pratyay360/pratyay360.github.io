@@ -1,9 +1,7 @@
 ---
-title: >-
-  lightcms an easy to use cms for crafting and managing contents for static
-  sites.
-description: What is Lightcms
-date: '2026-09-13T19:25:00Z'
+title: What is Lightcms
+description: Lightcms is an easy to use, interactive, Git-based CMS built to help you discover your inner writer and fall in love with writing again. 
+date: 2026-09-13T19:25:00Z
 draft: false
 weight: 0
 tags:
@@ -16,6 +14,12 @@ tags:
   - frontmatter
 isCJKLanguage: false
 headless: false
+keywords:
+  - git
+  - git cms
+  - lightcms
+  - opensource
+  - svelte kit
 ---
 ![editor](https://i.ibb.co/gL9DjJRN/650984307-a4209b8a-29a8-47cd-aef6-8f9e9505d6b7-png.png)
 

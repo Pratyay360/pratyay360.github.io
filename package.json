@@ -27,15 +27,15 @@
 		"tailwindcss": "^4.3.3",
 		"typescript": "^6.0.3"
 	},
-	"packageManager": "bun@1.4.3+sha512.12f410d9d509962c632a026379766f76c1d45882a755f62e7eb40d0c76befb460ce1792c4381ad1a87c47519d04a2c8da7fc945a25fa4a5a92f33ba0642a3ed8",
+	"devDependencies": {
+		"pagefind": "^1.5.2"
+	},
 	"devEngines": {
 		"packageManager": {
 			"name": "bun",
-			"version": "^1.4.3",
+			"version": "^1.4.4",
 			"onFail": "warn"
 		}
 	},
-	"devDependencies": {
-		"pagefind": "^1.5.2"
-	}
+	"packageManager": "bun@1.4.4+sha512.863d0049d1ba3cd8cb6461405e4b566f751a8ff75cbffd700ac22db68117003348401b068d3afee6e2ca61bac392e73b353d13923e323c8a892368c3c5776f56"
 }

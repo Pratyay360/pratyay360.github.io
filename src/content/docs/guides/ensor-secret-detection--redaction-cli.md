@@ -15,6 +15,15 @@ template: doc
 weight: 1
 date: 2026-10-29T10:15:07.070Z
 slug: ensor-secret-detection-redaction-cli
+keywords:
+  - betterleaks
+  - detection
+  - ensor
+  - git
+  - gitops
+  - opensource
+  - redaction
+  - secrets
 ---
 
 ## Ensor: The Automated Secret Redaction for Your Codebase
