@@ -3,6 +3,7 @@ bun = "latest"
 biome = "latest"
 node = "25"
 wrangler = { version = "latest", allow_builds = ["esbuild", "sharp", "workerd"] }
+action-validator = "latest"
 
 [settings]
 experimental = true
