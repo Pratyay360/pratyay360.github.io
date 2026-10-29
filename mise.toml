@@ -1,6 +1,6 @@
 [tools]
 biome = "latest"
-node = "latest"
+node = "26.13.0"
 bun = "latest"
 
 [settings]
