@@ -1,0 +1,24 @@
+# Pratyay Docs
+
+> Documentation for open-source developer tools by Pratyay Mustafi: setup guides,
+> configuration recipes, and technical reference for Ensor, Dynamic UPI QR, Drawy,
+> and Newsy. Built with Astro Starlight; all pages are Markdown and open source at
+> https://github.com/Pratyay360/pratyay360.github.io
+
+## Core pages
+
+- [Introduction](https://pratyay360.github.io/): What this documentation site covers.
+- [Getting Started](https://pratyay360.github.io/getting-started/): Quick navigation to every project guide.
+
+## Guides
+
+- [Dynamic UPI QR Generator](https://pratyay360.github.io/guides/upiqrcode/getting-started/): Client-side, WASM-powered UPI QR code generator and deep link generator.
+- [UPI QR & Intent Format](https://pratyay360.github.io/guides/upiqrcode/upi-format/): UPI QR and intent format specification.
+- [Ensor Secrets Redaction](https://pratyay360.github.io/guides/ensor/): Go CLI for scanning a codebase for hardcoded secrets and redacting them.
+- [Drawy](https://pratyay360.github.io/guides/drawy/): Self-hostable, Excalidraw-based collaborative whiteboard (web edition).
+- [DrawyParty](https://pratyay360.github.io/guides/drawy-party/): Collaborative whiteboard on Cloudflare PartyKit.
+- [DrawX](https://pratyay360.github.io/guides/drawx/): Offline desktop whiteboard for Linux, macOS, and Windows.
+
+## Optional
+
+- [Privacy](https://pratyay360.github.io/privacy/): Site privacy policy.
