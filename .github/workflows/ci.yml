@@ -1,0 +1,76 @@
+name: ci
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+  artifact-metadata: write
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MISE_EXPERIMENTAL: true
+  MISE_TRUST_ALL: 1
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/jdx/mise:2026.6.9
+    steps:
+      - name: Cache
+        uses: actions/cache@main
+        with:
+          path: |
+            ~/.cache/mise
+            ~/.local/share/mise
+          key: mise-${{ runner.os }}
+          restore-keys: |
+            mise-${{ runner.os }}
+
+      - name: checkout
+        uses: actions/checkout@main
+      - run: |
+          mise trust
+          mise deps
+          mise install
+          mise run build
+        # env:
+        #   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        #   CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+
+      - name: Upload artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@main
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@main
+
+      # - name: index now
+      #   if: deployment.status == 'success'
+      #   run: |
+      #     echo "${{ secrets.INDEXNOW_KEY }}" >public/${{ secrets.INDEXNOW_KEY }}.txt
+      #     curl -X POST "https://api.indexnow.org/indexnow?key=${{ secrets.INDEXNOW_KEY }}" -H "Content-Type: text/plain" --data-binary @public/${{ secrets.INDEXNOW_KEY }}.txt
+      #   shell: bash
+
+      - name: index now (bing)
+        run: >
+          grep -o '<loc>[^<]*</loc><lastmod>[^<]*</lastmod>' dist/sitemap-0.xml
+          | sed 's#<loc>\(.*\)</loc><lastmod>\(.*\)</lastmod>#\2 \1#'
+          | sort -r | head -n 5 | cut -d' ' -f2-
+          | xargs -I{} sh -c 'echo -n "Submitting {} ... ";
+          curl -s -o /dev/null -w "%{http_code}\n"
+          "https://www.bing.com/indexnow?url={}&key=${{ secrets.INDEXNOW_KEY }}"'

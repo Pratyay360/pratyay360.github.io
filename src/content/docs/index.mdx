@@ -1,0 +1,49 @@
+---
+title: "Developer Documentation & Guides"
+description: "Setup guides, configuration recipes, and technical documentation for open-source developer tools including Ensor, Dynamic UPI QR, Newsy, and Drawy."
+template: splash
+hero:
+  tagline: "Setup guides, architecture recipes, and reference for developer tools, CLI utilities, and WebAssembly packages — no fluff, just the bits you need to ship."
+  actions:
+    - text: Get Started
+      link: /getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/Pratyay360/pratyay360.github.io
+      icon: github
+      variant: secondary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Featured Projects & Guides
+
+<CardGrid stagger>
+  <Card title="Dynamic UPI QR Generator" icon="laptop">
+    WASM-powered client-side UPI payment QR code generator with deep-link intent generation.
+    [Explore UPI Guide](/guides/upiqrcode/getting-started/)
+  </Card>
+  <Card title="Ensor Secrets Redaction" icon="seti:lock">
+    Fast, interactive CLI tool for scanning codebases and redacting hardcoded secrets into secure env files.
+    [Explore Ensor Guide](/guides/ensor/)
+  </Card>
+  <Card title="Newsy Newsletter Platform" icon="email">
+    Serverless, GitHub-driven newsletter delivery engine powered by Go, WebAssembly, and GitHub Issues.
+    [Explore Newsy Guide](/guides/newsy/getstarted/)
+  </Card>
+  <Card title="Drawy Collaborative Whiteboards" icon="pencil">
+    Self-hostable whiteboards powered by Excalidraw, available in web (Supabase), edge (PartyKit), and offline desktop editions.
+    [Explore Drawy](/guides/drawy/) · [DrawyParty](/guides/drawy-party/) · [DrawX Desktop](/guides/drawx/)
+  </Card>
+</CardGrid>
+
+## How This Site Works
+
+Everything here is written in Markdown and open source, hosted on GitHub at
+[`Pratyay360/pratyay360.github.io`](https://github.com/Pratyay360/pratyay360.github.io). Pages are
+built with Astro Starlight and served globally from [pratyay360.github.io](https://pratyay360.github.io/).
+
+- **Contribute**: Found an error? Use the **Edit this page** link at the bottom of any document.
+- **Search**: Looking for something specific? Press <kbd>/</kbd> to instantly search across all guides.
+- **Quick Start**: New to the documentation? Jump right into [Getting Started](/getting-started/).

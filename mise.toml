@@ -1,0 +1,28 @@
+[tools]
+bun = "latest"
+biome = "latest"
+node = "25"
+wrangler = { version = "latest", allow_builds = ["esbuild", "sharp", "workerd"] }
+
+[settings]
+experimental = true
+
+
+[tasks.build]
+run = '''
+bun install
+bun run build
+bunx pagefind --site dist/
+'''
+description = "Build the project"
+
+[tasks.preview]
+run = "bun run preview"
+description = "Preview the project"
+
+# [tasks.deploy]
+# run = '''
+# mise run build
+# wrangler pages deploy public/ --project-name pratyay-project
+# '''
+# description = "Pages"

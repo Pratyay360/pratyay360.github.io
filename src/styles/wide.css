@@ -1,0 +1,61 @@
+/*
+ * Wide pages.
+ *
+ * starlight-theme-exquisitus centres a fixed ~78rem band (sidebar + 37rem
+ * measure + TOC) and spends the rest of a wide viewport on equal outer
+ * margins. These rules lift that cap so the shell uses the whole window on
+ * wide screens, while the reading column keeps the theme's 37rem (~74ch)
+ * measure — more page, same line length.
+ *
+ * Written unlayered: Starlight's own styles sit in `@layer starlight` and the
+ * theme's in `@layer exquisitus`, so an unlayered rule wins over both without
+ * `!important`.
+ */
+
+@media (min-width: 72rem) {
+	/* The theme derives this as (100vw − band) / 2. Drop the centreing margin
+	   down to the normal page padding so the sidebar, content and TOC spread
+	   across the viewport. Feeds the main-frame start/end padding, the fixed
+	   sidebar's start edge and the header padding. */
+	:root {
+		--sl-exquisitus-shell-inset: var(--sl-content-pad-x);
+	}
+
+	/* Splash / sidebar-less pages: the canvas becomes the window less page
+	   padding and a gutter, instead of the band minus the sidebar column.
+	   Prose stays capped by the theme's --sl-exquisitus-measure. */
+	html:not([data-has-sidebar]) .page {
+		--sl-content-width: calc(
+			100% - 2 * (var(--sl-content-pad-x) + var(--sl-exquisitus-shell-gutter))
+		);
+	}
+
+	/* The content pane takes everything left of the TOC instead of stopping at
+	   2 × gutter + measure; the 37rem text column centres inside it via the
+	   theme's own `--sl-content-margin-inline: auto`. */
+	[data-has-sidebar][data-has-toc] .main-pane {
+		width: calc(100% - var(--sl-exquisitus-toc-width));
+		--sl-content-margin-inline: auto;
+	}
+
+	/* Header tracks mirror the new columns: title over the sidebar, search
+	   centred over the reading column, actions pinned to the right edge. The
+	   third track is the TOC plus a gutter so the flexible middle track's centre
+	   lands exactly on the centre of the widened content pane. */
+	header.header > .header {
+		grid-template-columns:
+			calc(var(--sl-sidebar-width) + var(--sl-exquisitus-shell-gutter))
+			1fr
+			calc(var(--sl-exquisitus-toc-width) + var(--sl-exquisitus-shell-gutter));
+	}
+
+	/* Pages with no TOC have no right rail to mirror: the pane runs to the end
+	   of the frame, so the third track drops to a single gutter to keep the
+	   search centred over the text. */
+	html[data-has-sidebar]:not([data-has-toc]) header.header > .header {
+		grid-template-columns:
+			calc(var(--sl-sidebar-width) + var(--sl-exquisitus-shell-gutter))
+			1fr
+			var(--sl-exquisitus-shell-gutter);
+	}
+}
