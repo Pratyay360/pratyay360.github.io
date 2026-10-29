@@ -59,12 +59,12 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@main
 
-      # - name: index now
-      #   if: deployment.status == 'success'
-      #   run: |
-      #     echo "${{ secrets.INDEXNOW_KEY }}" >public/${{ secrets.INDEXNOW_KEY }}.txt
-      #     curl -X POST "https://api.indexnow.org/indexnow?key=${{ secrets.INDEXNOW_KEY }}" -H "Content-Type: text/plain" --data-binary @public/${{ secrets.INDEXNOW_KEY }}.txt
-      #   shell: bash
+      - name: index now
+        if: deployment.status == 'success'
+        run: |
+          echo "${{ secrets.INDEXNOW_KEY }}" > dist/${{ secrets.INDEXNOW_KEY }}.txt
+          curl -X POST "https://api.indexnow.org/indexnow?key=${{ secrets.INDEXNOW_KEY }}" -H "Content-Type: text/plain" --data-binary @dist/${{ secrets.INDEXNOW_KEY }}.txt
+        shell: bash
 
       - name: index now (bing)
         run: >
