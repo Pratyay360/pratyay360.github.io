@@ -1,7 +1,5 @@
 [tools]
 biome = "latest"
-wrangler = { version = "latest", allow_builds = ["esbuild", "sharp", "workerd"] }
-nub = "latest"
 node = "latest"
 bun = "latest"
 
@@ -11,14 +9,14 @@ experimental = true
 
 [tasks.build]
 run = '''
-nub install
-nub run build
-nub x pagefind --site dist/
+bun install
+bun run build
+bun x pagefind --site dist/
 '''
 description = "Build the project"
 
 [tasks.preview]
-run = "nub run preview"
+run = "bun run preview"
 description = "Preview the project"
 
 # [tasks.deploy]
