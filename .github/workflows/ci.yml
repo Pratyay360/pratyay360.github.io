@@ -68,7 +68,7 @@ jobs:
 
       - name: index now (bing)
         run: >
-          grep -o '<loc>[^<]*</loc><lastmod>[^<]*</lastmod>' dist/sitemap-0.xml
+          grep -o '<loc>[^<]*</loc><lastmod>[^<]*</lastmod>' ./dist/sitemap-0.xml
           | sed 's#<loc>\(.*\)</loc><lastmod>\(.*\)</lastmod>#\2 \1#'
           | sort -r | head -n 5 | cut -d' ' -f2-
           | xargs -I{} sh -c 'echo -n "Submitting {} ... ";
