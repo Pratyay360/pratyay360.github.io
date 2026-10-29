@@ -1,6 +1,6 @@
 ---
 
-title: 'Drawx: 100% Private, Standalone Desktop Whiteboard App'
+title: 'Drawx: 100% Private, offline Whiteboard App'
 description: >-
   Native, offline first desktop app for Linux, macOS, and Windows for planning,
   drawing, and brainstorming .
