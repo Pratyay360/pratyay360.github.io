@@ -1,0 +1,43 @@
+{
+	"name": "docs",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.12",
+		"@astrojs/markdown-satteri": "^0.4.6",
+		"@astrojs/mdx": "^8.1.2",
+		"@astrojs/sitemap": "^3.7.4",
+		"@astrojs/starlight": "^0.42.7",
+		"@microsoft/clarity": "^1.0.2",
+		"@tailwindcss/vite": "^4.3.3",
+		"astro": "^7.4.4",
+		"astro-mermaid": "^2.2.0",
+		"mermaid": "^11.17.2",
+		"sharp": "^0.35.5",
+		"starlight-image-zoom": "^0.16.2",
+		"starlight-kbd": "^0.4.0",
+		"starlight-tags": "^2.0.0",
+		"starlight-theme-exquisitus": "^1.2.0",
+		"starlight-theme-obsidian": "^0.4.1",
+		"tailwindcss": "^4.3.3",
+		"typescript": "^6.0.3"
+	},
+	"devDependencies": {
+		"pagefind": "^1.5.2"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"version": "^1.4.4",
+			"onFail": "warn"
+		}
+	},
+	"packageManager": "bun@1.4.4+sha512.863d0049d1ba3cd8cb6461405e4b566f751a8ff75cbffd700ac22db68117003348401b068d3afee6e2ca61bac392e73b353d13923e323c8a892368c3c5776f56"
+}
