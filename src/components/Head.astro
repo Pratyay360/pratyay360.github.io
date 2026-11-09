@@ -1,8 +1,6 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
-const canonicalUrl = `https://pratyay.online${Astro.url.pathname}`;
 ---
 <Default {...Astro.props}><slot /></Default>
-<link rel="canonical" href={canonicalUrl} />
 <div class="shareopenly-floating"></div>
 <script defer src="https://shareopenly.org/js/v1/shareopenly.js"></script>
