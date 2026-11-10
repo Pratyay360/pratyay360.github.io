@@ -23,8 +23,8 @@
 		></path>
 		<circle cx="12" cy="12" r="3"></circle>
 	</svg>
-	<span data-gc-count>—</span>
-	<span class="gc-views-label">views on this page</span>
+	<span data-gc-count>0</span>
+	<span class="gc-views-label" data-gc-label>views</span>
 </span>
 
 <script>
@@ -51,6 +51,7 @@
 
 	const root = document.querySelector<HTMLElement>(".gc-views");
 	const countEl = root?.querySelector<HTMLElement>("[data-gc-count]");
+	const labelEl = root?.querySelector<HTMLElement>("[data-gc-label]");
 
 	if (root && countEl) {
 		const url = `https://${SITE}.goatcounter.com/counter/${encodeURIComponent(trackedPath())}.json`;
@@ -58,9 +59,10 @@
 		fetch(url, { headers: { Accept: "application/json" } })
 			.then((res) => res.json())
 			.then((data: { count?: string }) => {
-				// Unknown path (no hits yet) comes back as 0; stay hidden for those.
-				if (!data.count || data.count === "0") return;
-				countEl.textContent = data.count;
+				// Unknown paths come back as 0; show that instead of nothing.
+				const count = data.count ?? "0";
+				countEl.textContent = count;
+				if (labelEl && count === "1") labelEl.textContent = "view on this page";
 				root.hidden = false;
 			})
 			// Counter disabled or offline: leave the element hidden.

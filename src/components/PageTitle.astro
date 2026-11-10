@@ -1,0 +1,30 @@
+---
+import StarlightPageTitle from "@astrojs/starlight/components/PageTitle.astro";
+import ViewCount from "./ViewCount.astro";
+
+const { date } = Astro.locals.starlightRoute.entry.data;
+const formattedDate = date?.toLocaleDateString(Astro.currentLocale ?? "en", {
+	year: "numeric",
+	month: "short",
+	day: "numeric",
+	timeZone: "UTC",
+});
+---
+
+<StarlightPageTitle />
+<div class="page-meta">
+	{date && <time datetime={date.toISOString()}>{formattedDate}</time>}
+	<ViewCount />
+</div>
+
+<style>
+	.page-meta {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+		margin-top: 0.5rem;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+</style>
