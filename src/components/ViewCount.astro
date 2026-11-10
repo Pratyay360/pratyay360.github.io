@@ -1,0 +1,96 @@
+---
+/**
+ * Pageview count for the current page, read from GoatCounter's public counter
+ * JSON. Requires "Allow adding visitor counts on your website" to be enabled in
+ * the site settings; otherwise the endpoint 404s and this stays hidden.
+ */
+---
+
+<span class="gc-views" hidden>
+	<svg
+		class="gc-views-icon"
+		aria-hidden="true"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="2"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+	>
+		<path
+			d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"
+		></path>
+		<circle cx="12" cy="12" r="3"></circle>
+	</svg>
+	<span data-gc-count>—</span>
+	<span class="gc-views-label">views on this page</span>
+</span>
+
+<script>
+	const SITE = "pratyay-project";
+
+	/**
+	 * Same path count.js sends, so the lookup matches the counter that recorded
+	 * the hit: the canonical URL's pathname + search, else the current URL.
+	 */
+	const trackedPath = () => {
+		let url = new URL(location.href);
+		const canonical = document.querySelector<HTMLLinkElement>(
+			'link[rel="canonical"][href]',
+		);
+
+		if (canonical) {
+			const candidate = new URL(canonical.href);
+			const host = (h: string) => h.replace(/^www\./, "");
+			if (host(candidate.hostname) === host(location.hostname)) url = candidate;
+		}
+
+		return (url.pathname + url.search) || "/";
+	};
+
+	const root = document.querySelector<HTMLElement>(".gc-views");
+	const countEl = root?.querySelector<HTMLElement>("[data-gc-count]");
+
+	if (root && countEl) {
+		const url = `https://${SITE}.goatcounter.com/counter/${encodeURIComponent(trackedPath())}.json`;
+
+		fetch(url, { headers: { Accept: "application/json" } })
+			.then((res) => res.json())
+			.then((data: { count?: string }) => {
+				// Unknown path (no hits yet) comes back as 0; stay hidden for those.
+				if (!data.count || data.count === "0") return;
+				countEl.textContent = data.count;
+				root.hidden = false;
+			})
+			// Counter disabled or offline: leave the element hidden.
+			.catch(() => {});
+	}
+</script>
+
+<style>
+	.gc-views {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35em;
+		font-size: var(--sl-text-xs);
+		font-variant-numeric: tabular-nums;
+		color: var(--sl-color-gray-3);
+	}
+
+	/* Author `display` beats the UA stylesheet's [hidden] rule. */
+	.gc-views[hidden] {
+		display: none;
+	}
+
+	.gc-views-icon {
+		width: 1em;
+		height: 1em;
+		flex-shrink: 0;
+	}
+
+	.gc-views [data-gc-count] {
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+	}
+</style>

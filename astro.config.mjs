@@ -143,13 +143,13 @@ export default defineConfig({
                 tag: "link",
                 attrs: {
                     rel: "preconnect",
-                    href: "https://unpkg.com",
+                    href: "https://jsdelivr.com",
                     crossorigin: "",
                 },
             },
             {
                 tag: "link",
-                attrs: { rel: "dns-prefetch", href: "https://unpkg.com" },
+                attrs: { rel: "dns-prefetch", href: "https://jsdelivr.com/" },
             },
             {
                 tag: "meta",
@@ -171,6 +171,27 @@ export default defineConfig({
                     name: "robots",
                     content:
                         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+                },
+            },
+            {
+                tag: "link",
+                attrs: {
+                    rel: "preconnect",
+                    href: "https://gc.zgo.at",
+                    crossorigin: "",
+                },
+            },
+            {
+                tag: "link",
+                attrs: { rel: "dns-prefetch", href: "https://gc.zgo.at" },
+            },
+            {
+                tag: "script",
+                attrs: {
+                    async: true,
+                    "data-goatcounter":
+                        "https://pratyay-project.goatcounter.com/count",
+                    src: "https://gc.zgo.at/count.js",
                 },
             },
         ],

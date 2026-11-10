@@ -124,7 +124,7 @@ Drawy is open source and built on a small set of well-known projects.
 
 - The client renders the Excalidraw editor inside a TanStack Start app.
 - Calls for accounts, canvases, sharing and libraries go through typed oRPC procedures, so the client and server share the same types.
-- Live cursors, selections and strokes are synced in realtime using Yjs over PartyServer.
+- Live cursors, selections and strokes are synced in realtime using Yjs over durable objects.
 - Canvases are persisted in Postgres, which is what makes autosave and version history possible.
 
 ## FAQ
