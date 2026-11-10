@@ -143,13 +143,13 @@ export default defineConfig({
                 tag: "link",
                 attrs: {
                     rel: "preconnect",
-                    href: "https://jsdelivr.com",
+                    href: "https://cdn.jsdelivr.net",
                     crossorigin: "",
                 },
             },
             {
                 tag: "link",
-                attrs: { rel: "dns-prefetch", href: "https://jsdelivr.com/" },
+                attrs: { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net/" },
             },
             {
                 tag: "meta",
