@@ -2,6 +2,8 @@
 biome = "latest"
 node = "26.13.0"
 bun = "latest"
+nub = "latest"
+"npm:@inlang/cli" = "latest"
 
 [settings]
 experimental = true

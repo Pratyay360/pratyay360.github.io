@@ -5,32 +5,38 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build",
+		"build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --emit-ts-declarations && astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"check:i18n": "inlang check --project ./project.inlang",
+		"machine-translate": "inlang machine translate --project project.inlang",
+		"lint:i18n": "oxlint --config ./.oxlintrc.paraglide.json ."
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.12",
-		"@astrojs/markdown-satteri": "^0.4.6",
-		"@astrojs/mdx": "^8.1.2",
+		"@astrojs/markdown-satteri": "^0.4.8",
+		"@astrojs/mdx": "^8.1.4",
 		"@astrojs/sitemap": "^3.7.4",
-		"@astrojs/starlight": "^0.42.7",
+		"@astrojs/starlight": "^0.42.10",
 		"@microsoft/clarity": "^1.0.2",
-		"@tailwindcss/vite": "^4.3.3",
-		"astro": "^7.4.4",
+		"@tailwindcss/vite": "^4.3.5",
+		"astro": "^7.4.10",
 		"astro-mermaid": "^2.2.0",
 		"mermaid": "^11.17.2",
 		"sharp": "^0.35.5",
 		"starlight-image-zoom": "^0.16.2",
 		"starlight-kbd": "^0.4.0",
 		"starlight-tags": "^2.0.0",
-		"starlight-theme-exquisitus": "^1.2.0",
+		"starlight-theme-exquisitus": "^1.3.0",
 		"starlight-theme-obsidian": "^0.4.1",
-		"tailwindcss": "^4.3.3",
+		"tailwindcss": "^4.3.5",
 		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
-		"pagefind": "^1.5.2"
+		"pagefind": "^1.6.0",
+		"@inlang/paraglide-js": "^3.2.2",
+		"@inlang/cli": "^3.6.0",
+		"oxlint": "^1.93.0"
 	},
 	"devEngines": {
 		"packageManager": {
