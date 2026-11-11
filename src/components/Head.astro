@@ -1,6 +1,12 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
+import { getLocale } from "../paraglide/runtime.js";
+
+const locale = Astro.locals.locale ?? getLocale();
 ---
 <Default {...Astro.props}><slot /></Default>
+<script is:inline define:vars={{ locale }}>
+	document.documentElement.lang = locale;
+</script>
 <div class="shareopenly-floating"></div>
 <script defer src="https://shareopenly.org/js/v1/shareopenly.js"></script>

@@ -5,6 +5,7 @@ import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
 import mdx from "@astrojs/mdx";
 
@@ -238,7 +239,24 @@ export default defineConfig({
 		}), mdx()],
 
     vite: {
-        plugins: [tailwindcss()],
+        plugins: [
+            paraglideVitePlugin({
+                project: "./project.inlang",
+                outdir: "./src/paraglide",
+                strategy: ["url", "cookie", "preferredLanguage", "baseLocale"],
+                urlPatterns: [
+                    {
+                        pattern: "/:path(.*)?",
+                        localized: [
+                            ["en", "/:path(.*)?"],
+                            ["de", "/de/:path(.*)?"],
+                        ],
+                    },
+                ],
+                emitTsDeclarations: true,
+            }),
+            tailwindcss(),
+        ],
         build: {
             minify: "oxc"
         },

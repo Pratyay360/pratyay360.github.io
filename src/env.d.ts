@@ -1,5 +1,11 @@
 /// <reference types="astro/client" />
 
+declare namespace App {
+	interface Locals {
+		locale: import("./paraglide/runtime.js").Locale;
+	}
+}
+
 declare module "virtual:starlight/user-config" {
 	import type { StarlightUserConfig } from "@astrojs/starlight/types";
 
