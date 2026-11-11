@@ -24,7 +24,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/jdx/mise:2026.6.9
+      image: ghcr.io/jdx/mise:latest
     steps:
       - name: Cache
         uses: actions/cache@main
