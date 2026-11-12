@@ -40,10 +40,9 @@
 	},
 	"devEngines": {
 		"packageManager": {
-			"name": "bun",
-			"version": "^1.4.4",
-			"onFail": "warn"
+			"name": "nub",
+			"version": "^0.10.0",
+			"onFail": "ignore"
 		}
-	},
-	"packageManager": "bun@1.4.4+sha512.863d0049d1ba3cd8cb6461405e4b566f751a8ff75cbffd700ac22db68117003348401b068d3afee6e2ca61bac392e73b353d13923e323c8a892368c3c5776f56"
+	}
 }

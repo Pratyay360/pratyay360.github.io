@@ -1,1 +1,14 @@
-{"taxonomy":{"tags":["betterleaks","gitops","golang","secret management","secrets"],"categories":["docs"]}}
+{
+  "taxonomy": {
+    "categories": [
+      "docs"
+    ],
+    "tags": [
+      "betterleaks",
+      "gitops",
+      "golang",
+      "secret management",
+      "secrets"
+    ]
+  }
+}

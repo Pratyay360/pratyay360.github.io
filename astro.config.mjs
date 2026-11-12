@@ -11,6 +11,10 @@ import mdx from "@astrojs/mdx";
 
 export default defineConfig({
     site: "https://pratyay360.github.io",
+    i18n: {
+        defaultLocale: "en",
+        locales: ["en", "de", "bn"],
+    },
     compressHTML: true,
     integrations: [sitemap({
         serialize(item) {
@@ -243,13 +247,14 @@ export default defineConfig({
             paraglideVitePlugin({
                 project: "./project.inlang",
                 outdir: "./src/paraglide",
-                strategy: ["url", "cookie", "preferredLanguage", "baseLocale"],
+                strategy: ["url", "globalVariable", "baseLocale"],
                 urlPatterns: [
                     {
                         pattern: "/:path(.*)?",
                         localized: [
                             ["en", "/:path(.*)?"],
                             ["de", "/de/:path(.*)?"],
+					["bn", "/bn/:path(.*)?"],
                         ],
                     },
                 ],

@@ -2,7 +2,7 @@
 import Default from '@astrojs/starlight/components/Head.astro';
 import { getLocale } from "../paraglide/runtime.js";
 
-const locale = Astro.locals.locale ?? getLocale();
+const locale = getLocale();
 ---
 <Default {...Astro.props}><slot /></Default>
 <script is:inline define:vars={{ locale }}>

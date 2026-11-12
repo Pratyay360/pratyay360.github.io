@@ -1,9 +1,7 @@
 import { defineMiddleware } from "astro:middleware";
-import { paraglideMiddleware } from "./paraglide/server.js";
+import { assertIsLocale, baseLocale, setLocale } from "./paraglide/runtime.js";
 
-export const onRequest = defineMiddleware((context, next) =>
-	paraglideMiddleware(context.request, ({ request, locale }) => {
-		context.locals.locale = locale;
-		return next(request);
-	}),
-);
+export const onRequest = defineMiddleware((context, next) => {
+	setLocale(assertIsLocale(context.currentLocale ?? baseLocale));
+	return next();
+});
