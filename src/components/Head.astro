@@ -3,10 +3,40 @@ import Default from '@astrojs/starlight/components/Head.astro';
 import { getLocale } from "../paraglide/runtime.js";
 
 const locale = getLocale();
+const { entry } = Astro.locals.starlightRoute;
+const site = Astro.site ?? new URL('https://pratyay360.github.io');
+const canonicalUrl = new URL(Astro.url.pathname, site).href;
+const title = entry?.data?.title ?? Astro.props.title ?? "Pratyay's project Docs";
+const description =
+	entry?.data?.description ??
+	"Developer documentation, setup guides, and technical reference for projects by pratyay.";
+const ogImage = new URL('/og-image.png', site).href;
 ---
 <Default {...Astro.props}><slot /></Default>
+<link rel="canonical" href={canonicalUrl} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta property="og:locale" content={locale} />
+<meta property="og:image:alt" content={title} />
 <script is:inline define:vars={{ locale }}>
 	document.documentElement.lang = locale;
 </script>
+<script type="application/ld+json" set:html={JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	name: title,
+	description,
+	url: canonicalUrl,
+	inLanguage: locale,
+	isPartOf: {
+		"@type": "WebSite",
+		name: "Pratyay's project Docs",
+		url: site.href,
+	},
+})} />
 <div class="shareopenly-floating"></div>
 <script defer src="https://shareopenly.org/js/v1/shareopenly.js"></script>

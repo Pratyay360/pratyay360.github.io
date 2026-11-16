@@ -31,8 +31,9 @@ keywords:
    - selfhosted
    - tanstack start
    - yjs
+tableOfContents:
+   minHeadingLevel: 2
 slug: drawy-documentation
-label: drawy
 ---
 
 Drawy is a collaborative drawing workspace. It gives you the full Excalidraw editor, plus the collaboration features: live cursors, shared canvases and version history. Realtime features run on Cloudflare Durable Objects via PartyServer.
@@ -42,13 +43,15 @@ Everything is saved as you draw, so you can close the tab and pick up exactly wh
 ## Getting started
 
 1. **Create an account**  
-   Pick a username and a password. There is no email address to enter and no confirmation link to click, so you are in straight away.
+   Pick a username and a password. There is no email address to enter and no confirmation link to click, so you can start immediately.
 
 2. **Start a canvas**  
-   Every new canvas gets a name, which you can rename later. Your drawings are grouped by the date you last touched them, so recent work is easy to find.
+   Every new canvas gets a name, which you can rename later. Your drawings are grouped by when you last edited them, so recent work is easy to find.
 
 3. **Draw, share, invite**  
-   Sketch on the canvas, pull in assets from your library, then share a link or invite a collaborator to work alongside you.
+   Sketch on the canvas, pull in assets from your library, then share a read-only link or invite a collaborator by username.
+
+For a step-by-step walkthrough, see [Drawy getting started](/guides/drawy-getting-started/).
 
 ## The canvas
 
@@ -85,14 +88,16 @@ You can revoke access at any time. Revoking removes the other person's or the li
 
 ## Version history
 
-While you work, Drawy keeps a snapshot of your canvas every minutes. If you want to go back, open the version history and roll back to an earlier snapshot with one click.
+While you work, Drawy keeps snapshots of your canvas over time. If you want to go back, open the version history and roll back to an earlier snapshot with one click.
 
 ## Libraries
 
 Libraries are reusable collections of shapes and assets you can drop into any drawing.
 
-- **Public libraries**: browse the public Excalidraw libraries and save the ones you use.
+- **Public libraries**: browse public Excalidraw libraries and save the ones you use.
 - **Personal library**: build your own library of items and reuse them across canvases.
+
+See [Drawy Libraries](/guides/drawy-library/) for details on browsing, saving, and local storage.
 
 ## Import and export
 
@@ -130,21 +135,27 @@ Drawy is open source and built on a small set of well-known projects.
 ## FAQ
 
 ### Do I need an email address to sign up?
+
 No. You only choose a username and a password.
 
 ### Will I lose my work if I close the tab?
+
 No. Changes are saved as you draw.
 
 ### Who can see my drawings?
+
 Only you, until you invite someone or publish a read-only link.
 
 ### Can I stop sharing a drawing?
+
 Yes. Revoke access whenever you like. The drawing itself is not deleted.
 
 ### Can I get my drawings out of Drawy?
+
 Yes. Export as `.excalidraw`, PNG or SVG, and import `.excalidraw` files back in.
 
 ### Can I undo a big mistake after autosave has run?
+
 Yes. Use version history to roll back to an earlier snapshot.
 
 ## Help and contact
@@ -153,3 +164,9 @@ Yes. Use version history to roll back to an earlier snapshot.
 - **Contact**: [https://drawy.pratyay.online/contact](https://drawy.pratyay.online/contact)
 - **Open Drawy**: [https://drawy.pratyay.online/login](https://drawy.pratyay.online/login)
 
+## Related guides
+
+- [Drawy getting started](/guides/drawy-getting-started/)
+- [Drawy Libraries](/guides/drawy-library/)
+- [Drawy Privacy and Security](/guides/drawy-privacy/)
+- [DrawX desktop app](/guides/drawx/)

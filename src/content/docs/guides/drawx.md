@@ -54,6 +54,6 @@ Ready-to-use binaries are available for all major platforms:
 
 [![](https://flatpark.org/badges/get-it-on-flatpark.svg)](https://flatpark.org/apps/io.github.pratyay360.drawx/)
 
-Need real-time web collaboration with teammates? Check out the web editions:
+Need real-time web collaboration with teammates? Check out the web edition:
 
-- [**Drawy**](/guides/drawy/) — Full-stack collaborative web app with multi-board management.
+- [**Drawy**](/drawy-documentation/) — Collaborative web drawing workspace with live cursors, shared canvases, and version history.
