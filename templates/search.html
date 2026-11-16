@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post" data-pagefind-ignore>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <section class="post-line"></section>
+  {{ page.content | safe }}
+  <link rel="stylesheet" href="{{ get_url(path='pagefind/pagefind-component-ui.css') | safe }}" />
+  <div id="search">
+    <pagefind-input autofocus></pagefind-input>
+    <pagefind-summary></pagefind-summary>
+    <pagefind-results></pagefind-results>
+  </div>
+  <script type="module" src="{{ get_url(path='assets/search.js') | safe }}"></script>
+</article>
+{% endblock content %}

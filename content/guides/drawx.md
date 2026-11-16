@@ -1,19 +1,18 @@
 +++
-title = 'Drawx: 100% Private, offline Whiteboard App'
-description = 'Native, offline first desktop app for Linux, macOS, and Windows for planning, drawing, and brainstorming.'
-date = '2026-10-17T13:27:00Z'
-weight = 0
+title = "Drawx 100% Private, offline Whiteboard App"
+description = "Native offline first desktop app for Linux, macOS, and Windows for planning, drawing, and brainstorming."
+date = "2026-10-17T13:27:00Z"
 +++
 
 ## What [Drawx](/guides/drawx/) is?
 
-[**Drawx**](https://github.com/Pratyay360/drawx) is an offline first native like desktop application built with Tauri
+[Drawx](https://github.com/Pratyay360/drawx) is an offline first native like desktop application built with Tauri
 v2, bringing the full power of Excalidraw directly to Linux, macOS, and Windows offline.
 
 Unlike cloud based diagramming tools that upload your canvases to remote servers, 
 [Drawx](/guides/drawx/) executes 100% locally on your machine. Drawings, plans, ideas, sensitive system architectures, product +mock ups, and personal brainstorming canvases never leave your computer unless you explicitly export them.
 
-## Why Choose [Drawx](/guides/drawx/)?
+## Why Choose [Drawx](/guides/drawx/) ?
 
 - 🔒 **Zero Cloud. 100% Privacy Guaranteed**: No external network requests, analytics, or telemetry. Works completely air gapped without an internet connection.
 - ⚡ **Instant Launch &amp; Native Performance**: Lightweight desktop runtime with near-instant boot times and smooth 60fps canvas panning and zooming.

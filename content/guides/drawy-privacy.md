@@ -41,9 +41,9 @@ Drawy may use error monitoring (such as Sentry, where enabled) to diagnose probl
 - **Uploaded images:** images already uploaded to an external host may remain there until removed by that host or by request.
 - **Account deletion:** use the [Drawy contact page](https://drawy.pratyay.online/contact) to request account or data removal.
 
-## Report a vulnerability
+### Report a vulnerability
 
-If you find a security issue, report it privately through the [vulnerability form](https://app.youform.com/forms/moki0tve) instead of opening a public issue. Include steps to reproduce the issue.
+If you find a security issue, report it privately through the [vulnerability form](https://app.youform.com/forms/8kgi7jvm) or open a public [issue](https://github.com/pratyay360/drawy/issues/new). Include steps to reproduce the issue.
 
 ## Related
 

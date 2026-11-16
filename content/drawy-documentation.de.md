@@ -130,9 +130,9 @@ Yes. Use version history to roll back to an earlier snapshot.
 
 ## Help and contact
 
-- **Help centre**: [https://drawy.pratyay.online/help](https://drawy.pratyay.online/help)
-- **Contact**: [https://drawy.pratyay.online/contact](https://drawy.pratyay.online/contact)
-- **Open Drawy**: [https://drawy.pratyay.online/login](https://drawy.pratyay.online/login)
+- Help centre: [https://drawy.pratyay.online/help](https://drawy.pratyay.online/help)
+- Contact: [https://drawy.pratyay.online/contact](https://drawy.pratyay.online/contact)
+- Open Drawy: [https://drawy.pratyay.online/login](https://drawy.pratyay.online/login)
 
 ## Related guides
 

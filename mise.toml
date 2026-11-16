@@ -1,12 +1,23 @@
 [tools]
+"npm:@inlang/cli" = "latest"
+"npm:@inlang/paraglide-js" = "latest"
+"npm:pagefind" = "latest"
 zola = "latest"
 
 [settings]
 experimental = true
 
 [tasks.build]
-run = "zola build"
-description = "Build the site with Zola"
+run = "zola build && pagefind --site dist"
+description = "Build the site with Zola and index it for search"
+
+[tasks.i18n]
+run = "bun run build"
+description = "Compile Paraglide messages"
+
+[tasks.i18n-check]
+run = "bun run check:i18n"
+description = "Check translations with the inlang CLI"
 
 [tasks.serve]
 run = "zola serve"

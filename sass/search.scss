@@ -1,0 +1,18 @@
+#search {
+  --pf-text: var(--default-color);
+  --pf-text-secondary: var(--default-shade);
+  --pf-text-muted: var(--default-tint);
+  --pf-background: var(--background-color);
+  --pf-border: var(--grey);
+  --pf-border-focus: var(--link-color);
+  --pf-hover: var(--background-color);
+  --pf-mark: var(--default-color);
+  --pf-outline-focus: var(--link-color);
+  --pf-font: inherit;
+  margin-top: 1.5rem;
+}
+
+#search pagefind-summary {
+  display: block;
+  margin: 0.75rem 0;
+}

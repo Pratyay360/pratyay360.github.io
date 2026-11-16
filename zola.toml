@@ -6,8 +6,8 @@ default_language = "en"
 compile_sass = true
 generate_feeds = true
 feed_filenames = ["rss.xml", "atom.xml"]
-minify_html = true
-build_search_index = true
+minify_html = false
+build_search_index = false
 output_dir = "dist"
 taxonomies = [{ name = "tags", feed = true }]
 
@@ -43,6 +43,10 @@ url = "guides"
 [[extra.menu]]
 name = "Privacy"
 url = "privacy"
+
+[[extra.menu]]
+name = "Search"
+url = "search"
 
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a>. Managed by <a href="https://www.pratyay.online">pratyay mustafi</a>.'

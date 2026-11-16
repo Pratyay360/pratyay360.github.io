@@ -23,7 +23,7 @@ Everything is saved as you draw, so you can close the tab and pick up exactly wh
 
 For a step-by-step walkthrough, see [Drawy getting started](/guides/drawy-getting-started/).
 
-## The canvas
+### The canvas
 
 Drawy embeds the full Excalidraw editor on an infinite surface that pans and zooms the way you expect. You can draw with:
 

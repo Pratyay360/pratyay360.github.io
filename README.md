@@ -18,14 +18,19 @@ Documentation site for projects by [Pratyay Mustafi](https://pratyay.online), bu
 
 ```bash
 zola serve   # local dev server
-zola build   # build to ./dist
+zola build   # build to ./dist (without the search index)
 zola check   # check links/templates
+pagefind --site dist  # index the built site for search
 ```
 
 With mise:
 
 ```bash
 mise run serve
-mise run build
+mise run build     # zola build + pagefind
 mise run check
+mise run i18n      # compile Paraglide messages
+mise run i18n-check
 ```
+
+Search is provided by [Pagefind](https://pagefind.app/) on `/search/`; its index is generated at build time.

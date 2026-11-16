@@ -9,17 +9,17 @@ Welcome to project docs by Pratyay.
 
 ## Featured Projects & Guides
 
-  ### Dynamic UPI QR Generator
+### Dynamic UPI QR Generator
 
 UPI compatible QR code generator based on client side rendering.
     [Explore UPI Guide](https://dynamic-upi-qr.netlify.app)
 
-  ### Ensor Secrets Redaction
+### Ensor Secrets Redaction
 
 Fast, interactive CLI tool for scanning codebases and redacting hardcoded secrets into secure env files.
     [Explore Ensor Guide](/ensor-secret-detection-redaction-cli/)
 
-  ### Newsy Newsletter Platform
+d### Newsy Newsletter Platform
 
 GitHub driven newsletter delivery inspired by utterances
     [Explore Newsy Guide](https://newsy.lightcms.me)

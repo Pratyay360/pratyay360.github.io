@@ -8,7 +8,7 @@ slug = 'ensor-secret-detection-redaction-cli'
 
 ## What is Ensor?
 
-[Ensor](https://github.com/Pratyay360/ensor) is a fast, interactive CLI tool for detecting and redacting hardcoded secrets in your codebase. It helps you replace leaked values—such as API keys, tokens, and credentials—with environment variable references, and it can convert environment files between `.env`, JSON, YAML, and TOML formats.
+[Ensor](https://github.com/Pratyay360/ensor) is a fast, interactive CLI tool for detecting and redacting hardcoded secrets in your codebase. It helps you replace leaked values—such as API keys, tokens, and credentials with environment variable references, and it can convert environment files between `.env`, JSON, YAML, and TOML formats.
 
 By default, Ensor scans your project, finds exposed secrets, and helps you move them into a `.env` file while substituting placeholders in source files. This makes it easier to keep code readable, shareable, and safer to commit.
 
