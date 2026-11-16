@@ -1,0 +1,58 @@
+base_url = "https://pratyay360.github.io/"
+title = "Docs for projects by pratyay"
+description = "Developer documentation, setup guides for projects by pratyay"
+default_language = "en"
+
+compile_sass = true
+generate_feeds = true
+feed_filenames = ["rss.xml", "atom.xml"]
+minify_html = true
+build_search_index = true
+output_dir = "dist"
+taxonomies = [{ name = "tags", feed = true }]
+
+[markdown]
+smart_punctuation = true
+
+[markdown.highlighting]
+theme = "dark-plus"
+
+[extra]
+author = "PRATYAY MUSTAFI"
+locales = ["en", "de", "bn"]
+github = "https://github.com/Pratyay360/pratyay360.github.io"
+site_url = "https://pratyay360.github.io"
+og_image = "/og-image.png"
+goatcounter = "https://pratyay-project.goatcounter.com/count"
+clarity_id = "z1374lu099"
+contact_url = "https://app.youform.com/forms/8kgi7jvm"
+timeformat = "%B %e, %Y"
+
+[[extra.menu]]
+name = "Home"
+url = "/"
+
+[[extra.menu]]
+name = "Getting Started"
+url = "getting-started"
+
+[[extra.menu]]
+name = "Guides"
+url = "guides"
+
+[[extra.menu]]
+name = "Privacy"
+url = "privacy"
+
+[extra.footer]
+info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a>. Managed by <a href="https://www.pratyay.online">pratyay mustafi</a>.'
+
+[languages.de]
+title = "Docs for projects by pratyay"
+description = "Entwicklerdokumentation und Anleitungen für Projekte von pratyay"
+generate_feeds = true
+
+[languages.bn]
+title = "Docs for projects by pratyay"
+description = "প্রত্যয়ের প্রকল্পগুলির জন্য ডেভেলপার ডকুমেন্টেশন এবং গাইড"
+generate_feeds = true

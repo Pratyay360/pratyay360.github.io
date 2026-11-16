@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post">
+  <h1 class="post-title">{{ section.title | default(value=config.title) }}</h1>
+  <section class="post-line"></section>
+  <div class="content">
+    {{ section.content | safe }}
+  </div>
+  {% if section.pages | length > 0 %}
+  <h2>Pages</h2>
+  <ul>
+    {% for p in section.pages %}
+    <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% set guides = get_section(path="guides/_index.md", lang=lang) %}
+  {% if guides %}
+  <h2>Guides</h2>
+  <ul>
+    {% for p in guides.pages %}
+    <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
+{% endblock content %}

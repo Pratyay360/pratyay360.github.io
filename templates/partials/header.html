@@ -1,0 +1,21 @@
+{% include "partials/darkmode.html" %}
+
+<header>
+  <section class="nav-container">
+    <a class="nav-title" href="{{ config.base_url | safe }}">
+      <h2>{{ config.title | default(value="Mabuya")}}</h2>
+    </a>
+    {% include "partials/language.html" %}
+    <nav>
+      <ul>
+        {% if config.extra.menu %}
+        {% for menu in config.extra.menu %}
+        <li><a href="{{ get_url(path=menu.url, lang=lang, trailing_slash=true) | safe }}">{{ menu.name }}</a></li>
+        {% endfor %} {% else %}
+        <li><a href="{{ config.base_url | safe }}">Home</a></li>
+        <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </section>
+</header>

@@ -1,0 +1,36 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page %}{% set ptitle = page.title %}{% set pdesc = page.description | default(value=config.description) %}{% set purl = page.permalink %}{% elif section %}{% set ptitle = section.title | default(value=config.title) %}{% set pdesc = section.description | default(value=config.description) %}{% set purl = section.permalink %}{% else %}{% set ptitle = config.title %}{% set pdesc = config.description %}{% set purl = config.base_url %}{% endif %}
+  <title>{{ ptitle }} | {{ config.title }}</title>
+  <meta name="description" content="{{ pdesc }}" />
+  <meta name="author" content="{{ config.extra.author | default(value='pratyay') }}" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="{{ purl | safe }}" />
+  {% if page %}{% for t in page.translations %}<link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />{% endfor %}{% elif section %}{% for t in section.translations %}<link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}" />{% endfor %}{% endif %}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ config.title }}" />
+  <meta property="og:title" content="{{ ptitle }}" />
+  <meta property="og:description" content="{{ pdesc }}" />
+  <meta property="og:url" content="{{ purl | safe }}" />
+  <meta property="og:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ ptitle }}" />
+  <meta name="twitter:description" content="{{ pdesc }}" />
+  <meta name="twitter:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
+  <meta name="theme-color" content="#0d0d12" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.png') | safe }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.png') | safe }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='assets/apple-touch-icon.png') | safe }}" />
+  <link rel="manifest" href="{{ get_url(path='manifest.json') | safe }}" />
+
+  <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+
+  <script async data-goatcounter="{{ config.extra.goatcounter }}" src="https://gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
+</head>

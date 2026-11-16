@@ -1,0 +1,32 @@
+{% set current = lang | default(value=config.default_language | default(value="en")) %}
+<nav class="language-switcher" aria-label="Language">
+  <ul>
+    {% for code in config.extra.locales | default(value=[config.default_language | default(value="en")]) %}
+      {% set_global target = "" %}
+      {% set_global label = code | upper %}
+      {% if code == current %}
+        {% if page %}{% set_global target = page.permalink %}{% elif section %}{% set_global target = section.permalink %}{% else %}{% set_global target = config.base_url %}{% endif %}
+      {% else %}
+        {% if page %}
+          {% for t in page.translations %}
+            {% if t.lang == code %}{% set_global target = t.permalink %}{% endif %}
+          {% endfor %}
+        {% elif section %}
+          {% for t in section.translations %}
+            {% if t.lang == code %}{% set_global target = t.permalink %}{% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if target == "" %}
+          {% if code == config.default_language | default(value="en") %}
+            {% set_global target = config.base_url %}
+          {% else %}
+            {% set_global target = config.base_url ~ code ~ "/" %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      <li>
+        <a href="{{ target | safe }}" hreflang="{{ code }}"{% if code == current %} aria-current="true" class="active"{% endif %}>{{ label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

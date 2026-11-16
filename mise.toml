@@ -1,29 +1,17 @@
 [tools]
-biome = "latest"
-node = "26.13.0"
-bun = "latest"
-nub = "latest"
-"npm:@inlang/cli" = "latest"
+zola = "latest"
 
 [settings]
 experimental = true
 
-
 [tasks.build]
-run = '''
-bun install
-bun run build
-bun x pagefind --site dist/
-'''
-description = "Build the project"
+run = "zola build"
+description = "Build the site with Zola"
 
-[tasks.preview]
-run = "bun run preview"
-description = "Preview the project"
+[tasks.serve]
+run = "zola serve"
+description = "Serve the site locally"
 
-# [tasks.deploy]
-# run = '''
-# mise run build
-# wrangler pages deploy public/ --project-name pratyay-project
-# '''
-# description = "Pages"
+[tasks.check]
+run = "zola check"
+description = "Check the site"

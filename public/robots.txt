@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pratyay360.github.io/sitemap-index.xml
-Sitemap: https://pratyay360.github.io/sitemap.xml

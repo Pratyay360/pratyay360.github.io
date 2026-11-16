@@ -1,51 +1,31 @@
-# Starlight Starter Kit: Basics
+# pratyay360.github.io
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Documentation site for projects by [Pratyay Mustafi](https://pratyay.online), built with [Zola](https://www.getzola.org/) using the [Mabuya](https://github.com/semanticdata/mabuya) theme as a base.
 
-```
-nub create astro@latest -- --template starlight
-```
+## Project structure
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
+```text
 .
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+├── config.toml      # Zola site configuration
+├── content/         # Markdown content (pages, sections, i18n .de/.bn variants)
+├── templates/       # Tera templates and partials
+├── sass/            # Styles
+├── static/          # Static assets copied as-is
+└── dist/            # Build output (generated)
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Commands
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+zola serve   # local dev server
+zola build   # build to ./dist
+zola check   # check links/templates
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+With mise:
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command               | Action                                           |
-| :-------------------- | :----------------------------------------------- |
-| `nub install`         | Installs dependencies                            |
-| `nub dev`             | Starts local dev server at `localhost:4321`      |
-| `nub build`           | Build your production site to `./dist/`          |
-| `nub preview`         | Preview your build locally, before deploying     |
-| `nub astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `nub astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read
-[the Astro documentation](https://docs.astro.build), or jump into the
-[Astro Discord server](https://astro.build/chat).
+```bash
+mise run serve
+mise run build
+mise run check
+```

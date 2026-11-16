@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value='en') }}">
+{% include "partials/head.html" %}
+
+<body>
+  {% include "partials/header.html" %}
+
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
+
+  {% include "partials/footer.html" %}
+</body>
+
+</html>

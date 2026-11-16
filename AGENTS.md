@@ -1,24 +1,20 @@
 ## Development
 
-When starting the dev server, use background mode:
+This site is built with [Zola](https://www.getzola.org/).
 
-```bash
-astro dev --background
-```
+- Local dev: `zola serve` (or `mise run serve`)
+- Build: `zola build` (or `mise run build`) → outputs to `dist/`
+- Check: `zola check` (or `mise run check`)
 
-Manage the background server with `astro dev stop`, `astro dev status`,
-and `astro dev logs`.
+## Structure
 
-## Documentation
+- `config.toml` — site configuration (base URL, menus, i18n languages)
+- `content/` — Markdown pages/sections; translations use suffixes like `.de.md`, `.bn.md`
+- `templates/` — Tera templates (`base.html`, `index.html`, `page.html`, `partials/`)
+- `sass/` — SCSS styles compiled by Zola
+- `static/` — static files (images, manifest, robots, etc.)
 
-Full documentation:
-[https://docs.astro.build](https://docs.astro.build)
+## Notes
 
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- Preserve existing URLs/content paths when editing docs.
+- Prefer updating `templates/partials/head.html` and `templates/partials/footer.html` for site-wide meta/scripts.
