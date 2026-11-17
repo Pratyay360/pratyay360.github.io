@@ -1,19 +1,25 @@
-+++
-title = 'Self hosting Drawy'
-description = 'Run your own instance of drawy the TanStack Start app, the real time worker and Postgres'
-date = '1111-11-11T11:11:00Z'
-weight = 5
-+++
+---
+title: Self hosting Drawy
+description: Run your own instance of drawy the TanStack Start app, the real time worker and Postgres
+weight: 5
+slug: drawy-selfhost
+date: 2026-11-17T10:25:27.401Z
+keywords:
+    - drawy
+    - hosting
+    - self-hosting
+draft: false
+---
 
-## Drawy has three components, front end, back end, and data store which holds the  
-  
-drawings. This page walks through all three.
+## Drawy Has Three Components, Front End, Back End, and Data Store Which Holds the Drawings
 
-## What you need
+### This Page Walks Through All Three
+
+### What You Need
 
 - MISE the version manager
 - A PostgreSQL database — Neon, Supabase or any
-- A Cloudflare account — the realtime Durable Objects live in the same Worker
+- A Cloudflare account — the real time Durable Objects live in the same Worker
 as the app, so `wrangler deploy` publishes everything.
 - Any serverless platform like cloudflare worker.
 
@@ -38,7 +44,7 @@ mise deps
 
 The repository's `.env.example` can be used as a reference.
 
-## 3. Create the tables
+## 3. Create the Tables
 
 ```bash
 bun run db:generate
@@ -50,7 +56,7 @@ This applies `src/lib/db/schema.ts` to `DATABASE_URL` and creates `app_users`,
 `canvases,` and `canvas_versions`. If you prefer versioned migrations, run
 `bun run db:generate` and then `bun run db:migrate`.
 
-## 4. Realtime ships with the app
+## 4. Realtime Ships with the App
 
 There is no separate realtime deployment: `src/party/index.ts` is the worker
 entry and routes `/parties/*` to two Durable Objects declared in
@@ -114,6 +120,4 @@ serve the app over HTTPS.
 ## Related
 
 - [Privacy and security](/privacy/) — what your instance stores
-- [Getting started](/getting-started/) — using Drawy as an end user
-
-&nbsp;
+- [Getting started](/getting-started/) — using Drawy as an end user.

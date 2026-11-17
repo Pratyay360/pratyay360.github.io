@@ -19,7 +19,7 @@ theme = "dark-plus"
 
 [extra]
 author = "PRATYAY MUSTAFI"
-locales = ["en", "de", "bn"]
+locales = ["en"]
 github = "https://github.com/Pratyay360/pratyay360.github.io"
 site_url = "https://pratyay360.github.io"
 og_image = "/og-image.png"
@@ -51,12 +51,3 @@ url = "search"
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a>. Managed by <a href="https://www.pratyay.online">pratyay mustafi</a>.'
 
-[languages.de]
-title = "Docs for projects by pratyay"
-description = "Entwicklerdokumentation und Anleitungen für Projekte von pratyay"
-generate_feeds = true
-
-[languages.bn]
-title = "Docs for projects by pratyay"
-description = "প্রত্যয়ের প্রকল্পগুলির জন্য ডেভেলপার ডকুমেন্টেশন এবং গাইড"
-generate_feeds = true

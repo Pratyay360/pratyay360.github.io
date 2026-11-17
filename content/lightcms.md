@@ -1,10 +1,11 @@
-+++
-title = 'What is Lightcms'
-description = 'Lightcms is an easy to use, interactive, Git based CMS built to help you discover your inner writer and fall in love with writing again.'
-date = '2026-02-22T22:22:00Z'
-weight = 1
-slug = 'lightcms'
-+++
+---
+title: What is Lightcms
+description: Lightcms is an easy to use, interactive, Git based CMS built to help you discover your inner writer and fall in love with writing again.
+date: 2026-11-17T10:27:07.328Z
+weight: 1
+slug: lightcms
+draft: false
+---
 
 ![editor](https://i.ibb.co/gL9DjJRN/650984307-a4209b8a-29a8-47cd-aef6-8f9e9505d6b7-png.png)
 

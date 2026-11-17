@@ -16,7 +16,7 @@
 {% if page.ancestors and page.ancestors | length > 0 %}
   {% set section_path = page.ancestors | last %}
   {% set_global sec = false %}
-  {% if section_path %}{% set_global sec = get_section(path=section_path, lang=lang) %}{% endif %}
+  {% if section_path %}{% set_global sec = get_section(path=section_path) %}{% endif %}
   {% if sec and sec.pages | length > 1 %}
   <nav class="section-nav" aria-label="{{ sec.title }}">
     <h2>{{ sec.title }}</h2>

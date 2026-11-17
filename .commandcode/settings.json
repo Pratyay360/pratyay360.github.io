@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(zola:*)",
+      "Shell(mise:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

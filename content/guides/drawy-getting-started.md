@@ -1,11 +1,11 @@
-+++
-title = 'Drawy getting started'
-description = 'Create an account, draw your first canvas, share it, and export your work.'
-slug = 'drawy-getting-started'
-weight = 1
-+++
+---
+title: Drawy getting started
+description: Create an account, draw your first canvas, share it, and export your work.
+weight: 1
+date: 2026-11-17T10:28:47.827Z
+---
 
-## What is Drawy?
+## What Is Drawy?
 
 Drawy is a collaborative drawing workspace built on Excalidraw. You can create an account, start a canvas, and invite someone to draw with you.
 

@@ -1,9 +1,10 @@
-+++
-title = 'Drawy Libraries'
-description = 'Reuse shapes across canvases by saving libraries from the public Excalidraw catalog.'
-slug = 'drawy-library'
-weight = 3
-+++
+---
+title: Library support in Drawy
+description: Reuse shapes across canvases by saving libraries from the public Excalidraw catalog.
+slug: drawy-library
+weight: 3
+date: 2026-11-17T10:29:06.333Z
+---
 
 A library is a reusable set of shapes — icons, diagram pieces, UI mockups, or anything else you want to drop onto a canvas again later.
 

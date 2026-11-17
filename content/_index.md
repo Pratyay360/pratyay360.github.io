@@ -1,9 +1,9 @@
-+++
-title = "Developer Documentation & Guides"
-description = "Setup guides for projects by pratyay managed with lightcms.me"
-template = "index.html"
-sort_by = "none"
-+++
+---
+title: Developer Documentation & Guides
+description: Setup guides for projects by pratyay managed with lightcms.me
+template: index.html
+sort_by: none
+---
 
 Welcome to project docs by [Pratyay](https://www.pratyay.online).
 

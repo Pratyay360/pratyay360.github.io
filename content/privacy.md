@@ -1,8 +1,10 @@
-+++
-title = 'Privacy Policy'
-description = 'What this documentation site collects, what third parties may receive, and how to contact us.'
-weight = 99
-+++
+---
+title: Privacy Policy
+description: What this documentation site collects, what third parties may receive, and how to contact us.
+weight: 99
+date: 2026-11-17T10:25:42.235Z
+draft: false
+---
 
 _Last updated: November 16, 2026_
 

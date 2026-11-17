@@ -1,5 +1,6 @@
-+++
-title = "Search"
-description = "Search the documentation."
-template = "search.html"
-+++
+---
+title: "Search"
+description: "Search the documentation."
+template: "search.html"
+draft: false
+---

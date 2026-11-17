@@ -1,12 +1,13 @@
-+++
-title = 'Drawy Documentation'
-description = 'A guide to drawing, sharing and collaborating in Drawy.'
-date = '2026-10-01T13:31:00Z'
-weight = 0
-slug = 'drawy-documentation'
-+++
+---
+title: Drawy Documentation
+description: A guide to drawing, sharing and collaborating in Drawy.
+date: 2026-11-17T10:26:42.355Z
+weight: 0
+slug: drawy-documentation
+draft: false
+---
 
-Drawy is a collaborative drawing workspace. It gives you the full Excalidraw editor, plus the collaboration features: live cursors, shared canvases and version history. Realtime features run on Cloudflare Durable Objects via PartyServer.
+Drawy is a collaborative drawing workspace. It gives you the full Excalidraw editor, plus the collaboration features: live cursors, shared canvases and version history. Realtime features run on Cloudflare Durable Objects.
 
 Everything is saved as you draw, so you can close the tab and pick up exactly where you left off. A drawing is private by default. You can share it with one person or publish it as a read-only link.
 

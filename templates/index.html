@@ -10,18 +10,18 @@
   {% if section.pages | length > 0 %}
   <h2>Pages</h2>
   <ul>
-    {% for p in section.pages %}
+    {%- for p in section.pages %}
     <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
-    {% endfor %}
+    {%- endfor %}
   </ul>
   {% endif %}
-  {% set guides = get_section(path="guides/_index.md", lang=lang) %}
+  {% set guides = get_section(path="guides/_index.md") %}
   {% if guides %}
   <h2>Guides</h2>
   <ul>
-    {% for p in guides.pages %}
+    {%- for p in guides.pages %}
     <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}</li>
-    {% endfor %}
+    {%- endfor %}
   </ul>
   {% endif %}
 </article>

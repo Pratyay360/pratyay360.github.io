@@ -6,8 +6,8 @@ Documentation site for projects by [Pratyay Mustafi](https://pratyay.online), bu
 
 ```text
 .
-├── config.toml      # Zola site configuration
-├── content/         # Markdown content (pages, sections, i18n .de/.bn variants)
+├── zola.toml        # Zola site configuration
+├── content/         # Markdown content (pages, sections)
 ├── templates/       # Tera templates and partials
 ├── sass/            # Styles
 ├── static/          # Static assets copied as-is
@@ -29,8 +29,6 @@ With mise:
 mise run serve
 mise run build     # zola build + pagefind
 mise run check
-mise run i18n      # compile Paraglide messages
-mise run i18n-check
 ```
 
 Search is provided by [Pagefind](https://pagefind.app/) on `/search/`; its index is generated at build time.
