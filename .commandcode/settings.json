@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Shell(zola:*)",
-      "Shell(mise:*)"
+      "Shell(mise:*)",
+      "Shell(cat static/robots.txt; echo ---; cat static/assets 2>/dev/null; ls -R static/assets | head -50; echo ---; grep -rn \"pagefind\" --include=\"*\" -i . | grep -v node_modules | grep -v .git/)",
+      "Shell(cat templates/base.html templates/partials/head.html; echo ---; cat sass/search.scss; echo ---; cat .github/workflows/ci.yml; echo ---; cat .gitignore 2>/dev/null; git ls-files | grep -c dist)",
+      "Shell(ls dist/pagefind/ 2>/dev/null | head -30; echo ---; grep -o -- '--pf-[a-z-]*' dist/pagefind/pagefind-component-ui.css 2>/dev/null | sort -u | head -30; echo ---; cat content/search.md 2>/dev/null; echo ---; cat templates/partials/header.html)",
+      "Shell(npm view pagefind version 2>/dev/null; echo ---; grep -o 'prefers-color-scheme[^)]*)' dist/pagefind/pagefind-component-ui.css | sort | uniq -c; echo ---; grep -o -- '--pf-[a-z-]*' dist/pagefind/pagefind-component-ui.css | sort -u | tail -20; echo ---; grep -oE '(pagefind-[a-z-]+|data-pagefind-[a-z-]+)' dist/pagefind/pagefind-component-ui.js | sort | uniq -c | sort -rn | head -20)",
+      "Shell(python3 - <<'EOF' import re s = open('sass/search.scss').read() s = s.replace('\\n#search .pf-result-title {\\n font-size: 1rem;\\n}\\n', '\\n') open('sass/search.scss','w').write(s) EOF cat sass/search.scss)",
+      "Shell(grep:*)"
     ],
     "deny": [],
     "defaultMode": "default"

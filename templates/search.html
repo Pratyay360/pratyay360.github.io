@@ -5,14 +5,13 @@
   <h1 class="post-title">{{ page.title }}</h1>
   <section class="post-line"></section>
   {{ page.content | safe }}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pagefind/component-ui@1.6.0/css/pagefind-component-ui.css" />
+  <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+  <pagefind-config bundle-path="/pagefind/"></pagefind-config>
   <div id="search">
-    <pagefind-input autofocus></pagefind-input>
+    <pagefind-input autofocus placeholder="Search docs…"></pagefind-input>
     <pagefind-summary></pagefind-summary>
-    <pagefind-results></pagefind-results>
+    <pagefind-results max-results="20"></pagefind-results>
   </div>
-  <script type="module">
-    import "https://cdn.jsdelivr.net/npm/@pagefind/component-ui@1.6.0/+esm";
-  </script>
+  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 </article>
 {% endblock content %}

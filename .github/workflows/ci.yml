@@ -30,7 +30,7 @@ jobs:
         run: zola build
 
       - name: Build search index
-        run: npx --yes pagefind@1.5.2 --site dist
+        run: npx --yes pagefind@1.6.0 --site dist
 
       # Must run before upload-pages-artifact, or the key file never reaches Pages.
       - name: index now key file
