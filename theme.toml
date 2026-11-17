@@ -1,5 +1,5 @@
 name = "Mabuya"
-description = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+description = "A minimal Zola theme for building light and SEO ready blogs."
 license = "MIT"
 homepage = "https://github.com/semanticdata/mabuya"
 min_version = "0.18.0"

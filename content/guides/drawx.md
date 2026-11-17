@@ -2,6 +2,7 @@
 title = "Drawx 100% Private, offline Whiteboard App"
 description = "Native offline first desktop app for Linux, macOS, and Windows for planning, drawing, and brainstorming."
 date = "2026-10-17T13:27:00Z"
+weight = 100
 +++
 
 ## What [Drawx](/guides/drawx/) is?

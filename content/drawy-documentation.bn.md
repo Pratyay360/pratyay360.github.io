@@ -6,11 +6,11 @@ weight = 0
 slug = 'drawy-documentation'
 +++
 
-Drawy is a collaborative drawing workspace. It gives you the full Excalidraw editor, plus the collaboration features: live cursors, shared canvases and version history. Realtime features run on Cloudflare Durable Objects via PartyServer.
+Drawy, is a collaborative drawing workspace for the edge. It gives you the full Excalidraw editor, plus the collaboration features: live cursors, shared canvases and version history. All on Cloudflare's edge.
 
 Everything is saved as you draw, so you can close the tab and pick up exactly where you left off. A drawing is private by default. You can share it with one person or publish it as a read-only link.
 
-## Getting started
+### Getting started
 
 1. **Create an account**  
    Pick a username and a password. There is no email address to enter and no confirmation link to click, so you can start immediately.
@@ -23,7 +23,7 @@ Everything is saved as you draw, so you can close the tab and pick up exactly wh
 
 For a step-by-step walkthrough, see [Drawy getting started](/guides/drawy-getting-started/).
 
-## The canvas
+### The canvas
 
 Drawy embeds the full Excalidraw editor on an infinite surface that pans and zooms the way you expect. You can draw with:
 

@@ -5,7 +5,6 @@
 @use "pagination";
 @use "catalogue";
 @use "tags";
-@use "font";
 @use "header";
 @use "footer";
 @use "code";
@@ -24,6 +23,10 @@
   --background-color: rgba(0, 0, 0, 0.05);
   --link-color: #02aa3a;
   --blockquote-color: #555;
+  --menu-background: #ffffff;
+  --menu-border: rgba(0, 0, 0, 0.12);
+  --menu-hover: rgba(0, 0, 0, 0.06);
+  --menu-shadow: rgba(0, 0, 0, 0.18);
 }
 
 // Dark theme colors
@@ -37,4 +40,8 @@
   --background-color: #1e1e2e;
   --link-color: #a6e3a1;
   --blockquote-color: #cdd6f4;
+  --menu-background: #181825;
+  --menu-border: rgba(255, 255, 255, 0.14);
+  --menu-hover: rgba(255, 255, 255, 0.08);
+  --menu-shadow: rgba(0, 0, 0, 0.55);
 }

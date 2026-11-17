@@ -1,7 +1,7 @@
-$serif-primary: "Bitter", "Inconsolata";
-$serif-secondary: "Bitter", "Inconsolata";
-$sans-serif: "Bitter", "Inconsolata";
-$monospaced: Menlo, Monaco, monospace !default;
+$serif-primary: "Bitter", serif;
+$serif-secondary: "Bitter", serif;
+$sans-serif: "Bitter", sans-serif;
+$monospaced: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace !default;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;

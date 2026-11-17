@@ -5,9 +5,8 @@ date = '1111-11-11T11:11:00Z'
 weight = 5
 +++
 
-## Drawy has three components, front end, back end, and data store which holds the  
-  
-drawings. This page walks through all three.
+## Drawy has three components, front end, back end, and data store which holds the drawings. 
+## This page walks through all three.
 
 ## What you need
 

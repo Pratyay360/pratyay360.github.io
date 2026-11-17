@@ -21,7 +21,7 @@ From the browser you can:
 
 Saved libraries show their item count in the browser.
 
-## Manage saved libraries
+### Manage saved libraries
 
 Saved libraries are added to your personal library and become available in the Excalidraw editor across canvases in the same browser.
 

@@ -1,9 +1,31 @@
 {% set current = lang | default(value=config.default_language | default(value="en")) %}
-<nav class="language-switcher" aria-label="Language">
-  <ul>
+{% set_global current_name = current | upper %}
+{% if current == "en" %}{% set_global current_name = "English" %}
+{% elif current == "de" %}{% set_global current_name = "Deutsch" %}
+{% elif current == "bn" %}{% set_global current_name = "বাংলা" %}
+{% endif %}
+<details class="language-switcher">
+  <summary aria-label="Change language ({{ current_name }})">
+    <svg class="language-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z" />
+    </svg>
+    <span class="language-current">{{ current_name }}</span>
+    <svg class="language-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </summary>
+  <ul class="language-menu" aria-label="Languages">
     {% for code in config.extra.locales | default(value=[config.default_language | default(value="en")]) %}
       {% set_global target = "" %}
       {% set_global label = code | upper %}
+      {% if code == "en" %}{% set_global label = "English" %}
+      {% elif code == "de" %}{% set_global label = "Deutsch" %}
+      {% elif code == "bn" %}{% set_global label = "বাংলা" %}
+      {% endif %}
       {% if code == current %}
         {% if page %}{% set_global target = page.permalink %}{% elif section %}{% set_global target = section.permalink %}{% else %}{% set_global target = config.base_url %}{% endif %}
       {% else %}
@@ -25,8 +47,39 @@
         {% endif %}
       {% endif %}
       <li>
-        <a href="{{ target | safe }}" hreflang="{{ code }}"{% if code == current %} aria-current="true" class="active"{% endif %}>{{ label }}</a>
+        <a href="{{ target | safe }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == current %} aria-current="true"{% endif %}>
+          <span class="language-name">{{ label }}</span>
+          <span class="language-meta">
+            <span class="language-code">{{ code | upper }}</span>
+            {% if code == current %}
+            <svg class="language-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m5 13 4 4 10-10" />
+            </svg>
+            {% endif %}
+          </span>
+        </a>
       </li>
     {% endfor %}
   </ul>
-</nav>
+</details>
+
+<script>
+  (() => {
+    const switcher = document.querySelector(".language-switcher");
+    if (!switcher) return;
+
+    document.addEventListener("click", (event) => {
+      if (switcher.open && !switcher.contains(event.target)) {
+        switcher.open = false;
+      }
+    });
+
+    switcher.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && switcher.open) {
+        switcher.open = false;
+        switcher.querySelector("summary").focus();
+      }
+    });
+  })();
+</script>

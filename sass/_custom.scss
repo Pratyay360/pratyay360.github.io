@@ -8,26 +8,160 @@
 
 // Language switcher in the header
 .language-switcher {
-  ul {
-    display: flex;
-    gap: 0.75rem;
+  position: relative;
+  color: var(--default-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--default-tint);
+    border-radius: 999px;
+    line-height: 1.2;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: "";
+    }
+
+    &:hover {
+      background-color: var(--menu-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link-color);
+      outline-offset: 2px;
+    }
   }
 
-  a {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-decoration: none;
+  &[open] summary {
+    border-color: var(--link-color);
+    background-color: var(--menu-hover);
+  }
+
+  .language-icon,
+  .language-check {
+    flex: none;
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+
+  .language-chevron {
+    flex: none;
+    width: 0.7rem;
+    height: 0.7rem;
     opacity: 0.7;
+    transition: transform 0.2s ease;
   }
 
-  a:hover,
-  a.active {
+  &[open] .language-chevron {
+    transform: rotate(180deg);
+  }
+
+  .language-menu {
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    right: 0;
+    z-index: 30;
+    display: block;
+    min-width: 12rem;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background-color: var(--menu-background);
+    border: 1px solid var(--menu-border);
+    border-radius: 0.65rem;
+    box-shadow: 0 12px 30px var(--menu-shadow);
+    animation: language-menu-in 0.15s ease-out;
+  }
+
+  .language-menu li {
+    display: block;
+    padding: 0;
     opacity: 1;
-    text-decoration: underline;
+  }
+
+  .language-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.65rem;
+    border-radius: 0.45rem;
+    color: var(--default-color);
+    font-size: 0.85rem;
+    letter-spacing: 0;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--menu-hover);
+      opacity: 1;
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link-color);
+      outline-offset: -2px;
+    }
+
+    &[aria-current="true"] {
+      color: var(--link-color);
+      font-weight: 700;
+      opacity: 1;
+    }
+  }
+
+  .language-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .language-code {
+    color: var(--default-tint);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .language-menu a[aria-current="true"] .language-code {
+    color: inherit;
+  }
+}
+
+@keyframes language-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-switcher .language-menu {
+    animation: none;
+  }
+
+  .language-switcher .language-chevron {
+    transition: none;
   }
 }
 

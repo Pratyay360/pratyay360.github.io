@@ -1,6 +1,6 @@
 +++
 title = 'Ensor: Secret Detection & Redaction CLI for Codebases'
-description = 'Open-source CLI to detect and redact hardcoded secrets, replace them with environment variables, and convert .env, JSON, YAML, and TOML files.'
+description = "Open source CLI to detect and redact hardcoded secrets, replace them with environment variables, and convert .env, JSON, YAML, and TOML files."
 date = '2026-10-29T10:15:07.070Z'
 weight = 1
 slug = 'ensor-secret-detection-redaction-cli'
