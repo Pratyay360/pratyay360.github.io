@@ -29,7 +29,7 @@ For this documentation site’s own policy, see [Privacy Policy](/privacy/).
 
 ## Images
 
-Images you paste or upload while drawing may go to an outside image host (imgcdn.dev). The saved URL is kept with the canvas. Once uploaded, the image is on that host, not under Drawy’s control. To have an uploaded image removed, use the [Drawy contact page](https://drawy.pratyay.online/contact).
+Images you paste or upload while drawing may go to an outside image host (imgbb.com). The saved URL is kept with the canvas. Once uploaded, the image is on that host, not under Drawy’s control. To have an uploaded image removed, use the [Drawy contact page](https://drawy.pratyay.online/contact).
 
 ## Libraries
 

@@ -67,7 +67,7 @@ a {
 }
 
 ::selection {
-	background: rebeccapurple;
+	background: rgba(102, 51, 153, 0.393);
 	color: white;
 }
 
@@ -126,6 +126,7 @@ footer,
 }
 
 @media (max-width: 600px) {
+
 	main,
 	footer,
 	.nav-container {
@@ -169,6 +170,7 @@ a div p {
 		font-size: 0.75em;
 		display: inline;
 	}
+
 	p {
 		display: inline;
 	}

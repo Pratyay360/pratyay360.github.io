@@ -11,46 +11,36 @@
 		}
 	],
 	"frontMatter.taxonomy.contentTypes": [
-		{
-			"name": "default",
-			"pageBundle": false,
-			"fields": [
-				{
-					"title": "title",
-					"name": "title",
-					"type": "string"
-				},
-				{
-					"title": "description",
-					"name": "description",
-					"type": "string"
-				},
-				{
-					"title": "date",
-					"name": "date",
-					"type": "datetime"
-				},
-				{
-					"title": "weight",
-					"name": "weight",
-					"type": "number"
-				},
-				{
-					"title": "draft",
-					"name": "draft",
-					"type": "draft"
-				},
-				{
-					"title": "template",
-					"name": "template",
-					"type": "string"
-				},
-				{
-					"title": "sort_by",
-					"name": "sort_by",
-					"type": "string"
-				}
-			]
-		}
-	]
+    {
+      "name": "default",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "Title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "Description",
+          "type": "string"
+        },
+        {
+          "title": "Weight",
+          "name": "Weight",
+          "type": "number"
+        },
+        {
+          "title": "Date",
+          "name": "Date",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        }
+      ]
+    }
+  ]
 }

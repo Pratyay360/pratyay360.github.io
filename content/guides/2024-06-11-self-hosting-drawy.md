@@ -13,9 +13,7 @@ draft: false
 
 ## Drawy Has Three Components, Front End, Back End, and Data Store Which Holds the Drawings
 
-### This Page Walks Through All Three
-
-### What You Need
+### This Page Walks Through All you Need
 
 - MISE the version manager
 - A PostgreSQL database — Neon, Supabase or any

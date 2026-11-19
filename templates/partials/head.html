@@ -3,24 +3,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
   {% if page %}{% set ptitle = page.title %}{% set pdesc = page.description | default(value=config.description) %}{% set purl = page.permalink %}{% elif section %}{% set ptitle = section.title | default(value=config.title) %}{% set pdesc = section.description | default(value=config.description) %}{% set purl = section.permalink %}{% else %}{% set ptitle = config.title %}{% set pdesc = config.description %}{% set purl = config.base_url %}{% endif %}
+  {% set og_image_url = get_url(path=config.extra.og_image | default(value='og-image.png')) %}
+  {% set page_noindex = false %}
+  {% if page and page.extra and page.extra.noindex %}{% set page_noindex = true %}{% endif %}
+  {% if section and section.extra and section.extra.noindex %}{% set page_noindex = true %}{% endif %}
   <title>{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}</title>
   <meta name="description" content="{{ pdesc }}" />
   <meta name="author" content="{{ config.extra.author | default(value='pratyay') }}" />
+  {% if page_noindex %}
+  <meta name="robots" content="noindex, follow" />
+  {% else %}
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  {% endif %}
   <link rel="canonical" href="{{ purl | safe }}" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ get_url(path='sitemap.xml', trailing_slash=false) | safe }}" />
 
   <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}" />
   <meta property="og:site_name" content="{{ config.title }}" />
-  <meta property="og:locale" content="{{ lang | default(value='en') }}" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}" />
   <meta property="og:description" content="{{ pdesc }}" />
   <meta property="og:url" content="{{ purl | safe }}" />
-  <meta property="og:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
+  <meta property="og:image" content="{{ og_image_url | safe }}" />
   <meta property="og:image:alt" content="{{ ptitle }}" />
+  {% if page %}
+    {% if page.date %}<meta property="article:published_time" content="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%z') }}" />{% endif %}
+    {% if page.updated %}<meta property="article:modified_time" content="{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S%z') }}" />{% endif %}
+  {% endif %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}" />
   <meta name="twitter:description" content="{{ pdesc }}" />
-  <meta name="twitter:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
+  <meta name="twitter:image" content="{{ og_image_url | safe }}" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0d0d12" media="(prefers-color-scheme: dark)" />
 
@@ -41,11 +54,22 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
 
   <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}" />
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
-  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ config.title }} RSS Feed" href="{{ get_url(path='rss.xml', trailing_slash=false) | safe }}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" />
 
   {% if config.extra.goatcounter %}
   <script async data-goatcounter="{{ config.extra.goatcounter }}" src="https://gc.zgo.at/count.js"></script>
   {% endif %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
+
+  {% if page %}
+    {% set schema_type = "TechArticle" %}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":{{ schema_type | json_encode() | safe }},"headline":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"image":{{ og_image_url | json_encode() | safe }},"author":{"@type":"Person","name":{{ config.extra.author | default(value='pratyay') | json_encode() | safe }}},"publisher":{"@type":"Person","name":{{ config.extra.author | default(value='pratyay') | json_encode() | safe }}}{% if page.date %},"datePublished":{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%z') | json_encode() | safe }}{% endif %}{% if page.updated %},"dateModified":{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S%z') | json_encode() | safe }}{% elif page.date %},"dateModified":{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%z') | json_encode() | safe }}{% endif %},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
+    {% if page.ancestors and page.ancestors | length > 0 %}
+      {% set_global bc_pos = 1 %}
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{% for ancestor in page.ancestors %}{% set anc = get_section(path=ancestor, metadata_only=true) %}{"@type":"ListItem","position":{{ bc_pos }},"name":{{ anc.title | default(value=config.title) | json_encode() | safe }},"item":{{ anc.permalink | json_encode() | safe }}}{% set_global bc_pos = bc_pos + 1 %},{% endfor %}{"@type":"ListItem","position":{{ bc_pos }},"name":{{ ptitle | json_encode() | safe }},"item":{{ purl | json_encode() | safe }}}]}</script>
+    {% endif %}
+  {% else %}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }},"description":{{ config.description | json_encode() | safe }},"inLanguage":"en"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
+  {% endif %}
 </head>

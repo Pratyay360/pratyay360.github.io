@@ -9,11 +9,11 @@ date: 2026-11-17T10:29:06.333Z
 
 A library is a reusable set of shapes — icons, diagram pieces, UI mockups, or anything else you want to drop onto a canvas again later.
 
-Drawy uses Excalidraw's library format, so libraries made for Excalidraw work in Drawy too.
+Drawy uses Excalidraw's library format, so libraries made for Excalidraw works with [Drawy](https://drawy.pratyay.online) too.
 
-## Browse the public catalog
+## Browse the Public Catalog
 
-Select Libraries in the sidebar. Drawy loads the public catalog from [libraries.excalidraw.com](https://libraries.excalidraw.com).
+Select Libraries in the sidebar. [Drawy](https://drawy.pratyay.online) loads the public catalog from [libraries.excalidraw.com](https://libraries.excalidraw.com).
 
 From the browser you can:
 
@@ -23,7 +23,7 @@ From the browser you can:
 
 Saved libraries show their item count in the browser.
 
-### Manage saved libraries
+### Manage to Saved Libraries
 
 Saved libraries are added to your personal library and become available in the Excalidraw editor across canvases in the same browser.
 
@@ -37,7 +37,7 @@ Saved libraries and library items live in your browser's local storage. They are
 
 Select shapes in the editor, then add them from Excalidraw's library panel. Drawy persists library changes, so your items are available the next time you open a canvas in the same browser.
 
-## Import from excalidraw.com
+## Import from Excalidraw.com
 
 "Add to library" links on excalidraw.com can point to Drawy. When you open such a link, Drawy reads the linked library file and adds its items to your library.
 

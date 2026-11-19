@@ -36,9 +36,9 @@ Collaborative and offline whiteboard tools powered by Excalidraw:
 - [Drawy Getting Started](/guides/drawy-getting-started/) — Create an account, make a canvas, share, and export.
 - [Drawy Libraries](/guides/drawy-library/) — Save and reuse Excalidraw libraries across canvases.
 - [Drawy Privacy & Security](/guides/drawy-privacy/) — What Drawy stores, sessions, and data removal.
-- [DrawX (Desktop Application)](/guides/drawx/) — 100% private, offline native desktop whiteboard for Linux, macOS, and Windows.
+- [DrawX (Desktop Application)](/guides/drawx-100-private-offline-whiteboard-app/) — 100% private, offline native desktop whiteboard for Linux, macOS, and Windows.
 
-### 4. LightCMS
+### LightCMS
 
 Git-based CMS for writing and managing content for static sites with front matter support.
 

@@ -14,14 +14,14 @@ Everything is saved as you draw, so you can close the tab and pick up exactly wh
 
 ## Getting started
 
-1. **Create an account**  
+1. Create an account
    Pick a username and a password. There is no email address to enter and no confirmation link to click, so you can start immediately.
 
-2. **Start a canvas**  
+2. Start a canvas
    Every new canvas gets a name, which you can rename later. Your drawings are grouped by when you last edited them, so recent work is easy to find.
 
-3. **Draw, share, invite**  
-   Sketch on the canvas, pull in assets from your library, then share a read-only link or invite a collaborator by username.
+3. Draw, share, invite
+   Sketch on the canvas, pull in assets from your library, then share a read only link or invite a collaborator by username.
 
 For a step-by-step walkthrough, see [Drawy getting started](/guides/drawy-getting-started/).
 
@@ -141,4 +141,4 @@ Yes. Use version history to roll back to an earlier snapshot.
 - [Drawy getting started](/guides/drawy-getting-started/)
 - [Drawy Libraries](/guides/drawy-library/)
 - [Drawy Privacy and Security](/guides/drawy-privacy/)
-- [DrawX desktop app](/guides/drawx/)
+- [DrawX desktop app](/guides/drawx-100-private-offline-whiteboard-app/)

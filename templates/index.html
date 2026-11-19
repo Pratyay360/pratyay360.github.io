@@ -2,6 +2,7 @@
 
 {% block content %}
 <article class="post">
+  {% if section %}
   <h1 class="post-title">{{ section.title | default(value=config.title) }}</h1>
   <section class="post-line"></section>
   <div class="content">
@@ -14,6 +15,13 @@
     <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
     {%- endfor %}
   </ul>
+  {% endif %}
+  {% elif page %}
+  <h1 class="post-title">{{ page.title | default(value=config.title) }}</h1>
+  <section class="post-line"></section>
+  <div class="content">
+    {{ page.content | safe }}
+  </div>
   {% endif %}
   {% set guides = get_section(path="guides/_index.md") %}
   {% if guides %}

@@ -1,9 +1,11 @@
 ---
-
 title: Developer Documentation & Guides
 description: Setup guides for projects by pratyay managed with lightcms.me
 template: index.html
-sort_by: none
+draft: false
+date: 2026-11-19T14:39:48.709Z
+weight: 1
+slug: developer-documentation-guides
 ---
 
 Welcome to project docs by [Pratyay](https://www.pratyay.online).

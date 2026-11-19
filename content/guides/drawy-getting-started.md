@@ -1,16 +1,16 @@
 ---
-
-title: Drawy getting started
-description: Create an account, draw your first canvas, share it, and export your work.
-weight: 1
-date: 2026-11-17T10:28:47.827Z
+Title: Drawy Getting Started
+Description: Create an Account, Draw Your First Canvas, Share It, and Export Your Work.
+Weight: 1
+draft: false
+Date: 2026-11-19T14:41:56.828Z
 ---
 
 ## What Is Drawy?
 
 Drawy is a collaborative drawing workspace built on Excalidraw. You can create an account, start a canvas, and invite someone to draw with you.
 
-## Create an account
+## Create an Account
 
 An account uses a username and a password. There is no email address, confirmation link, or password reset flow, so keep your credentials somewhere safe.
 
@@ -83,4 +83,4 @@ glo  # interactive git log
 - [Drawy Documentation](/drawy-documentation/) — full overview, collaboration, version history, and FAQ
 - [Drawy Libraries](/guides/drawy-library/) — reuse shapes and assets across canvases
 - [Drawy Privacy and Security](/guides/drawy-privacy/) — what Drawy stores and how to remove data
-- [DrawX](/guides/drawx/) — offline, private desktop Excalidraw app
+- [DrawX](/guides/drawx-100-private-offline-whiteboard-app/) — offline, private desktop Excalidraw app
