@@ -1,6 +1,6 @@
 ---
 title: 'Forgit: a cli for all the gitforges'
-description: 'A cli tool to '
+description: A cli tool to interact with all the gitforges
 date: '2026-11-19T15:35:35Z'
 draft: false
 tags:
