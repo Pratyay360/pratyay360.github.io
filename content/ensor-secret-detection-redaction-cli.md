@@ -48,11 +48,11 @@ Ensor is useful when you want to:
 Ensor uses a robust scanning back end (powered by better leaks/git leaks) to identify potential secrets in your project.
 
 1. **Scan files** in the current directory and subdirectories.
-2. **Detect secrets** such as tokens, keys, and credentials.
+2. **Detect secrets** Such as tokens, keys, and credentials.
 3. **Map or prompt for names**:
    - If a matching value exists in `.env`, Ensor can replace it with the corresponding key reference.
    - For newly detected secrets, Ensor can suggest a name or let you provide one.
-4. **Redact values** in code by replacing hardcoded secrets with placeholders/references.
+4. **Redact values** in code by replacing hard coded secrets with placeholders/references.
 5. **Store secrets** in environment files (commonly `.env`) for safer configuration management.
 
 ## Installation
@@ -105,7 +105,7 @@ stew install pratyay360/ensor
 
 ### Prebuilt binaries and packages
 
-Prebuilt binaries and `.deb`, `.rpm`, and `.apk` packages for Linux, macOS, Windows, and FreeBSD are available on the [Ensor releases page](https://github.com/Pratyay360/ensor/releases).
+Prebuilt binaries and `.deb`, `.rpm`, and `.apk` Packages for Linux, macOS, Windows, and FreeBSD are available on the [Ensor releases page](https://github.com/Pratyay360/ensor/releases).
 
 ## Usage
 
@@ -117,7 +117,7 @@ Run Ensor in your project directory:
 ensor
 ```
 
-Ensor walks files and directories in the project, detects secrets, and helps redact them by replacing hardcoded values with environment variable references.
+Ensor walks files and directories in the project, detects secrets, and helps redact them by replacing hard coded values with environment variable references.
 
 By default, Ensor skips dot-prefixed paths such as `.env`, `.env.json`, and `.git/*` so existing secret/config files are not modified unintentionally.
 
