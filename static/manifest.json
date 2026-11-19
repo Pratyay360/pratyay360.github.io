@@ -1,10 +1,9 @@
 {
-	"id": "/",
 	"name": "Pratyay Docs",
 	"short_name": "Pratyay Docs",
 	"description": "Developer documentation, setup guides, and technical reference for Ensor, Dynamic UPI QR, Drawy, Newsy, and open-source tools.",
-	"start_url": "/",
-	"scope": "/",
+	"start_url": "https://pratyay360.github.io/",
+	"scope": "https://pratyay360.github.io/",
 	"display": "standalone",
 	"background_color": "#0d0d12",
 	"theme_color": "#0d0d12",
