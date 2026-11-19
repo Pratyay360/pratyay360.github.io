@@ -46,7 +46,7 @@ scoop install pratyay360/forgit
 winget install pratyay360.forgit
 ```
 
-Prefer a direct download? Browse the [latest release.](https://github.com/Pratyay360/forgit/releases/latest)
+Prefer a direct download? Browse the [Latest release.](https://github.com/Pratyay360/forgit/releases/latest)
 
 ## Support Forgit
 
