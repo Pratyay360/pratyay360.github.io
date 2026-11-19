@@ -47,7 +47,7 @@ Ensor is useful when you want to:
 
 Ensor uses a robust scanning back end (powered by better leaks/git leaks) to identify potential secrets in your project.
 
-1. **Scan files** in the current directory and subdirectories.
+1. **Scan files** in the current directory and sub directories.
 2. **Detect secrets** Such as tokens, keys, and credentials.
 3. **Map or prompt for names**:
    - If a matching value exists in `.env`, Ensor can replace it with the corresponding key reference.
