@@ -119,7 +119,7 @@ ensor
 
 Ensor walks files and directories in the project, detects secrets, and helps redact them by replacing hard coded values with environment variable references.
 
-By default, Ensor skips dot-prefixed paths such as `.env`, `.env.json`, and `.git/*` so existing secret/config files are not modified unintentionally.
+By default, Ensor skips dot-prefixed paths such as `.env`, `.env.json`, and `.git/*` so existing secret/configuration files are not modified unintentionally.
 
 To see available options:
 
@@ -162,7 +162,7 @@ This is useful when migrating configuration formats across tools or projects whi
 
 - Run Ensor before committing changes that may include credentials or tokens
 - Keep generated `.env` Files out of version control (add them to `.gitignore`)
-- Rotate any secrets that may have already been exposed
+
 - Review redactions to confirm placeholders and variable names match your app's configuration
 
 ## Resources
