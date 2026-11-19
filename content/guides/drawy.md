@@ -1,0 +1,265 @@
+---
+title: "Drawy: Self-Hosted Collaborative Whiteboard"
+description: "Complete guide to Drawy — a multi-tenant Excalidraw wrapper with real-time collaboration, version history, and libraries. Covers getting started, self-hosting on Cloudflare Workers, privacy, and architecture."
+date: 2026-11-19T14:41:56.828Z
+weight: 1
+draft: false
+slug: drawy
+keywords:
+  - collaborative whiteboard
+  - Excalidraw
+  - self-hosting
+  - Cloudflare Workers
+  - real-time collaboration
+  - Drawy
+---
+
+Drawy is a collaborative drawing workspace built on Excalidraw. It gives you the full Excalidraw editor — infinite canvas, shapes, arrows, freehand, frames, images — plus the collaboration features most teams need: live cursors, shared canvases, version history, and reusable libraries. Everything runs on your infrastructure.
+
+## Quick Start (5 minutes)
+
+### 1. Create an account
+
+No email required. Just a username and password.
+
+```bash
+# Open the hosted version
+open https://drawy.pratyay.online/login
+
+# Or self-host (see Self-Hosting section below)
+```
+
+- Usernames: letters, numbers, underscores, hyphens (lowercased)
+- No email, no confirmation link, no password reset — **keep credentials safe**
+
+### 2. Start a canvas
+
+Click **New canvas** in the sidebar. Canvases group by last-edit date so recent work stays visible.
+
+Drawy autosaves as you draw. After a short pause the header shows **Saved**. The **Save** button in the editor header forces an immediate save.
+
+### 3. Share & collaborate
+
+Open **Share canvas** to choose access:
+
+| Option | Who can open | Best for |
+|--------|-------------|----------|
+| **Private** (default) | Only you | Work in progress |
+| **Invite by username** | Specific Drawy user | Editing together in real time |
+| **Read-only link** | Anyone with the link | Publishing finished drawings, collecting feedback |
+
+Revoke access anytime without deleting the canvas.
+
+---
+
+## Core Features
+
+### Real-time collaboration
+
+Multiple people edit the same canvas simultaneously. Live cursors, selections, and strokes appear as they happen — point at a shape instead of describing it.
+
+Powered by **Yjs** over **Cloudflare Durable Objects** (PartyServer). The worker relays updates but stores nothing — the browser saves each canvas to Postgres, which remains the source of truth.
+
+### Version history
+
+Drawy keeps the 50 most recent snapshots per canvas. Open version history → click a snapshot → one-click rollback.
+
+### Libraries
+
+Reusable shape collections (icons, diagram pieces, UI mockups) that work across canvases.
+
+- **Public catalog**: Browse [libraries.excalidraw.com](https://libraries.excalidraw.com) from the Libraries sidebar. Search, preview, **Save** to your personal library.
+- **Personal library**: Saved libraries live in browser localStorage — available across canvases in the same browser, not tied to your account.
+- **From canvas**: Select shapes in the editor → add to library via Excalidraw's library panel.
+- **Import from Excalidraw.com**: "Add to library" links on excalidraw.com open directly in Drawy.
+
+### Import / Export
+
+| Action | Formats |
+|--------|---------|
+| Export canvas | `.excalidraw`, PNG, SVG |
+| Import into Drawy | `.excalidraw` |
+
+Nothing you draw is locked in.
+
+### Themes
+
+Six themes across light/dark mode. Choice persists per device (localStorage), applied before first paint — no theme flash.
+
+---
+
+## Self-Hosting Drawy
+
+Drawy has three components: front end (TanStack Start), realtime worker (Cloudflare Durable Objects), and data store (Postgres). All deploy together via `wrangler deploy`.
+
+### Prerequisites
+
+- **mise** (version/task manager) — `curl https://mise.run \| sh`
+- **PostgreSQL** — Neon, Supabase, or any remote Postgres (pooled URL preferred)
+- **Cloudflare account** — Durable Objects live in the same Worker as the app
+- **Bun** — `curl -fsSL https://bun.sh/install \| bash`
+
+### 1. Clone & install
+
+```bash
+git clone https://github.com/Pratyay360/drawy.git
+cd drawy
+mise deps
+```
+
+### 2. Configure environment
+
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `DATABASE_URL` | yes | Postgres connection string (pooled URL preferred) |
+| `SESSION_SECRET` | yes | Signs session cookie — `openssl rand -hex 32` |
+| `VITE_SITE_URL` | no | Canonical app URL (defaults to `https://drawyparty.pratyay.online`) |
+| `SENTRY_AUTH_TOKEN` | no | Uploads source maps during build (optional) |
+
+Copy `.env.example` to `.env` and fill in values.
+
+### 3. Create database tables
+
+```bash
+bun run db:generate
+bun run db:migrate
+bun run db:push
+```
+
+Applies `src/lib/db/schema.ts` → creates `app_users`, `canvases`, `canvas_versions`.
+
+### 4. Run locally
+
+```bash
+bun run dev          # Frontend on http://localhost:3000
+bun run cf:dev       # Built worker on http://localhost:8787 (app + rooms)
+```
+
+### 5. Deploy to Cloudflare Workers
+
+```bash
+bun run build              # Writes .output/server and .output/public
+bun run deploy:dry-run     # Packages worker without uploading
+bun run deploy             # Builds and uploads to Cloudflare
+```
+
+**wrangler.jsonc** is the single source of truth for worker config: name, compatibility date/flags, `ASSETS` binding, `Main`/`Rooms` Durable Object bindings.
+
+**Secrets** (set in Cloudflare dashboard or via CLI):
+```bash
+bunx wrangler secret put DATABASE_URL
+bunx wrangler secret put SESSION_SECRET
+```
+
+**Operational notes:**
+- Reverse proxy must forward WebSocket upgrades on `/parties`
+- Image uploads go to imgcdn.dev via `src/lib/s3.ts` — replace if you want own storage
+- Session cookie marked `Secure` only when `NODE_ENV=production` — serve over HTTPS
+- Lint/format: `mise run lint` (oxlint), `mise run format` (oxfmt)
+
+---
+
+## Architecture (for developers)
+
+| Layer | Technology | Role |
+|-------|------------|------|
+| Canvas & editor | Excalidraw | Drawing surface, tools, element model |
+| App shell & routing | TanStack Start + Router | Application framework & routes |
+| API | oRPC | Typed API between client & server |
+| Realtime | PartyServer on Cloudflare Durable Objects | Presence & Yjs sync for live collaboration |
+| Storage | Postgres via Drizzle ORM | Persistent canvas storage |
+| UI | Astryx | Component library & theming |
+
+**Data flow:**
+1. Client renders Excalidraw inside TanStack Start app
+2. Account/canvas/sharing/library calls go through typed oRPC procedures (shared client/server types)
+3. Live cursors/selections/strokes sync via Yjs over Durable Objects
+4. Canvases persist to Postgres → enables autosave + version history
+
+---
+
+## Privacy & Security
+
+### What Drawy stores
+- **Account**: Username + password hash (≥2 chars, any hash)
+- **Canvas data**: Content, title, version history (50 snapshots max/canvas)
+- **Sharing settings**: Usernames with access, read-only link status
+
+### What Drawy does NOT store
+- No email addresses
+- No advertising cookies
+- No third-party ad profiles
+- No analytics/tracking
+
+### Images
+Pasted/uploaded images may go to an external host (imgcdn.dev by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host. To request removal: [Drawy contact page](https://drawy.pratyay.online/contact).
+
+### Libraries
+Saved libraries live in **browser localStorage**, not on the Drawy server. Not tied to account, don't sync across devices/browsers.
+
+### Sessions & error tracking
+May use Sentry (when enabled) for error tracking — collects technical details per its own policy.
+
+### Data removal
+- **Delete canvas**: Remove from sidebar → deletes canvas + version history
+- **Uploaded images**: May persist on external host until removed there
+- **Account removal**: [Contact page](https://drawy.pratyay.online/contact)
+
+### Security issues
+Report privately via [security form](https://app.youform.com/forms/8kgi7jvm) or public [GitHub issue](https://github.com/Pratyay360/drawy/issues/new). Include reproduction steps.
+
+---
+
+## DrawX: Offline Desktop Alternative
+
+Need 100% offline, zero-cloud whiteboard? **DrawX** is a Tauri v2 desktop app (Linux/macOS/Windows) running Excalidraw locally. No network requests, no analytics, air-gapped capable.
+
+- 📦 [DrawX downloads](https://github.com/Pratyay360/drawx/releases) — .deb, .rpm, AppImage, .dmg, NSIS, Flatpak
+- 🔒 Zero telemetry, works completely offline
+
+---
+
+## FAQ
+
+### Do I need an email to sign up?
+No. Username + password only.
+
+### Will I lose work if I close the tab?
+No. Changes save as you draw. Header shows "Saved" when synced.
+
+### Who can see my drawings?
+Only you — until you invite someone or publish a read-only link.
+
+### Can I stop sharing a drawing?
+Yes. Revoke access anytime. The drawing itself isn't deleted.
+
+### Can I get my drawings out of Drawy?
+Yes. Export as `.excalidraw`, PNG, or SVG. Import `.excalidraw` files back in.
+
+### Can I undo a big mistake after autosave?
+Yes. Version history → roll back to any of the last 50 snapshots.
+
+### How do I self-host on a different platform?
+The TanStack Start app builds to static assets + Cloudflare Worker. For other platforms: build the client (`bun run build`), deploy the worker separately, ensure WebSocket upgrades on `/parties` work.
+
+### What's the difference between Drawy and DrawX?
+| | Drawy | DrawX |
+|--|-------|-------|
+| **Platform** | Web (self-hosted) | Desktop (Tauri v2) |
+| **Collaboration** | Real-time, multi-user | Single-user, offline |
+| **Storage** | Postgres (your infra) | Local filesystem |
+| **Network** | Required | None (air-gapped) |
+
+---
+
+## Resources & Links
+
+- 🌐 **Hosted instance**: <https://drawy.pratyay.online/login>
+- 📦 **GitHub**: <https://github.com/Pratyay360/drawy>
+- 📦 **DrawX repo**: <https://github.com/Pratyay360/drawx>
+- 📖 **DrawX downloads**: <https://github.com/Pratyay360/drawx/releases>
+- 🏗️ **Self-hosting guide**: This page (Self-Hosting section)
+- 🔒 **Privacy details**: Privacy & Security section above
+- 💬 **Help center**: <https://drawy.pratyay.online/help>
+- 📧 **Contact**: <https://drawy.pratyay.online/contact>
+- 🐛 **Issues**: <https://github.com/Pratyay360/drawy/issues>

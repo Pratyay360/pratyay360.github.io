@@ -1,8 +1,7 @@
 ---
 title: 'Drawx Private, offline Whiteboard and planning App'
 description: >-
-  offline first desktop app for Linux, macOS, and Windows for planning, drawing,
-  and brainstorming.
+  offline first desktop app for Linux, macOS, and Windows for planning, drawing and brainstorming.
 date: '2026-11-17T10:24:05.403Z'
 keywords:
   - offline
