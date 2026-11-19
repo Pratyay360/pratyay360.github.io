@@ -38,7 +38,7 @@ Saved libraries and library items live in your browser’s local storage, not on
 
 Drawy may use error tracking (such as Sentry, where on) to find problems. It can collect technical details, and it may set its own cookies or storage entries, based on how it is set up.
 
-## Removing your data
+### Removing your data
 
 - **Delete a canvas:** Remove a canvas from the sidebar. This deletes the canvas and its saved version history.
 - **Uploaded images:** Images already on an outside host may stay there until the host removes them or you ask to.
