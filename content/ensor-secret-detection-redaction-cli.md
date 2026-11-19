@@ -1,43 +1,43 @@
 ---
-
-title: "Ensor: Secret Detection & Redaction CLI for Codebases"
-description: Open source CLI to detect and redact hardcoded secrets, replace them with environment variables, and convert .env, JSON, YAML, and TOML files.
+title: 'Ensor: Secret Detection & Redaction'
+description: >-
+  Open source CLI to detect and redact hardcoded secrets, replace them with
+  references
 keywords:
   - secret detection
   - redaction
   - CLI
   - codebase
   - ensor
-date: 2026-11-17T10:25:51.812Z
+date: '2026-11-17T10:25:51.812Z'
 weight: 1
 slug: ensor-secret-detection-redaction-cli
 draft: false
 ---
-
 ### What is Ensor?
 
-[Ensor](https://github.com/Pratyay360/ensor) is a fast, interactive CLI tool for detecting and redacting hardcoded secrets in your codebase. It helps you replace leaked values such as API keys, tokens, and credentials with environment variable references, and it can convert environment files between `.env`, JSON, YAML, and TOML formats.
+[Ensor](https://github.com/Pratyay360/ensor) Is a fast, interactive CLI tool for detecting and redacting hard coded secrets in your codebase. It helps you replace leaked values such as API keys, tokens, and credentials with environment variable references, and it can convert environment files between `.env`, JSON, YAML, and TOML formats.
 
-By default, Ensor scans your project, finds exposed secrets, and helps you move them into a `.env` file while substituting placeholders in source files. This makes it easier to keep code readable, shareable, and safer to commit.
+By default, Ensor scans your project, finds exposed secrets, and helps you move them into a `.env` File while substituting placeholders in source files. This makes it easier to keep code readable, shareable, and safer to commit.
 
 #### Why use Ensor for secret detection and redaction?
 
-Hardcoded secrets are easy to leak through commits, screenshots, logs, or public repositories. Manually finding and replacing them is slow and error-prone, while fully encrypting files can make everyday configuration hard to read and maintain.
+Hard coded secrets are easy to leak through commits, screenshots, logs, or public repositories. Manually finding and replacing them is slow and error-prone, while fully encrypting files can make everyday configuration hard to read and maintain.
 
 Ensor is useful when you want to:
 
-- **Detect secrets in a codebase** before they are committed or shared
-- **Redact hardcoded credentials** and replace them with named environment variables
-- **Map existing `.env` values** to matching secrets already present in files
-- **Convert secret/config files** between dotenv, JSON, YAML, and TOML
-- **Keep workflows readable** without storing plaintext secrets directly in source
+- Detect secrets in a codebase Before they are committed or shared
+- Redact hard coded credentials And replace them with named environment variables
+- Map existing `.env` Values To matching secrets already present in files
+- Seamlessly convert secret and configuration files among dotenv, JSON, YAML, and TOML formats.
+- Keep workflows readable without storing plaintext secrets directly in source
 
 > Even private repositories can be exposed through misconfiguration, access issues, or leaks. Rotating leaked secrets is costly—preventing exposure is better.
 
 ### Key features
 
 - **Secret scanning and redaction** — scans project files and helps remove exposed secrets automatically
-- **Intelligent `.env` mapping** — matches values from an existing `.env` file and replaces them with their corresponding keys
+- **Intelligent `.env` mapping** — matches values from existing `.env` File and replaces them with their corresponding keys
 - **Interactive secret naming** — prompts for custom secret names or suggests replacements for detected values
 - **Environment file conversion** — convert between `.env`, JSON, YAML, and TOML with `ensor convert`
 - **Smart defaults** — dot-prefixed files like `.env` and `.git/*` are skipped by default so source secret files stay untouched
@@ -45,7 +45,7 @@ Ensor is useful when you want to:
 
 ### How Ensor works
 
-Ensor uses a robust scanning backend (powered by betterleaks/gitleaks) to identify potential secrets in your project.
+Ensor uses a robust scanning back end (powered by better leaks/git leaks) to identify potential secrets in your project.
 
 1. **Scan files** in the current directory and subdirectories.
 2. **Detect secrets** such as tokens, keys, and credentials.
