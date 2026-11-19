@@ -20,10 +20,10 @@ tags:
 
 ## LightCMS — Discover the Writer Within You ✍️
 
-[LightCMS](https://www.lightcms.me) is an easy to use, interactive, Git-based CMS built to help you discover your inner
+[LightCMS](https://www.lightcms.me) Is an easy to use, interactive, Git-based CMS built to help you discover your inner
 writer and fall in love with writing again.
 
-Compatible with **any static site generator (SSG) that supports front matter**, LightCMS makes
+Compatible with **Any static site generator (SSG) that supports front matter**, LightCMS makes
 creating, managing, and publishing content effortless.
 
 Whether you're sharing your experiences, documenting your journey, or putting your thoughts into words,
