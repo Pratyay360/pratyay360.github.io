@@ -161,7 +161,7 @@ This is useful when migrating configuration formats across tools or projects whi
 ## Best practices when using Ensor
 
 - Run Ensor before committing changes that may include credentials or tokens
-- Keep generated `.env` files out of version control (add them to `.gitignore`)
+- Keep generated `.env` Files out of version control (add them to `.gitignore`)
 - Rotate any secrets that may have already been exposed
 - Review redactions to confirm placeholders and variable names match your app's configuration
 
