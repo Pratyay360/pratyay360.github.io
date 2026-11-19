@@ -1,26 +1,25 @@
 #search {
-  --pf-text: var(--default-color);
-  --pf-text-secondary: var(--default-tint);
-  --pf-text-muted: var(--default-tint);
-  --pf-background: var(--menu-background);
-  --pf-border: var(--grey);
-  --pf-border-focus: var(--link-color);
-  --pf-hover: var(--menu-hover);
-  --pf-mark: var(--link-color);
-  --pf-outline-focus: var(--link-color);
-  --pf-font: inherit;
-  margin-top: 1.5rem;
+	--pf-text: var(--default-color);
+	--pf-text-secondary: var(--default-tint);
+	--pf-text-muted: var(--default-tint);
+	--pf-background: var(--menu-background);
+	--pf-border: var(--grey);
+	--pf-border-focus: var(--link-color);
+	--pf-hover: var(--menu-hover);
+	--pf-mark: var(--link-color);
+	--pf-outline-focus: var(--link-color);
+	--pf-font: inherit;
+	margin-top: 1.5rem;
 }
 
 #search pagefind-input,
 #search pagefind-results {
-  display: block;
+	display: block;
 }
 
 #search pagefind-summary {
-  display: block;
-  margin: 0.75rem 0;
-  color: var(--default-tint);
-  font-size: 0.85rem;
+	display: block;
+	margin: 0.75rem 0;
+	color: var(--default-tint);
+	font-size: 0.85rem;
 }
-

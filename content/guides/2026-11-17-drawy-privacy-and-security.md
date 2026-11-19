@@ -3,10 +3,10 @@ title: Drawy Privacy and Security
 description: What Drawy stores, what it does not store, and how to remove your data.
 slug: drawy-privacy
 weight: 4
-keywords:
-    - drawy
-    - privacy
-    - security
+keywords: 
+  - drawy
+  - privacy
+  - security
 date: 2026-11-17T10:27:53.916Z
 draft: false
 ---

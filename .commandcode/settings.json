@@ -8,7 +8,9 @@
       "Shell(ls dist/pagefind/ 2>/dev/null | head -30; echo ---; grep -o -- '--pf-[a-z-]*' dist/pagefind/pagefind-component-ui.css 2>/dev/null | sort -u | head -30; echo ---; cat content/search.md 2>/dev/null; echo ---; cat templates/partials/header.html)",
       "Shell(npm view pagefind version 2>/dev/null; echo ---; grep -o 'prefers-color-scheme[^)]*)' dist/pagefind/pagefind-component-ui.css | sort | uniq -c; echo ---; grep -o -- '--pf-[a-z-]*' dist/pagefind/pagefind-component-ui.css | sort -u | tail -20; echo ---; grep -oE '(pagefind-[a-z-]+|data-pagefind-[a-z-]+)' dist/pagefind/pagefind-component-ui.js | sort | uniq -c | sort -rn | head -20)",
       "Shell(python3 - <<'EOF' import re s = open('sass/search.scss').read() s = s.replace('\\n#search .pf-result-title {\\n font-size: 1rem;\\n}\\n', '\\n') open('sass/search.scss','w').write(s) EOF cat sass/search.scss)",
-      "Shell(grep:*)"
+      "Shell(grep:*)",
+      "Shell(cd /var/home/pmustafi/alpha/pratyay360.github.io && echo \"HEAD balance:\" && git show HEAD:sass/_tags.scss | tr -cd '{' | wc -c && git show HEAD:sass/_tags.scss | tr -cd '}' | wc -c && echo \"WORKTREE balance:\" && tr -cd '{' < sass/_tags.scss | wc -c && tr -cd '}' < sass/_tags.scss | wc -c && echo \"HEAD lines:\" && git show HEAD:sass/_tags.scss | sed -n '38,56p' | cat -A | sed -n '1,20p')",
+      "Shell(cd /var/home/pmustafi/alpha/pratyay360.github.io && echo \"WORKTREE opens=$(grep -o '{' sass/_tags.scss | wc -l) closes=$(grep -o '}' sass/_tags.scss | wc -l)\" && echo \"HEAD opens=$(git show HEAD:sass/_tags.scss | grep -o '{' | wc -l) closes=$(git show HEAD:sass/_tags.scss | grep -o '}' | wc -l)\" && git show HEAD:sass/_tags.scss > /tmp/tags_head.scss && echo \"TMP HEAD opens=$(grep -o '{' /tmp/tags_head.scss | wc -l) closes=$(grep -o '}' /tmp/tags_head.scss | wc -l)\" && wc -l /tmp/tags_head.scss sass/_tags.scss)"
     ],
     "deny": [],
     "defaultMode": "default"

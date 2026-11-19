@@ -6,25 +6,20 @@ date: 2026-11-17T10:25:42.235Z
 draft: false
 ---
 
-_Last updated: November 16, 2026_
-
-> **TL;DR**
-  This is a static documentation site with no accounts or sign-ups. We do not run
-  advertising or cross-site tracking for ad targeting. The site uses lightweight
-  analytics/measurement and a few third-party embeds to understand usage and keep
-  pages working.
+> **TL;DR** This is a static documentation site with no accounts or sign-ups. We do not run advertising or cross-site tracking for ad targeting. The site uses lightweight analytics/measurement and a few third-party embeds to understand usage and keep pages working.
 
 ## What this site is
 
 These docs are built with [Zola](https://www.getzola.org/) and served as static files from [pratyay360.github.io](https://pratyay360.github.io/). There is no backend, no database, and no user accounts on this site.
 
-Source code lives at [`Pratyay360/pratyay360.github.io`](https://github.com/Pratyay360/pratyay360.github.io) on GitHub.
+Source code lives at [Pratyay360/pratyay360.github.io](https://github.com/Pratyay360/pratyay360.github.io) on GitHub.
 
-## Data we collect directly
+### Data we collect directly
 
 We do not ask for your name, email, or other personal information to read these docs, and we do not operate user accounts on this site.
 
 To understand which pages are useful, the site loads lightweight measurement tools:
+
 - **GoatCounter** (page view counting; the site also displays a per-page view count)
 - **Microsoft Clarity** (usage analytics/behavior insights)
 

@@ -4,10 +4,10 @@ description: Run your own instance of drawy the TanStack Start app, the real tim
 weight: 5
 slug: drawy-selfhost
 date: 2026-11-17T10:25:27.401Z
-keywords:
-    - drawy
-    - hosting
-    - self-hosting
+keywords: 
+  - drawy
+  - hosting
+  - self-hosting
 draft: false
 ---
 
@@ -20,7 +20,7 @@ draft: false
 - MISE the version manager
 - A PostgreSQL database — Neon, Supabase or any
 - A Cloudflare account — the real time Durable Objects live in the same Worker
-as the app, so `wrangler deploy` publishes everything.
+  as the app, so `wrangler deploy` publishes everything.
 - Any serverless platform like cloudflare worker.
 
 ## 1. Install
@@ -109,13 +109,13 @@ Variables prefixed with `VITE_` are inlined into the bundle during the build pro
 ## Operational Notes
 
 - Your reverse proxy must forward WebSocket upgrades on `/parties`; the browser  
-connects there directly for real time sync.
+  connects there directly for real time sync.
 - Image uploads go to imgcdn.dev from `src/lib/s3.ts`. Replace that function if
-you would rather keep objects on your own storage.
+  you would rather keep objects on your own storage.
 - The session cookie is only marked `Secure` when `NODE_ENV=production`, so
-serve the app over HTTPS.
+  serve the app over HTTPS.
 - Lint and format are mise tasks: `mise run lint` (oxlint) and `mise run format`
-(oxfmt).
+  (oxfmt).
 
 ## Related
 

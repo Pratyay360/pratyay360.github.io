@@ -1,6 +1,6 @@
 ---
-title: What is Lightcms
-description: Lightcms is an easy to use, interactive, Git based CMS built to help you discover your inner writer and fall in love with writing again.
+title: What Lightcms is
+description: Lightcms an easy to use, interactive, Git based CMS built to make you discover the hidden writer and make you fall in love with writing again.
 date: 2026-11-17T10:27:07.328Z
 weight: 1
 slug: lightcms

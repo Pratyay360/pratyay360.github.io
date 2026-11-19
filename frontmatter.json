@@ -1,56 +1,56 @@
 {
-  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
-  "frontMatter.content.pageFolders": [
-    {
-      "title": "content",
-      "path": "[[workspace]]/content"
-    },
-    {
-      "title": "guides",
-      "path": "[[workspace]]/content/guides"
-    }
-  ],
-  "frontMatter.taxonomy.contentTypes": [
-    {
-      "name": "default",
-      "pageBundle": false,
-      "fields": [
-        {
-          "title": "title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "date",
-          "name": "date",
-          "type": "datetime"
-        },
-        {
-          "title": "weight",
-          "name": "weight",
-          "type": "number"
-        },
-        {
-          "title": "draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "template",
-          "name": "template",
-          "type": "string"
-        },
-        {
-          "title": "sort_by",
-          "name": "sort_by",
-          "type": "string"
-        }
-      ]
-    }
-  ]
+	"$schema": "https://frontmatter.codes/frontmatter.schema.json",
+	"frontMatter.content.pageFolders": [
+		{
+			"title": "content",
+			"path": "[[workspace]]/content"
+		},
+		{
+			"title": "guides",
+			"path": "[[workspace]]/content/guides"
+		}
+	],
+	"frontMatter.taxonomy.contentTypes": [
+		{
+			"name": "default",
+			"pageBundle": false,
+			"fields": [
+				{
+					"title": "title",
+					"name": "title",
+					"type": "string"
+				},
+				{
+					"title": "description",
+					"name": "description",
+					"type": "string"
+				},
+				{
+					"title": "date",
+					"name": "date",
+					"type": "datetime"
+				},
+				{
+					"title": "weight",
+					"name": "weight",
+					"type": "number"
+				},
+				{
+					"title": "draft",
+					"name": "draft",
+					"type": "draft"
+				},
+				{
+					"title": "template",
+					"name": "template",
+					"type": "string"
+				},
+				{
+					"title": "sort_by",
+					"name": "sort_by",
+					"type": "string"
+				}
+			]
+		}
+	]
 }

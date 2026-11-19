@@ -1,42 +1,54 @@
 .darkmode {
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
+	position: absolute;
+	right: 1rem;
+	top: 1.5rem;
 }
 
 .darkmode > .toggle {
-    display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
-.darkmode svg {
-    opacity: 0;
-    width: 20px;
-    height: 20px;
-    fill: var(--gray);
-    transition: opacity 0.1s ease;
-    cursor: pointer;
+.darkmode label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 4px;
+	padding: 0.15rem;
 }
 
-.darkmode .toggle:checked ~ label > #dayIcon {
-    opacity: 0;
-    display: none;
+.darkmode .toggle:focus-visible + #toggle-label-light,
+.darkmode .toggle:focus-visible ~ #toggle-label-dark {
+	outline: 2px solid var(--link-color);
+	outline-offset: 2px;
 }
 
-.darkmode .toggle:checked ~ label > #nightIcon {
-    opacity: 1;
-    filter: invert(1);
+.darkmode label i {
+	font-size: 1.25rem;
+	color: var(--grey);
+	cursor: pointer;
 }
 
-.darkmode .toggle:not(:checked) ~ label > #dayIcon {
-    opacity: 1;
+.darkmode .toggle:checked ~ #toggle-label-light {
+	display: none;
 }
 
-.darkmode .toggle:not(:checked) ~ label > #nightIcon {
-    opacity: 0;
-    display: none;
+.darkmode .toggle:checked ~ #toggle-label-dark {
+	display: inline-flex;
 }
 
-.darkmode #toggle-label-light,
-.darkmode #toggle-label-dark {
-    display: inline;
+.darkmode .toggle:not(:checked) ~ #toggle-label-light {
+	display: inline-flex;
+}
+
+.darkmode .toggle:not(:checked) ~ #toggle-label-dark {
+	display: none;
 }

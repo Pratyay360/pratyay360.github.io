@@ -1,8 +1,9 @@
 ---
 title: Library support in Drawy
-description: Reuse shapes across canvases by saving libraries from the public Excalidraw catalog.
+description: Reuse shapes across canvases by utilizing libraries from the public Excalidraw catalog.
 slug: drawy-library
 weight: 3
+draft: false
 date: 2026-11-17T10:29:06.333Z
 ---
 
@@ -12,7 +13,7 @@ Drawy uses Excalidraw's library format, so libraries made for Excalidraw work in
 
 ## Browse the public catalog
 
-Select **Libraries** in the sidebar. Drawy loads the public catalog from [libraries.excalidraw.com](https://libraries.excalidraw.com).
+Select Libraries in the sidebar. Drawy loads the public catalog from [libraries.excalidraw.com](https://libraries.excalidraw.com).
 
 From the browser you can:
 

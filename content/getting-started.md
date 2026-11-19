@@ -3,9 +3,7 @@ title : 'Getting Started with Projects & Tools'
 description : 'Quick navigation guide and introduction to developer tools, CLI utilities, and libraries documented across this site.'
 weight : 2
 draft: false
-published: true
 ---
-
 
 Welcome to the documentation hub. Here you will find quickstarts, implementation guides, architectural diagrams,
 and practical examples for each active open-source tool and project.

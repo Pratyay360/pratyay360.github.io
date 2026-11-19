@@ -22,7 +22,7 @@
     <h2>{{ sec.title }}</h2>
     <ul>
       {% for p in sec.pages %}
-      <li{% if p.permalink == page.permalink %} class="active"{% endif %}><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
+      <li {% if p.permalink == page.permalink %} class="active"{% endif %}><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
       {% endfor %}
     </ul>
   </nav>

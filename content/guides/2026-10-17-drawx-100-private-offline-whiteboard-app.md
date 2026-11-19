@@ -1,5 +1,5 @@
 ---
-title: Drawx 100% Private, offline Whiteboard App
+title: Drawx Private, offline Whiteboard and planning App
 description: Native offline first desktop app for Linux, macOS, and Windows for planning, drawing, and brainstorming.
 date: 2026-11-17T10:24:05.403Z
 weight: 100
@@ -26,16 +26,16 @@ Unlike cloud based diagramming tools that upload your canvases to remote servers
 
 Ready-to-use binaries are available for all major platforms:
 
-| Operating System             | Package Type                 | Download Link                                                                                                |
-| :---------------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| **Ubuntu / Debian / Mint**   | `.deb` (x86\_64)             | [Download debian-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/debian-x86_64)   |
-| **Fedora / RHEL / openSUSE** | `.rpm` (x86\_64)             | [Download rpm-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/rpm-x86_64)         |
-| **Universal Linux**          | AppImage                     | [Download AppImage](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/appimage-x86_64)           |
-| **Linux Flatpak**            | Flatpak                      | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                      |
-| **macOS (Apple Silicon)**   | `.dmg` (aarch64)             | [Download dmg-aarch64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-aarch64)        |
-| **macOS (Intel)**           | `.dmg` (x86\_64)             | [Download dmg-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-x86_64)         |
-| **Windows Installer**        | NSIS Setup (.exe)            | [Download NSIS Installer](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/nsis-x86_64)     |
-| **Windows Portable**         | Standalone (.exe)            | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                       |
+| Operating System             | Package Type      | Download Link                                                                                              |
+| :--------------------------- | :---------------- | :--------------------------------------------------------------------------------------------------------- |
+| **Ubuntu / Debian / Mint**   | `.deb` (x86\_64)  | [Download debian-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/debian-x86_64) |
+| **Fedora / RHEL / openSUSE** | `.rpm` (x86\_64)  | [Download rpm-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/rpm-x86_64)       |
+| **Universal Linux**          | AppImage          | [Download AppImage](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/appimage-x86_64)     |
+| **Linux Flatpak**            | Flatpak           | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                    |
+| **macOS (Apple Silicon)**    | `.dmg` (aarch64)  | [Download dmg-aarch64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-aarch64)      |
+| **macOS (Intel)**            | `.dmg` (x86\_64)  | [Download dmg-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-x86_64)       |
+| **Windows Installer**        | NSIS Setup (.exe) | [Download NSIS Installer](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/nsis-x86_64)   |
+| **Windows Portable**         | Standalone (.exe) | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                    |
 
 [![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
 

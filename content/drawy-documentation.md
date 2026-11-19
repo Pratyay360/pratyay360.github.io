@@ -1,4 +1,5 @@
 ---
+
 title: Drawy Documentation
 description: A guide to drawing, sharing and collaborating in Drawy.
 date: 2026-11-17T10:26:42.355Z
@@ -49,11 +50,11 @@ To start collaborating, open a canvas and either invite someone by username or s
 
 A new drawing is private. You choose how, and with whom, to share it.
 
-| Option | Who can open it | Good for |
-| :--- | :--- | :--- |
-| **Private (default)** | Only you | Work in progress |
-| **Invite by username** | A specific person you choose | Working on a canvas together |
-| **Read-only link** | Anyone with the link, view only | Publishing a finished drawing or asking for feedback |
+| Option                 | Who can open it                 | Good for                                             |
+| :--------------------- | :------------------------------ | :--------------------------------------------------- |
+| **Private (default)**  | Only you                        | Work in progress                                     |
+| **Invite by username** | A specific person you choose    | Working on a canvas together                         |
+| **Read-only link**     | Anyone with the link, view only | Publishing a finished drawing or asking for feedback |
 
 You can revoke access at any time. Revoking removes the other person's or the link's access without deleting the drawing.
 
@@ -74,10 +75,10 @@ See [Drawy Libraries](/guides/drawy-library/) for details on browsing, saving, a
 
 Nothing you draw is locked inside the app.
 
-| Action | Formats |
-| :--- | :--- |
-| **Export a canvas** | `.excalidraw`, PNG, SVG |
-| **Import into Drawy** | `.excalidraw` |
+| Action                | Formats                 |
+| :-------------------- | :---------------------- |
+| **Export a canvas**   | `.excalidraw`, PNG, SVG |
+| **Import into Drawy** | `.excalidraw`           |
 
 ## Themes
 
@@ -87,14 +88,14 @@ Drawy offers six themes across light and dark mode. Your choice is remembered on
 
 Drawy is open source and built on a small set of well-known projects.
 
-| Layer | Technology | Role |
-| :--- | :--- | :--- |
-| **Canvas and editor** | Excalidraw | Drawing surface, tools and element model |
-| **App shell and routing** | TanStack Start and Router | Application framework and routes |
-| **API** | oRPC | Typed API between client and server |
-| **Realtime** | PartyServer on Cloudflare Durable Objects | Presence and Yjs sync for live collaboration |
-| **Storage** | Postgres through Drizzle ORM | Persistent canvas storage |
-| **UI** | Astryx | Component library and theming |
+| Layer                     | Technology                                | Role                                         |
+| :------------------------ | :---------------------------------------- | :------------------------------------------- |
+| **Canvas and editor**     | Excalidraw                                | Drawing surface, tools and element model     |
+| **App shell and routing** | TanStack Start and Router                 | Application framework and routes             |
+| **API**                   | oRPC                                      | Typed API between client and server          |
+| **Realtime**              | PartyServer on Cloudflare Durable Objects | Presence and Yjs sync for live collaboration |
+| **Storage**               | Postgres through Drizzle ORM              | Persistent canvas storage                    |
+| **UI**                    | Astryx                                    | Component library and theming                |
 
 ### How the pieces fit
 

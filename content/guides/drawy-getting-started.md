@@ -1,4 +1,5 @@
 ---
+
 title: Drawy getting started
 description: Create an account, draw your first canvas, share it, and export your work.
 weight: 1
@@ -34,11 +35,11 @@ Drawy saves as you draw. After a short pause the header shows **Saved**, and the
 
 Open **Share canvas** to choose how other people can access a drawing:
 
-| Option | Who can open it | Good for |
-| :--- | :--- | :--- |
-| **Private** | Only you | Work in progress |
-| **Invite by username** | A specific Drawy user | Editing together |
-| **Read-only link** | Anyone with the link | Sharing a finished drawing or getting feedback |
+| Option                 | Who can open it       | Good for                                       |
+| :--------------------- | :-------------------- | :--------------------------------------------- |
+| **Private**            | Only you              | Work in progress                               |
+| **Invite by username** | A specific Drawy user | Editing together                               |
+| **Read-only link**     | Anyone with the link  | Sharing a finished drawing or getting feedback |
 
 You can revoke access at any time without deleting the canvas. For more on collaboration and version history, see [Drawy Documentation](/drawy-documentation/).
 
@@ -46,11 +47,11 @@ You can revoke access at any time without deleting the canvas. For more on colla
 
 The canvas menu can export the current drawing in several formats:
 
-| Format | Use it for |
-| :--- | :--- |
+| Format        | Use it for                              |
+| :------------ | :-------------------------------------- |
 | `.excalidraw` | Reopening or importing the canvas later |
-| PNG | Slides, docs, and raster images |
-| SVG | Vector artwork that scales cleanly |
+| PNG           | Slides, docs, and raster images         |
+| SVG           | Vector artwork that scales cleanly      |
 
 The same menu can import a `.excalidraw` file back into a canvas, so drawings can move between Drawy and other Excalidraw-compatible apps.
 

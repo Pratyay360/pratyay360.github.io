@@ -1,6 +1,4 @@
 {
-  "recommendations": [
-    "frontmatter.front-matter-cms"
-  ],
-  "unwantedRecommendations": []
+	"recommendations": ["frontmatter.front-matter-cms"],
+	"unwantedRecommendations": []
 }

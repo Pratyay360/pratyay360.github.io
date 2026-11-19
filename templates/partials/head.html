@@ -1,25 +1,28 @@
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   {% if page %}{% set ptitle = page.title %}{% set pdesc = page.description | default(value=config.description) %}{% set purl = page.permalink %}{% elif section %}{% set ptitle = section.title | default(value=config.title) %}{% set pdesc = section.description | default(value=config.description) %}{% set purl = section.permalink %}{% else %}{% set ptitle = config.title %}{% set pdesc = config.description %}{% set purl = config.base_url %}{% endif %}
-  <title>{{ ptitle }} | {{ config.title }}</title>
+  <title>{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}</title>
   <meta name="description" content="{{ pdesc }}" />
   <meta name="author" content="{{ config.extra.author | default(value='pratyay') }}" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="{{ purl | safe }}" />
 
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}" />
   <meta property="og:site_name" content="{{ config.title }}" />
-  <meta property="og:title" content="{{ ptitle }}" />
+  <meta property="og:locale" content="{{ lang | default(value='en') }}" />
+  <meta property="og:title" content="{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}" />
   <meta property="og:description" content="{{ pdesc }}" />
   <meta property="og:url" content="{{ purl | safe }}" />
   <meta property="og:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
+  <meta property="og:image:alt" content="{{ ptitle }}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ ptitle }}" />
+  <meta name="twitter:title" content="{% if ptitle == config.title %}{{ config.title }}{% else %}{{ ptitle }} | {{ config.title }}{% endif %}" />
   <meta name="twitter:description" content="{{ pdesc }}" />
   <meta name="twitter:image" content="{{ get_url(path=config.extra.og_image | default(value='og-image.png')) | safe }}" />
-  <meta name="theme-color" content="#0d0d12" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d0d12" media="(prefers-color-scheme: dark)" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.png') | safe }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.png') | safe }}" />
@@ -28,24 +31,21 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" /></noscript>
+
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
 
   <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
   <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-  <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "z03gvjb9wd");
-  </script>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M3NNRZ4L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  </script>
+
+  {% if config.extra.goatcounter %}
   <script async data-goatcounter="{{ config.extra.goatcounter }}" src="https://gc.zgo.at/count.js"></script>
+  {% endif %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
 </head>

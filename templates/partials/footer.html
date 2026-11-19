@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-actions">
-    <a class="contact-cta" href="{{ config.extra.contact_url }}" target="_blank" rel="noopener">Contact us</a>
+    <a class="contact-cta" href="{{ config.extra.contact_url }}" target="_blank" rel="noopener noreferrer">Contact us</a>
   </div>
   <div class="footer-badges">
     <div id="wcb" class="carbonbadge"></div>
@@ -12,7 +12,7 @@
     © 2026. Powered by <a href="https://www.getzola.org"><u>Zola</u></a>.
     {%- endif -%}
   </span>
-  <nav class="navigation-footer">
+  <nav class="navigation-footer" aria-label="Footer">
     <ul>
       <li><a href="https://github.com/Pratyay360/pratyay360.github.io">GitHub</a></li>
       <li><a href="https://pratyay.online">Website</a></li>
@@ -20,15 +20,19 @@
   </nav>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/website-carbon-badges@1.1.3/b.min.js" defer></script>
+{% if config.extra.goatcounter %}
 <noscript>
   <img src="{{ config.extra.goatcounter }}?p={{ current_path | default(value='/404') | urlencode }}" alt="" width="1" height="1" />
 </noscript>
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
+{% endif %}
+{% if config.extra.clarity_id %}
+<script>
+  ((c,l,a,r,i,t,y)=> {
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      t=l.createElement(r);t.async=1;t.src=`https://www.clarity.ms/tag/${i}`;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "{{ config.extra.clarity_id }}");
 </script>
+{% endif %}
 <div class="shareopenly-floating"></div>
 <script defer src="https://shareopenly.org/js/v1/shareopenly.js"></script>
