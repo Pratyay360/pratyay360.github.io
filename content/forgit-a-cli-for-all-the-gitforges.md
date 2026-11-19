@@ -3,9 +3,14 @@ title: 'Forgit: a cli for all the gitforges'
 description: 'A cli tool to '
 date: '2026-11-19T15:35:35Z'
 draft: false
-tags: []
+tags:
+  - cli
+  - forgit
+  - golang
+  - opensource
 isCJKLanguage: false
 headless: false
+slug: forgit-a-cli-for-all-the-gitforges
 ---
 Forgit is a unified CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, SourceHut, and other Git forges. Manage repositories, issues, pull requests, and more using one consistent set of commands across platforms without needing a separate CLI for each forge.
 
@@ -43,7 +48,7 @@ winget install pratyay360.forgit
 
 Prefer a direct download? Browse the [latest release.](https://github.com/Pratyay360/forgit/releases/latest)
 
-##  Support Forgit
+## Support Forgit
 
 If `forgit` Is useful to you, [give it a star on GitHub](https://github.com/Pratyay360/forgit)
 
