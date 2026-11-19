@@ -16,31 +16,42 @@
       "pageBundle": false,
       "fields": [
         {
-          "title": "Title",
-          "name": "Title",
+          "title": "title",
+          "name": "title",
           "type": "string"
         },
         {
-          "title": "Description",
-          "name": "Description",
+          "title": "description",
+          "name": "description",
           "type": "string"
         },
         {
-          "title": "Weight",
-          "name": "Weight",
+          "title": "weight",
+          "name": "weight",
           "type": "number"
-        },
-        {
-          "title": "Date",
-          "name": "Date",
-          "type": "datetime"
         },
         {
           "title": "draft",
           "name": "draft",
           "type": "draft"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "drawy",
+            "hosting",
+            "self-hosting"
+          ]
         }
       ]
     }
-  ]
+  ],
+  "frontMatter.git.enabled": true
 }

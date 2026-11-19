@@ -16,13 +16,13 @@ headless: false
 ---
 
 
-# VN AI Video Editor
+## VN AI Video Editor
 
 Unofficial. Edit Like a Pro with VN AI Video Editor. The best free video editor for YouTube &amp; Shorts. Featuring 4K resolution support, advanced keyframes, and zero ads.
 
-![](https://i.ibb.co/9m8QxYD9/image-png.png)
+![vn](https://i.ibb.co/9m8QxYD9/image-png.png)
 
-![](https://i.ibb.co/cXgBtwBV/image-png.png)
+![vlognow](https://i.ibb.co/cXgBtwBV/image-png.png)
 
 # VN Video Editor for Linux (Unofficial AppImage)
 
@@ -30,8 +30,6 @@ Unofficial. Edit Like a Pro with VN AI Video Editor. The best free video editor 
 [![Build AppImage](https://img.shields.io/github/actions/workflow/status/Pratyay360/vn-appimage/appimage.yml?style=flat-square&logo=githubactions&label=build)](https://github.com/Pratyay360/vn-appimage/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-orange.svg?style=flat-square&logo=linux)](https://github.com/Pratyay360/vn-appimage/releases)
-
-
 
 > **FUSE Compatibility**: This AppImage works without legacy `fuse2` as it can use `fuse3` instead. On systems without FUSE or in restricted environments, you can run:
 

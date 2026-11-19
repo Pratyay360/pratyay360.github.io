@@ -4,10 +4,7 @@ description: Run your own instance of drawy the TanStack Start app, the real tim
 weight: 5
 slug: drawy-selfhost
 date: 2026-11-17T10:25:27.401Z
-keywords: 
-  - drawy
-  - hosting
-  - self-hosting
+keywords: self-hosting
 draft: false
 ---
 
@@ -15,8 +12,8 @@ draft: false
 
 ### This Page Walks Through All you Need
 
-- MISE the version manager
-- A PostgreSQL database — Neon, Supabase or any
+- mise the version manager and dependency manager + task runner for the project.
+- A PostgreSQL database — Neon, Supabase or any remote postgres.
 - A Cloudflare account — the real time Durable Objects live in the same Worker
   as the app, so `wrangler deploy` publishes everything.
 - Any serverless platform like cloudflare worker.
@@ -117,5 +114,5 @@ Variables prefixed with `VITE_` are inlined into the bundle during the build pro
 
 ## Related
 
-- [Privacy and security](/privacy/) — what your instance stores
-- [Getting started](/getting-started/) — using Drawy as an end user.
+- [Privacy and security](/drawy-privacy/) — what your instance stores
+- [Getting started](/getting-started-guide/) — using Drawy as an end user.

@@ -35,7 +35,6 @@ Unlike cloud-based diagramming tools that upload your canvases to remote servers
 
 Ready-to-use binaries are available for all major platforms:
 
-
 | Operating System             | Package Type      | Download Link                                                                                              |
 | :---------------------------- | :----------------- | :---------------------------------------------------------------------------------------------------------- |
 | **Ubuntu / Debian / Mint**   | `.deb` (x86\_64)  | [Download debian-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/debian-x86_64) |
@@ -46,7 +45,6 @@ Ready-to-use binaries are available for all major platforms:
 | **macOS (Intel)**            | `.dmg` (x86\_64)  | [Download dmg-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-x86_64)       |
 | **Windows Installer**        | NSIS Setup (.exe) | [Download NSIS Installer](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/nsis-x86_64)   |
 | **Windows Portable**         | Standalone (.exe) | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                    |
-
 
 [![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
 

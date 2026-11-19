@@ -30,13 +30,11 @@ Drawy saves as you draw. After a short pause the header shows **Saved**, and the
 
 Open **Share canvas** To choose how other people can access a drawing:
 
-
 | Option                 | Who can open it       | Good for                                       |
 | :---------------------- | :--------------------- | :---------------------------------------------- |
 | **Private**            | Only you              | Work in progress                               |
 | **Invite by username** | A specific Drawy user | Editing together                               |
 | **Read-only link**     | Anyone with the link  | Sharing a finished drawing or getting feedback |
-
 
 You can revoke access at any time without deleting the canvas. For more on collaboration and version history, see [Drawy Documentation](/drawy-documentation/).
 

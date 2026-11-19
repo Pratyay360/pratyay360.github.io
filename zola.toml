@@ -6,7 +6,7 @@ author = "pratyay"
 compile_sass = true
 generate_feeds = true
 feed_filenames = ["atom.xml", "rss.xml"]
-minify_html = false
+minify_html = true
 build_search_index = true
 output_dir = "dist"
 taxonomies = [{ name = "tags", feed = true }]

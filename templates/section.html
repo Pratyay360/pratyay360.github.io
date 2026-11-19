@@ -12,7 +12,9 @@
   {% if section.pages | length > 0 %}
   <ul>
     {% for p in section.pages %}
-    <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}</li>
+    <li>
+      <a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}
+    </li>
     {% endfor %}
   </ul>
   {% endif %}

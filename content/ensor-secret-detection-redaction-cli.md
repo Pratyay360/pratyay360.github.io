@@ -3,12 +3,7 @@ title: 'Ensor: Secret Detection & Redaction'
 description: >-
   Open source CLI to detect and redact hardcoded secrets, replace them with
   references
-keywords:
-  - secret detection
-  - redaction
-  - CLI
-  - codebase
-  - ensor
+keywords: hosting
 date: '2026-11-17T10:25:51.812Z'
 weight: 1
 slug: ensor-secret-detection-redaction-cli

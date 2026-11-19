@@ -6,15 +6,18 @@
       <h2>{{ config.title | default(value="Mabuya")}}</h2>
     </a>
     <nav>
+      {% if config.extra.menu %}
       <ul>
-        {% if config.extra.menu %}
         {% for menu in config.extra.menu %}
         <li><a href="{{ get_url(path=menu.url, trailing_slash=true) | safe }}">{{ menu.name }}</a></li>
-        {% endfor %} {% else %}
+        {% endfor %}
+      </ul>
+      {% else %}
+      <ul>
         <li><a href="{{ config.base_url | safe }}">Home</a></li>
         <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
-        {% endif %}
       </ul>
+      {% endif %}
     </nav>
   </section>
 </header>
