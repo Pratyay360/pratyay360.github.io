@@ -1,13 +1,13 @@
-base_url = "https://pratyay360.github.io/"
+base_url = "pratyay360.github.io"
 title = "Docs for projects by pratyay"
 description = "Developer documentation, setup guides for projects by pratyay"
 default_language = "en"
 
 compile_sass = true
 generate_feeds = true
-feed_filenames = ["rss.xml", "atom.xml"]
-minify_html = false
-build_search_index = false
+feed_filenames = ["atom.xml"]
+minify_html = true
+build_search_index = true
 output_dir = "dist"
 taxonomies = [{ name = "tags", feed = true }]
 
@@ -21,8 +21,8 @@ theme = "dark-plus"
 author = "PRATYAY MUSTAFI"
 locales = ["en"]
 github = "https://github.com/Pratyay360/pratyay360.github.io"
-site_url = "https://pratyay360.github.io"
-og_image = "/og-image.png"
+site_url = "pratyay360.github.io"
+og_image = "og-image.png"
 goatcounter = "https://pratyay-project.goatcounter.com/count"
 clarity_id = "z1374lu099"
 contact_url = "https://app.youform.com/forms/8kgi7jvm"
@@ -50,4 +50,3 @@ url = "search"
 
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a>. Managed by <a href="https://www.pratyay.online">pratyay mustafi</a>.'
-
