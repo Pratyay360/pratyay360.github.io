@@ -50,7 +50,7 @@ Prefer a direct download? Browse the [latest release.](https://github.com/Pratya
 
 ## Support Forgit
 
-If `forgit` Is useful to you, [give it a star on GitHub](https://github.com/Pratyay360/forgit)
+If `forgit` Is useful to you, [Give it a star on GitHub](https://github.com/Pratyay360/forgit)
 
 And share it with someone who works across Git forges.
 
