@@ -18,10 +18,10 @@ tags:
 
 ![speech to text](https://i.ibb.co/WWssN2bg/Screenshot-2026-11-03-at-23-00-25-Edit-entry-Light-CMS-png.png)
 
-## LightCMS — Discover the Writer Within You ✍️
+## LightCMS Discover the Writer Within You ✍️
 
-[LightCMS](https://www.lightcms.me) Is an easy to use, interactive, Git-based CMS built to help you discover your inner
-writer and fall in love with writing again.
+[LightCMS](https://www.lightcms.me) Is an easy to use, interactive, Git based CMS built to help you discover the hidden  
+Writer in you and fall in love with writing again.
 
 Compatible with **Any static site generator (SSG) that supports front matter**, LightCMS makes
 creating, managing, and publishing content effortless.
