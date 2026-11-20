@@ -1,6 +1,6 @@
 ---
 title: "LightCMS: Git Based CMS for Static Sites"
-description: "LightCMS is a Git-backed CMS for static sites. Write and publish Markdown with front matter using Zola, Hugo, Astro, or Jekyll; every edit is a commit."
+description: LightCMS is a Git based CMS for static sites. Write and publish Markdown with front matter using Zola, Hugo, Astro, or Jekyll; every edit is a commit
 date: 2026-11-17T10:27:07.328Z
 slug: lightcms
 draft: false
