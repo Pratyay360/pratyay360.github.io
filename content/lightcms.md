@@ -15,7 +15,7 @@ tags:
   - astro
 ---
 
-LightCMS is an easy-to-use, interactive, Git-based CMS built to help you discover the hidden writer in you and fall in love with writing again.
+LightCMS is an easy to use, interactive, Git based CMS built to help you discover the hidden writer in you and fall in love with writing again.
 
 Compatible with any static site generator (SSG) that supports front matter schema Zola, Hugo, Astro, Jekyll, Eleventy, Next.js, Nuxt, and more. LightCMS makes creating, managing, and publishing content effortless.
 
@@ -25,15 +25,15 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 
 | Problem | LightCMS Approach |
 |---------|-------------------|
-| **CMS lock-in** | Your content lives in *your* Git repo — markdown + front matter |
-| **Complex setup** | Connect repo → configure front matter fields → write |
-| **No local preview** | Built-in preview renders your actual SSG templates |
-| **Vendor hosting** | Deploy anywhere: Netlify, Vercel, Cloudflare Pages, GitHub Pages, your own server |
-| **Content stuck in DB** | Every edit is a Git commit — full history, diffs, rollback |
+| CMS lock in | Your content lives in your Git repo as markdown files so no lockin |
+| Complex setup | Connect repo → configure front matter fields → write |
+| No local preview | Built in preview renders your actual SSG templates |
+| Vendor hosting | Deploy anywhere: Netlify, Vercel, Cloudflare Pages, GitHub Pages, your own server |
+| Content stuck in DB | Every edit is a Git commit — full history, diffs, rollback |
 
 ## Core Features
 
-### Git-Native Content Storage
+### Git Native Content Storage
 - Content = markdown files + YAML/TOML front matter
 - Every save = Git commit (signed, if you configure it)
 - Branches = drafts, PRs = editorial workflow
@@ -85,41 +85,14 @@ cd lightcms
 # Configure
 cp .env.example .env
 # Add: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, DATABASE_URL, SESSION_SECRET
-
-# Deploy to Cloudflare Workers (recommended)
 bun run build
 bun run deploy
 ```
 
-**Requirements:**
-- Cloudflare account (Workers + D1/KV/R2) or Node.js server + PostgreSQL
-- GitHub OAuth app (for authentication)
-- Your SSG repo with front matter schema
+### 3. zero config by default 
 
-### 3. Configure your content model
+No config file required  you can use it as is out of the box with all the features.
 
-```yaml
-# lightcms.yaml in your content repo
-collections:
-  - name: "blog"
-    path: "content/blog"
-    fields:
-      - name: "title"
-        type: "string"
-        required: true
-      - name: "description"
-        type: "text"
-      - name: "date"
-        type: "datetime"
-        default: "now"
-      - name: "tags"
-        type: "tags"
-      - name: "draft"
-        type: "boolean"
-        default: true
-```
-
-LightCMS reads this config and builds the editor UI automatically.
 
 ## Architecture
 
@@ -136,11 +109,8 @@ LightCMS reads this config and builds the editor UI automatically.
 └─────────────────┘                          └─────────────────┘
 ```
 
-- **Frontend**: React, TypeScript, Vite, Tailwind
-- **Backend**: Cloudflare Workers (Hono) + D1 (SQLite) + R2 (assets) + KV (cache)
-- **Auth**: GitHub/GitLab OAuth (no passwords stored)
-- **Preview**: Spins up your SSG in a Worker — renders actual templates
-- **Deploy**: Triggers your existing CI/CD (Netlify, Vercel, Cloudflare Pages, etc.)
+- Frontend: Sveltekit, TypeScript, Vite, Tailwind
+- Auth: GitHub/GitLab OAuth using better auth
 
 ## Use Cases
 
@@ -166,31 +136,19 @@ LightCMS reads this config and builds the editor UI automatically.
 
 ## Pricing
 
-| Tier | Cost | Includes |
-|------|------|----------|
-| **Community** | Free | Self-hosted, unlimited repos, 1 user |
-| **Team** | $15/user/mo | Hosted, 5 users, PR review workflow, AI assistant |
-| **Enterprise** | Custom | SSO, audit logs, dedicated preview workers, SLA |
+Free only 
 
-Self-hosted is fully featured — no artificial limits.
-
-## Roadmap
-
-- [ ] Visual page builder (compose from components)
-- [ ] Webhook-based deploy triggers (beyond GitHub Actions)
-- [ ] Custom field types (color picker, file upload, relation)
-- [ ] Multi-language content (i18n front matter)
-- [ ] Plugin system for custom editor blocks
+Every edition is fully featured no artificial limits.
 
 ## Links
 
-- 🌐 **Live demo**: <https://www.lightcms.me/>
-- 📦 **GitHub**: <https://github.com/light-cms/lightcms>
-- 📖 **Docs**: <https://lightcms.me/docs>
-- 💬 **Discord**: <https://discord.gg/lightcms>
-- 🐛 **Issues**: <https://github.com/light-cms/lightcms/issues>
+- 🌐 **Live demo**: [https://www.lightcms.me/](https://www.lightcms.me/)
+- 📦 **GitHub**: [https://github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
+- 📖 **Docs**: [https://lightcms.me/docs](https://lightcms.me/docs)
+- 💬 **Discord**: [https://discord.gg/lightcms](https://discord.gg/lightcms)
+- 🐛 **Issues**: [https://github.com/light-cms/lightcms/issues](https://github.com/light-cms/lightcms/issues)
 - 📜 **License**: MIT
 
 ---
 
-*LightCMS is built by developers who got tired of fighting CMSs. If it helps you write, [star the repo](https://github.com/light-cms/lightcms). Questions? [Open a discussion](https://github.com/light-cms/lightcms/discussions).*
+- LightCMS is built by developers who got tired of fighting CMSs. If it helps you write, [star the repo](https://github.com/light-cms/lightcms).

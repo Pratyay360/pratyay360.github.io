@@ -5,20 +5,15 @@ date: 2026-11-19T15:52:35Z
 draft: false
 slug: vn-video-editor-appimage
 keywords:
-  - VN Video Editor
-  - VlogNow
   - AppImage
-  - Linux
-  - Wine
-  - pkgforge
-  - video editing
-  - unofficial
+  - VlogNow
+  - VN Video Editor
 ---
 
-**VN Video Editor (VlogNow)** is a popular free video editor for YouTube and Shorts — 4K support, advanced keyframes, zero ads. Official Linux build doesn't exist. This unofficial AppImage packages the Windows version via Wine and pkgforge tooling so it runs on Linux.
+VN Video Editor (VlogNow) is a popular free video editor for YouTube and Shorts with 4K support, advanced keyframes, and zero ads. Official Linux build doesn't exist. This unofficial AppImage packages the Windows version via Wine and pkgforge tooling so it runs on Linux.
 
 > ⚠️ **UNOFFICIAL COMMUNITY PROJECT**  
-> This repository is an independent, community-driven effort to create a portable AppImage wrapper for VN Video Editor on Linux. It is **not** affiliated with, endorsed by, or sponsored by Ubiquiti Labs, VlogNow, or the official developers of VN Video Editor.
+> This repository is an independent, community-driven effort to create a portable AppImage wrapper for VN Video Editor on Linux. It is not affiliated with, endorsed by, or sponsored by Ubiquiti Labs, VlogNow, or the official developers of VN Video Editor.
 
 ## Quick Start
 
@@ -29,16 +24,12 @@ chmod +x vn.AppImage
 ./vn.AppImage
 ```
 
-### FUSE Compatibility
-
-This AppImage works without legacy `fuse2` — it uses `fuse3` automatically. On systems without FUSE or in restricted environments (containers, some HPC clusters):
-
 ```bash
 # Option 1: Extract and run
 ./vn.AppImage --appimage-extract-and-run
 
 # Option 2: Environment variables
-APPIMAGE_EXTRACT_AND_RUN=1 NO_CLEANUP=1 ./vn.AppImage
+APPIMAGE_EXTRACT_AND_RUN=1 ./vn.AppImage
 ```
 
 ## What's Inside
@@ -49,13 +40,12 @@ APPIMAGE_EXTRACT_AND_RUN=1 NO_CLEANUP=1 ./vn.AppImage
 | **Compatibility layer** | Wine (latest stable) |
 | **Packaging** | pkgforge AppImage tooling |
 | **Architecture** | x86_64 (runs on x86_64 Linux) |
-| **FUSE** | fuse3 compatible, fallback to extract-and-run |
 
 ## Features Preserved
 
 - 4K resolution export support
 - Advanced keyframe animation
-- Multi-track timeline
+- Multi track timeline
 - Effects, transitions, filters
 - Text, stickers, overlays
 - Audio editing (volume, fade, split)
@@ -83,35 +73,19 @@ pkgforge build --recipe recipe.yml
 
 The recipe uses `pkgforge`'s Wine AppImage template with custom `dnf`/`apt` dependencies for multimedia codecs.
 
-## CI/CD Pipeline
-
-GitHub Actions workflow (`.github/workflows/appimage.yml`):
-1. Scheduled weekly + on upstream release
-2. Downloads latest VN Windows installer
-3. Builds AppImage via pkgforge in container
-4. Tests with `--appimage-extract-and-run`
-5. Publishes to GitHub Releases
-6. Updates AppImageHub listing
-
 ## Legal & Disclaimer
 
-- **VN Video Editor** is proprietary software developed by Ubiquiti Labs / Ubiquity (or respective copyright holders)
+- VN Video Editor is a property of Ubiquiti Labs / Ubiquity (or respective copyright holders)
 - This repository is an **unofficial community project** for **educational purposes only**
 - Does not promote piracy — users must comply with VN's original terms
 - No ownership claimed over VN Video Editor or its assets
 - Packaging scripts/recipes licensed MIT — VN itself subject to original terms
 
-**Copyright concerns?** Email <pratyaymustafi@outlook.com> or [open an issue](https://github.com/Pratyay360/vn-appimage/issues/new).
+**Copyright concerns?** Email [pratyaymustafi](mailto:pratyaymustafi@outlook.com) or [open an issue](https://github.com/Pratyay360/vn-appimage/issues/new).
 
 ## Downloads & Links
 
 | Platform | Link |
 |----------|------|
-| **GitHub Releases** | <https://github.com/Pratyay360/vn-appimage/releases> |
-| **Build status** | <https://github.com/Pratyay360/vn-appimage/actions> |
-| **Source recipes** | <https://github.com/Pratyay360/vn-appimage> |
-| **VN official site** | <https://vlognow.me/> |
-
----
-
-*Found a bug in the AppImage? [File an issue](https://github.com/Pratyay360/vn-appimage/issues/new). Want to help improve the packaging? PRs welcome.*
+| **GitHub Releases** | [https://github.com/Pratyay360/vn-appimage/releases](https://github.com/Pratyay360/vn-appimage/releases) |
+| **VN official site** | [https://vlognow.me/](https://vlognow.me/) |
