@@ -153,7 +153,3 @@ Open an issue first for significant changes. PRs welcome for bug fixes, document
 - 📦 **Releases**: [https://github.com/Pratyay360/forgit/releases](https://github.com/Pratyay360/forgit/releases)
 - 🐛 **Issues**: [https://github.com/Pratyay360/forgit/issues](https://github.com/Pratyay360/forgit/issues)
 - 📜 **License**: Apache-2.0
-
----
-
-*If forgit saves you juggling 10 different cli tools, [give it a star](https://github.com/Pratyay360/forgit). Found a bug? [File an issue](https://github.com/Pratyay360/forgit/issues).*
