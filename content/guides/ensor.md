@@ -44,7 +44,7 @@ ensor scan --interactive
 - **50+ secret patterns**: AWS, GitHub, Slack, Stripe, JWT, private keys, database URLs, generic high-entropy strings
 - **Interactive redaction**: TUI prompts for each finding — accept suggested name, customize, or skip
 - **Smart .env mapping**: If a detected value matches an existing `.env` entry, uses that key automatically
-- **Placeholder format**: `{{SECRET_NAME}}` (customizable via config)
+- **Placeholder format**: `{SECRET_NAME}` (customizable via config)
 - **Format conversion**: `ensor convert` — `.env` ↔ JSON ↔ YAML ↔ TOML
 - **Safe defaults**: Skips `.env*`, `.git/*`, `node_modules/`, `vendor/` by default
 - **CI/CD ready**: `ensor scan --json` for pipeline integration
@@ -71,7 +71,7 @@ ensor scan --interactive
 ```
 
 **Before:** `config.py` contains `API_KEY = "sk-live-abc123"`  
-**After:** `config.py` contains `API_KEY = "{{STRIPE_API_KEY}}"`  
+**After:** `config.py` contains `API_KEY = "{STRIPE_API_KEY}"`  
 **New `.env`:** `STRIPE_API_KEY=sk-live-abc123`
 
 ### Non-interactive (CI/CD)
@@ -100,7 +100,7 @@ ensor convert --from yaml --to toml --input config.yaml --output config.toml
 
 ```yaml
 # Custom placeholder format
-placeholder_format: "{{{.Name}}}"  # default: "{{.Name}}"
+placeholder_format: "{NAME}"  # example
 
 # Additional paths to skip
 skip_paths:
@@ -122,7 +122,7 @@ custom_patterns:
 3. **Map or prompt** —
    - Match found in `.env`? → Use existing key
    - New secret? → Suggest name (e.g., `STRIPE_SECRET_KEY`) or prompt
-4. **Redact** — Replace hardcoded value with `{{KEY}}` placeholder
+4. **Redact** — Replace hardcoded value with `{KEY}` placeholder
 5. **Store** — Write secrets to `.env` (or specified format)
 
 ## Demo

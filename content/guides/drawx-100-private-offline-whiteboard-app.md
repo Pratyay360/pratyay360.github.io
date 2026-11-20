@@ -51,4 +51,4 @@ Ready-to-use binaries are available for all major platforms:
 
 Need real-time web collaboration with teammates? Check out the web edition:
 
-- [Drawy](/drawy-documentation/) — Collaborative web drawing workspace with live cursors, shared canvases, and version history.
+- [Drawy](/guides/drawy/) — Collaborative web drawing workspace with live cursors, shared canvases, and version history.

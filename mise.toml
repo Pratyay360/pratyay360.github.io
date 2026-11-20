@@ -1,6 +1,8 @@
 [tools]
 biome = "latest"
 "github:sass/dart-sass" = "latest"
+harper-ls = "latest"
+imagemagick = "latest"
 "npm:pagefind" = "1.6.0"
 superhtml = "latest"
 zola = "latest"

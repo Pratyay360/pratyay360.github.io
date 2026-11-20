@@ -26,9 +26,14 @@
           "type": "string"
         },
         {
-          "title": "weight",
-          "name": "weight",
-          "type": "number"
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "updated",
+          "name": "updated",
+          "type": "datetime"
         },
         {
           "title": "draft",
@@ -36,27 +41,13 @@
           "type": "draft"
         },
         {
-          "title": "date",
-          "name": "date",
-          "type": "datetime"
-        },
-        {
           "title": "keywords",
           "name": "keywords",
-          "type": "choice",
-          "choices": [
-            "drawy",
-            "hosting",
-            "self-hosting"
-          ]
-        },
-        {
-          "title": "template",
-          "name": "template",
           "type": "string"
         }
       ]
     }
   ],
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.panel.openOnSupportedFile": true
 }

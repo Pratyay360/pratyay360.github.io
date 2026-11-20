@@ -110,7 +110,7 @@ ensor scan --interactive
 **Key capabilities:**
 
 - **Detection:** 50+ secret patterns (AWS, GitHub, Slack, Stripe, JWT, private keys, etc.)
-- **Redaction:** Replaces secrets with `{{SECRET_NAME}}` placeholders (customizable)
+- **Redaction:** Replaces secrets with `{SECRET_NAME}` placeholders (customizable)
 - **Extraction:** Writes detected secrets to `.env` with descriptive keys
 - **Format conversion:** `.env` ↔ JSON ↔ YAML ↔ TOML
 - **CI/CD ready:** Non-interactive mode for pipelines
@@ -121,7 +121,7 @@ ensor scan --interactive
 # Before: config.py has hardcoded API_KEY = "sk-live-abc123"
 ensor scan --interactive
 
-# After: config.py has API_KEY = "{{STRIPE_API_KEY}}"
+# After: config.py has API_KEY = "{STRIPE_API_KEY}"
 # .env has STRIPE_API_KEY=sk-live-abc123
 ```
 
@@ -130,7 +130,7 @@ ensor scan --interactive
 **Links:**
 
 - 📦 Repo: <https://github.com/Pratyay360/ensor>
-- 📖 Docs: <https://pratyay360.github.io/guides/ensor/>
+- 📖 Docs: [/guides/ensor/](/guides/ensor/)
 - 🪟 WinGet: `winget install pratyay360.ensor`
 
 ---
@@ -210,7 +210,7 @@ builds:
       post: tauri build --target $TARGET
 archives:
   - format: appimage
-    name_template: "{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}.AppImage"
+    name_template: "APPNAME-VERSION-OS-ARCH.AppImage"  # example pattern
   - format: deb
   - format: rpm
 ```

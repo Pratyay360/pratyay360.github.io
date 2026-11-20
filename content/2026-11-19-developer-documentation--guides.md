@@ -8,25 +8,28 @@ weight: 1
 slug: developer-documentation-guides
 ---
 
-Welcome to project docs by [Pratyay](https://www.pratyay.online).
+Welcome to the project documentation hub maintained by [Pratyay](https://www.pratyay.online).
 
-## Featured Projects & Guides
+## Featured projects and guides
 
-### Dynamic UPI QR Generator
+### Dynamic UPI QR generator
 
-UPI compatible QR code generator based on client side rendering.
-[Explore UPI Guide](https://dynamic-upi-qr.netlify.app)
+A UPI-compatible QR code generator that runs entirely in the browser.
+[Explore the UPI guide](https://dynamic-upi-qr.netlify.app)
 
-### Ensor Secrets Redaction
+### Ensor secret detection and redaction
 
-Fast, interactive CLI tool for scanning codebases and redacting hardcoded secrets into secure env files.
-[Explore Ensor Guide](/ensor-secret-detection-redaction-cli/)
+A fast, interactive CLI for scanning codebases, finding hardcoded secrets, and writing them into environment files.
+[Read the Ensor guide](/guides/ensor/)
 
-### Newsy Newsletter Platform
+### QCADesigner-E
 
-GitHub driven newsletter delivery inspired by utterances
-[Explore Newsy Guide](https://newsy.lightcms.me)
+A QCA circuit simulator built on QCADesigner 2.0.3 with a CVSE module for power-dissipation estimation. Packaged as a portable Linux AppImage.
+[Read the QCADesigner-E guide](/qcadesigner-e-appimage/)
 
-Managed by [pratyay mustafi](https://www.pratyay.online)
+### Newsy newsletter platform
 
-via [lightcms](https://www.lightcms.me)
+A GitHub-driven newsletter workflow inspired by utterances.
+[Explore the Newsy guide](https://newsy.lightcms.me)
+
+Docs are managed with [LightCMS](https://www.lightcms.me).

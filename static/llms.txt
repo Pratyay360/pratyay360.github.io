@@ -1,4 +1,4 @@
-# Pratyay Docs
+# Docs for projects by Pratyay Mustafi
 
 > Documentation for open-source developer tools by Pratyay Mustafi: setup guides,
 > configuration recipes, and technical reference for Ensor, Dynamic UPI QR, Drawy,

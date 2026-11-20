@@ -1,6 +1,6 @@
 ---
 title: "forgit: One CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, SourceHut"
-description: "Stop context-switching between gh, glab, tea, and forgejo-cli. forgit unifies repository, issue, PR, and release management across all major Git forges with one consistent command set."
+description: Stop context-switching between gh, glab, tea, and forgejo-cli. forgit unifies repository, issue, PR, and release management across all major Git forges with one consistent command set.
 date: 2026-11-19T15:35:35Z
 weight: 0
 draft: false
@@ -15,7 +15,6 @@ tags:
   - gitea
   - forgejo
 isCJKLanguage: false
-headless: true
 slug: forgit-a-cli-for-all-the-gitforges
 ---
 
@@ -36,34 +35,39 @@ forgit release create --tag v1.0.0 --title "v1.0.0"
 Pick your package manager:
 
 ### mise (recommended)
+
 ```bash
 mise use github:github.com/pratyay360/forgit@latest
 ```
 
 ### Homebrew
+
 ```bash
 brew trust --cask pratyay360/tap/forgit
 brew install pratyay360/tap/forgit
 ```
 
 ### Scoop (Windows)
+
 ```powershell
 scoop bucket add pratyay360 https://github.com/Pratyay360/scoop-bucket
 scoop install pratyay360/forgit
 ```
 
 ### WinGet (Windows)
+
 ```powershell
 winget install pratyay360.forgit
 ```
 
 ### Direct download
+
 [Latest release](https://github.com/Pratyay360/forgit/releases/latest) — single binary, no dependencies.
 
 ## Supported Operations
 
 | Category | Commands |
-|----------|----------|
+| ---------- | ---------- |
 | **Repositories** | `list`, `create`, `clone`, `delete`, `view` |
 | **Issues** | `list`, `create`, `view`, `comment`, `close` |
 | **Pull/Merge Requests** | `list`, `create`, `view`, `merge`, `checkout` |
@@ -107,6 +111,7 @@ contexts:
 ```
 
 Switch contexts instantly:
+
 ```bash
 forgit context use github
 forgit context use gitlab
@@ -123,7 +128,7 @@ forgit context use gitea
 ## Comparison: forgit vs. forge-specific CLIs
 
 | Task | `gh` | `glab` | `tea` (Gitea) | `forgit` |
-|------|------|--------|---------------|----------|
+| ------ | ------ | -------- | --------------- | ---------- |
 | List repos | `gh repo list` | `glab repo list` | `tea repos` | `forgit repo list` |
 | Create issue | `gh issue create` | `glab issue create` | `tea issue create` | `forgit issue create` |
 | Create PR/MR | `gh pr create` | `glab mr create` | `tea pr create` | `forgit pr create` |
@@ -139,14 +144,14 @@ Non-interactive mode for pipelines:
 # .github/workflows/release.yml
 - name: Create release on all forges
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-    GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
+    GITHUB_TOKEN: ${GITHUB_TOKEN_SECRET}
+    GITLAB_TOKEN: ${GITLAB_TOKEN_SECRET}
+    GITEA_TOKEN: ${GITEA_TOKEN_SECRET}
   run: |
     forgit context use github
-    forgit release create --tag v${{ github.ref_name }} --title "v${{ github.ref_name }}"
+    forgit release create --tag vvX.Y.Z --title "vvX.Y.Z"
     forgit context use gitlab
-    forgit release create --tag v${{ github.ref_name }} --title "v${{ github.ref_name }}"
+    forgit release create --tag vvX.Y.Z --title "vvX.Y.Z"
 ```
 
 ## Roadmap
@@ -173,7 +178,6 @@ Open an issue first for significant changes. PRs welcome for bug fixes, document
 - 📦 **GitHub**: <https://github.com/Pratyay360/forgit>
 - 📦 **Releases**: <https://github.com/Pratyay360/forgit/releases>
 - 🐛 **Issues**: <https://github.com/Pratyay360/forgit/issues>
-- 💬 **Discussions**: <https://github.com/Pratyay360/forgit/discussions>
 - 📜 **License**: Apache-2.0
 
 ---
