@@ -72,20 +72,6 @@ stew install pratyay360/forgit
 
 [Latest release — single binary, no dependencies.](https://github.com/Pratyay360/forgit)
 
-## Supported Operations
-
-
-| Category                | Commands                                      |
-| ----------------------- | --------------------------------------------- |
-| **Repositories**        | `list`, `create`, `clone`, `delete`, `view`   |
-| **Issues**              | `list`, `create`, `view`, `comment`, `close`  |
-| **Pull/Merge Requests** | `list`, `create`, `view`, `merge`, `checkout` |
-| **Releases**            | `list`, `create`, `view`, `upload-assets`     |
-| **Authentication**      | `auth login`, `auth status`, `auth logout`    |
-
-
-
-
 [![asciicast](https://asciinema.org/a/1273284.svg)](https://asciinema.org/a/1273284)
 
 ## Configuration
@@ -121,12 +107,6 @@ token = "echo $GITGUD_PAT"
 
 ```
 
-
-
-## Why Go?
-
-- **Cross-compilation**: Single binary for Linux/macOS/Windows/ARM
-- **Distribution**: Homebrew, Scoop, WinGet, mise, GitHub Releases
 
 ## Comparison: forgit vs. forge specific CLIs
 
