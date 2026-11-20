@@ -36,7 +36,7 @@ forgit release create --tag v1.0.0 --title "v1.0.0"
 
 Pick your package manager:
 
-### mise
+### mise ([https://mise.jdx.dev/](https://mise.jdx.dev/))
 
 ```bash
 mise use github:github.com/pratyay360/forgit@latest
