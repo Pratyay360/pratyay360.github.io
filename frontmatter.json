@@ -54,6 +54,23 @@
           "title": "sort_by",
           "name": "sort_by",
           "type": "string"
+        },
+        {
+          "title": "template",
+          "name": "template",
+          "type": "string"
+        },
+        {
+          "title": "extra",
+          "name": "extra",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "noindex",
+              "name": "noindex",
+              "type": "boolean"
+            }
+          ]
         }
       ]
     }

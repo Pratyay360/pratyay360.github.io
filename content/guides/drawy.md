@@ -43,7 +43,7 @@ Drawy autosaves as you draw. After a short pause the header shows **Saved**. The
 Open **Share canvas** to choose access:
 
 | Option | Who can open | Best for |
-|--------|-------------|----------|
+| -------- | ------------- | ---------- |
 | **Private** (default) | Only you | Work in progress |
 | **Invite by username** | Specific Drawy user | Editing together in real time |
 | **Read-only link** | Anyone with the link | Publishing finished drawings, collecting feedback |
@@ -58,7 +58,7 @@ Revoke access anytime without deleting the canvas.
 
 Multiple people edit the same canvas simultaneously. Live cursors, selections, and strokes appear as they happen — point at a shape instead of describing it.
 
-Powered by **Yjs** over **Cloudflare Durable Objects** (PartyServer). The worker relays updates but stores nothing — the browser saves each canvas to Postgres, which remains the source of truth.
+Powered by Yjs and Cloudflare Durable Objects. The worker relays updates between users.
 
 ### Version history
 
@@ -72,21 +72,6 @@ Reusable shape collections (icons, diagram pieces, UI mockups) that work across 
 - **Personal library**: Saved libraries live in browser localStorage — available across canvases in the same browser, not tied to your account.
 - **From canvas**: Select shapes in the editor → add to library via Excalidraw's library panel.
 - **Import from Excalidraw.com**: "Add to library" links on excalidraw.com open directly in Drawy.
-
-### Import / Export
-
-| Action | Formats |
-|--------|---------|
-| Export canvas | `.excalidraw`, PNG, SVG |
-| Import into Drawy | `.excalidraw` |
-
-Nothing you draw is locked in.
-
-### Themes
-
-Six themes across light/dark mode. Choice persists per device (localStorage), applied before first paint — no theme flash.
-
----
 
 ## Self Hosting Drawy
 
@@ -110,7 +95,7 @@ mise deps
 ### 2. Configure environment
 
 | Variable | Required | Purpose |
-|----------|----------|---------|
+| ---------- | ---------- | --------- |
 | `DATABASE_URL` | yes | Postgres connection string (pooled URL preferred) |
 | `SESSION_SECRET` | yes | Signs session cookie — `openssl rand -hex 32` |
 | `VITE_SITE_URL` | no | Canonical app URL (defaults to `https://drawyparty.pratyay.online`) |
@@ -146,12 +131,14 @@ bun run deploy             # Builds and uploads to Cloudflare
 **wrangler.jsonc** is the single source of truth for worker config: name, compatibility date/flags, `ASSETS` binding, `Main`/`Rooms` Durable Object bindings.
 
 **Secrets** (set in Cloudflare dashboard or via CLI):
+
 ```bash
 bunx wrangler secret put DATABASE_URL
 bunx wrangler secret put SESSION_SECRET
 ```
 
 **Operational notes:**
+
 - Reverse proxy must forward WebSocket upgrades on `/parties`
 - Image uploads go to imgcdn.dev via `src/lib/s3.ts` — replace if you want own storage
 - Session cookie marked `Secure` only when `NODE_ENV=production` — serve over HTTPS
@@ -162,7 +149,7 @@ bunx wrangler secret put SESSION_SECRET
 ## Architecture (for developers)
 
 | Layer | Technology | Role |
-|-------|------------|------|
+| ------- | ------------ | ------ |
 | Canvas & editor | Excalidraw | Drawing surface, tools, element model |
 | App shell & routing | TanStack Start + Router | Application framework & routes |
 | API | oRPC | Typed API between client & server |
@@ -171,6 +158,7 @@ bunx wrangler secret put SESSION_SECRET
 | UI | Astryx | Component library & theming |
 
 **Data flow:**
+
 1. Client renders Excalidraw inside TanStack Start app
 2. Account/canvas/sharing/library calls go through typed oRPC procedures (shared client/server types)
 3. Live cursors/selections/strokes sync via Yjs over Durable Objects
@@ -181,31 +169,38 @@ bunx wrangler secret put SESSION_SECRET
 ## Privacy & Security
 
 ### What Drawy Stores
+
 - **Account**: Username + password hash (≥2 chars, any hash)
 - **Canvas data**: Content, title, version history (50 snapshots max/canvas)
 - **Sharing settings**: Usernames with access, read-only link status
 
 ### What Drawy does NOT store
+
 - No email addresses
 - No advertising cookies
 - No third-party ad profiles
 - No analytics/tracking
 
 ### Images
+
 Pasted/uploaded images may go to an external host (imgcdn.dev by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host. To request removal: [Drawy contact page](https://drawy.pratyay.online/contact).
 
 ### Libraries
+
 Saved libraries live in **browser localStorage**, not on the Drawy server. Not tied to account, don't sync across devices/browsers.
 
 ### Sessions & error tracking
+
 May use Sentry (when enabled) for error tracking — collects technical details per its own policy.
 
 ### Data removal
+
 - **Delete canvas**: Remove from sidebar → deletes canvas + version history
 - **Uploaded images**: May persist on external host until removed there
 - **Account removal**: [Contact page](https://drawy.pratyay.online/contact)
 
 ### Security issues
+
 Report privately via [security form](https://app.youform.com/forms/8kgi7jvm) or public [GitHub issue](https://github.com/Pratyay360/drawy/issues/new). Include reproduction steps.
 
 ---
@@ -222,29 +217,37 @@ Need 100% offline, zero-cloud whiteboard? **DrawX** is a Tauri v2 desktop app (L
 ## FAQ
 
 ### Do I need an email to sign up?
+
 No. Username + password only.
 
 ### Will I lose work if I close the tab?
+
 No. Changes save as you draw. Header shows "Saved" when synced.
 
 ### Who can see my drawings?
+
 Only you — until you invite someone or publish a read-only link.
 
 ### Can I stop sharing a drawing?
+
 Yes. Revoke access anytime. The drawing itself isn't deleted.
 
 ### Can I get my drawings out of Drawy?
+
 Yes. Export as `.excalidraw`, PNG, or SVG. Import `.excalidraw` files back in.
 
 ### Can I undo a big mistake after autosave?
+
 Yes. Version history → roll back to any of the last 50 snapshots.
 
 ### How do I self-host on a different platform?
+
 The TanStack Start app builds to static assets + Cloudflare Worker. For other platforms: build the client (`bun run build`), deploy the worker separately, ensure WebSocket upgrades on `/parties` work.
 
 ### What's the difference between Drawy and DrawX?
+
 | | Drawy | DrawX |
-|--|-------|-------|
+| -- | ------- | ------- |
 | **Platform** | Web (self-hosted) | Desktop (Tauri v2) |
 | **Collaboration** | Real-time, multi-user | Single-user, offline |
 | **Storage** | Postgres (your infra) | Local filesystem |

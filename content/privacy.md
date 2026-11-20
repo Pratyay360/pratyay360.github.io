@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: "How this documentation site handles analytics, third-party embeds, and local storage, plus how to contact Pratyay Mustafi with privacy questions."
+description: How this documentation site handles analytics, third-party embeds, and local storage, plus how to contact Pratyay Mustafi with privacy questions.
 weight: 99
 date: 2026-11-17T10:25:42.235Z
 draft: false
