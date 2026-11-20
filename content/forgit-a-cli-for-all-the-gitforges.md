@@ -85,11 +85,12 @@ stew install pratyay360/forgit
 
 
 
+
 [![asciicast](https://asciinema.org/a/1273284.svg)](https://asciinema.org/a/1273284)
 
 ## Configuration
 
-One   `$HOME/.config/forgit/config.toml` defines all your forges:
+One    `$HOME/.config/forgit/config.toml` defines all your forges:
 
 ```yaml
 ## $HOME/.config/forgit/config.toml
