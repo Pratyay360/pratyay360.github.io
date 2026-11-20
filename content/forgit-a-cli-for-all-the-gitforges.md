@@ -89,7 +89,7 @@ stew install pratyay360/forgit
 One  `$HOME/.config/forgit/config.toml` defines all your forges:
 
 ```yaml
-# $HOME/.config/forgit/config.toml
+## $HOME/.config/forgit/config.toml
 
 [github]
 token = "echo $GITHUB_PAT"

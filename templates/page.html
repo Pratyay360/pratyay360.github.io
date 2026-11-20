@@ -4,7 +4,7 @@
 <article class="post">
   <section class="post-info">
     {% if page.date -%}
-    <time datetime="{{ page.date }}">{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y"))
+    <time datetime="{{ page.date }}"><i class="fa-solid fa-calendar-day icon-before" aria-hidden="true"></i>{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y"))
       }}</time>
     {%- endif %}
   </section>
@@ -12,6 +12,10 @@
   {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
   <section class="post-line"></section>
   {{ page.content | safe }}
+
+  {% if page.extra.comments | default(value=true) %}
+  {% include "partials/comments.html" %}
+  {% endif %}
 </article>
 
 {% if page.ancestors and page.ancestors | length > 0 %}
@@ -20,11 +24,11 @@
 {% if section_path %}{% set_global sec = get_section(path=section_path) %}{% endif %}
 {% if sec and sec.pages | length > 1 %}
 <nav class="section-nav" aria-label="{{ sec.title }}">
-  <h2>{{ sec.title }}</h2>
+  <h2><i class="fa-solid fa-list icon-before" aria-hidden="true"></i>{{ sec.title }}</h2>
   <ul>
     {% for p in sec.pages %}
     <li{% if p.permalink==page.permalink %} class="active" {% endif %}>
-      <a href="{{ p.permalink | safe }}">{{ p.title }}</a>
+      <a href="{{ p.permalink | safe }}"><i class="fa-solid fa-file-lines icon-before" aria-hidden="true"></i>{{ p.title }}</a>
       </li>
       {% endfor %}
   </ul>
@@ -34,11 +38,12 @@
 
 <section class="pagination">
   {% if page.lower -%}
-  <a href="{{ page.lower.permalink | safe }}" class="left arrow">&#8592; {{ page.lower.title }}</a>
+  <a href="{{ page.lower.permalink | safe }}" class="left arrow"><i class="fa-solid fa-arrow-left icon-before" aria-hidden="true"></i>{{ page.lower.title }}</a>
   {%- endif %}
   {% include "partials/back-to-top.html" %}
   {% if page.higher -%}
-  <a href="{{ page.higher.permalink | safe }}" class="right arrow">{{ page.higher.title }} &#8594;</a>
+  <a href="{{ page.higher.permalink | safe }}" class="right arrow">{{ page.higher.title }}<i class="fa-solid fa-arrow-right icon-after" aria-hidden="true"></i></a>
   {%- endif %}
 </section>
+
 {% endblock content %}

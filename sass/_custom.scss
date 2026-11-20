@@ -1,5 +1,13 @@
 // Site customisations layered on top of the Mabuya theme.
 
+.icon-before {
+	margin-inline-end: 0.4em;
+}
+
+.icon-after {
+	margin-inline-start: 0.4em;
+}
+
 .post-description {
 	margin-top: 0.25rem;
 	color: var(--default-tint);
@@ -14,7 +22,9 @@
 }
 
 .contact-cta {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
 	padding: 0.5rem 1.1rem;
 	border: 1px solid var(--default-tint);
 	border-radius: 999px;
@@ -52,5 +62,15 @@
 
 	li.active {
 		font-weight: 700;
+	}
+}
+
+.comments {
+	margin-top: 3rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--default-tint);
+
+	h2 {
+		margin-top: 0;
 	}
 }

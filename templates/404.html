@@ -2,10 +2,10 @@
 
 {% block content %}
 <section class="notfound" data-pagefind-ignore>
-  <h1 class="notfound-error">404: Page not found</h1>
+  <h1 class="notfound-error"><i class="fa-solid fa-triangle-exclamation icon-before" aria-hidden="true"></i>404: Page not found</h1>
   <section class="notfound-line"></section>
   <p class="notfound-message">Oops! We can't seem to find the page you are looking for. Let's
-    <a href="{{ config.base_url | safe }}">head back home</a>.
+    <a href="{{ config.base_url | safe }}"><i class="fa-solid fa-house icon-before" aria-hidden="true"></i>head back home</a>.
   </p>
 </section>
 {% endblock content %}

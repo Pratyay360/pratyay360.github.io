@@ -31,20 +31,24 @@ timeformat = "%B %e, %Y"
 [[extra.menu]]
 name = "Home"
 url = "/"
+icon = "fa-solid fa-house"
 
 [[extra.menu]]
 name = "Getting Started"
 url = "started-projects-tools"
+icon = "fa-solid fa-compass"
 
 [[extra.menu]]
 name = "Guides"
 url = "guides"
+icon = "fa-solid fa-book-open"
 
 [[extra.menu]]
 name = "Privacy"
 url = "privacy"
+icon = "fa-solid fa-shield-halved"
 
 [[extra.menu]]
 name = "Search"
 url = "search"
-
+icon = "fa-solid fa-magnifying-glass"

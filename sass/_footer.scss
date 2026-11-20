@@ -24,6 +24,9 @@ footer {
 
 .navigation-footer {
 	a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		font-size: 0.8rem;
 		color: variables.$default-color;
 		font-family: variables.$serif-secondary;

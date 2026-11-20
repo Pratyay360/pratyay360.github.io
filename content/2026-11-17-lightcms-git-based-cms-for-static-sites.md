@@ -34,7 +34,7 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 ## Core Features
 
 ### Git Native Content Storage
-- Content = markdown files + YAML/TOML front matter
+- Content = markdown files + front matter schema
 - Every save = Git commit (signed, if you configure it)
 - Branches = drafts, PRs = editorial workflow
 - No database, no vendor lock-in
@@ -46,12 +46,12 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 
 ### AI Writing Assistant (optional)
 - Inline completions, rephrasing, summarization
-- Runs locally (Ollama) or via API (OpenAI, Anthropic)
+- Runs via openai compatible API (OpenAI, openrouter)
 - Your content never leaves your infrastructure unless you choose
 
-### Speech-to-Text
+### Speech to Text
 - Dictate drafts directly in the editor
-- Powered by Whisper (local) or cloud APIs
+- Powered by Whisper compatible API or cloud APIs
 - Useful for capturing thoughts faster than typing
 
 ### Multi-SSG Support
@@ -66,7 +66,7 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 | Nuxt (MDC) | YAML | ✅ Native |
 
 ### Team Collaboration
-- Multi-user with role-based access (admin, editor, contributor)
+- Multi user role based access powered by git
 - Review workflow via GitHub/GitLab PRs
 - Comments and suggestions on drafts
 
@@ -147,7 +147,7 @@ Every edition is fully featured no artificial limits.
 - 📖 **Docs**: [https://lightcms.me/docs](https://lightcms.me/docs)
 - 💬 **Discord**: [https://discord.gg/lightcms](https://discord.gg/lightcms)
 - 🐛 **Issues**: [https://github.com/light-cms/lightcms/issues](https://github.com/light-cms/lightcms/issues)
-- 📜 **License**: MIT
+- 📜 **License**: Apache 2.0
 
 ---
 

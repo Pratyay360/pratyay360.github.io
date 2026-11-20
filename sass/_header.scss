@@ -36,7 +36,13 @@ header ul {
 	padding: 0;
 	margin: 0;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1rem;
+
+	@media (max-width: 600px) {
+		gap: 0 0.5rem;
+	}
 }
 
 header li {
@@ -54,4 +60,10 @@ header li {
 
 header a {
 	color: variables.$default-color;
+}
+
+header .nav-link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
 }

@@ -2,7 +2,7 @@
 
 {% block content %}
 <article class="post">
-  <h1 class="post-title">{{ section.title }}</h1>
+  <h1 class="post-title"><i class="fa-solid fa-folder-open icon-before" aria-hidden="true"></i>{{ section.title }}</h1>
   <section class="post-line"></section>
   {% if section.content %}
   <div class="content">
@@ -13,7 +13,7 @@
   <ul>
     {% for p in section.pages %}
     <li>
-      <a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}
+      <a href="{{ p.permalink | safe }}"><i class="fa-solid fa-file-lines icon-before" aria-hidden="true"></i>{{ p.title }}</a>{% if p.description %} — {{ p.description }}{% endif %}
     </li>
     {% endfor %}
   </ul>

@@ -3,7 +3,7 @@
 {% block content %}
 <section class="tags">
   <section class="tags-header">
-    <h2 class="tags-header-title">Tags</h2>
+    <h2 class="tags-header-title"><i class="fa-solid fa-tags icon-before" aria-hidden="true"></i>Tags</h2>
     <section class="tags-header-line"></section>
   </section>
   <section class="tags-clouds">
@@ -25,7 +25,7 @@
         <section class="tags-post-line"></section>
       </section>
       <span class="tags-post-meta">
-        <time datetime="{{ page.date }}">
+        <time datetime="{{ page.date }}"><i class="fa-solid fa-calendar-day icon-before" aria-hidden="true"></i>
           {{ page.date | date(format=config.extra.timeformat | default(value="%B
           %e, %Y")) }}
         </time>

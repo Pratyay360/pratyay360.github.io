@@ -9,10 +9,10 @@
     {{ section.content | safe }}
   </div>
   {% if section.pages | length > 0 %}
-  <h2>Pages</h2>
+  <h2><i class="fa-solid fa-file-lines icon-before" aria-hidden="true"></i>Pages</h2>
   <ul>
     {% for p in section.pages %}
-    <li><a href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
+    <li><a href="{{ p.permalink | safe }}"><i class="fa-solid fa-file-lines icon-before" aria-hidden="true"></i>{{ p.title }}</a></li>
     {% endfor %}
   </ul>
   {% endif %}
@@ -25,10 +25,10 @@
   {% endif %}
   {% set guides = get_section(path="guides/_index.md") %}
   {% if guides %}
-  <h2>Guides</h2>
+  <h2><i class="fa-solid fa-book-open icon-before" aria-hidden="true"></i>Guides</h2>
   <ul>
     {%- for p in guides.pages %}
-    <li><a href="{{ p.permalink | safe }}" title="{{ p.title }}" accesskey="g">{{ p.title }}</a>{% if p.description %}
+    <li><a href="{{ p.permalink | safe }}" title="{{ p.title }}" accesskey="g"><i class="fa-solid fa-file-lines icon-before" aria-hidden="true"></i>{{ p.title }}</a>{% if p.description %}
       — {{ p.description }}{% endif %}
     </li>
     {%- endfor %}

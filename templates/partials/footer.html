@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-actions">
-    <a class="contact-cta" href="{{ config.extra.contact_url }}" target="_blank" rel="noopener noreferrer">Contact us</a>
+    <a class="contact-cta" href="{{ config.extra.contact_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope icon-before" aria-hidden="true"></i>Contact us</a>
   </div>
   <div class="footer-badges">
     <div id="wcb" class="carbonbadge"></div>
@@ -14,8 +14,8 @@
   </span>
   <nav class="navigation-footer" aria-label="Footer">
     <ul>
-      <li><a href="https://github.com/Pratyay360/pratyay360.github.io">GitHub</a></li>
-      <li><a href="https://pratyay.online/" rel="noopener noreferrer">Blog</a></li>
+      <li><a href="https://github.com/Pratyay360/pratyay360.github.io"><i class="fa-brands fa-github icon-before" aria-hidden="true"></i>GitHub</a></li>
+      <li><a href="https://pratyay.online/" rel="noopener noreferrer"><i class="fa-solid fa-pen-nib icon-before" aria-hidden="true"></i>Blog</a></li>
     </ul>
   </nav>
 </footer>
@@ -25,14 +25,6 @@
   <img src="{{ config.extra.goatcounter }}?p={{ current_path | default(value='/404') | urlencode }}" alt="" width="1" height="1" />
 </noscript>
 {% endif %}
-{% if config.extra.clarity_id %}
-<script>
-  ((c,l,a,r,i,t,y)=> {
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src=`https://www.clarity.ms/tag/${i}`;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "{{ config.extra.clarity_id }}");
-</script>
-{% endif %}
+
 <div class="shareopenly-floating"></div>
 <script defer src="https://shareopenly.org/js/v1/shareopenly.js"></script>

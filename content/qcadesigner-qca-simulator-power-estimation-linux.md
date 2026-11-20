@@ -20,7 +20,7 @@ keywords:
 
 AppImages can be downloaded and run directly, without any installation or root privileges required.
 
-![](https://i.ibb.co/27pyyC7X/image-png.png)
+![a](https://i.ibb.co/27pyyC7X/image-png.png)
 
 [![QCADesigner-E AppImage](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)
 
@@ -28,7 +28,7 @@ AppImages can be downloaded and run directly, without any installation or root p
 
 ![QCADesigner-E AppImage](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
-I repackaged [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) To make life easier for users. I repackaged the entire app into an isolated containerized app image file which can be downloaded and run, without installing on the system.
+I repackaged [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) To make life easier for users. I just repackaged the entire app into an isolated containerized app image file which can be downloaded and run, without installing on the system.
 
 ![](https://i.ibb.co/ZzXzj142/image-png.png "qcadesigner-e")
 
@@ -38,7 +38,7 @@ AppImages are single-file applications that run on most Linux distributions. Dow
 
 [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) Is a free tool for drawing quantum-dot cellular automata (QCA) circuits and estimating how much power they dissipate. Think of it as QCADesigner 2.0.3 with one extra simulation module strapped on. Same canvas, same file format, plus a way to measure energy. That's the short version.
 
-# Any restrictions?
+## Any restrictions?
 
 Not as such it's just an open source repackaging of the original [QCADesigner-E](https://fsillt.github.io/QCADesigner-E/) Project. [The original project is still owned by the original authors](https://fsillt.github.io/QCADesigner-E/).
 
