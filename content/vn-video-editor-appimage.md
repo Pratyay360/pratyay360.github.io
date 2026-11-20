@@ -54,13 +54,7 @@ APPIMAGE_EXTRACT_AND_RUN=1 ./vn.AppImage
 
 ## Known Limitations
 
-| Limitation | Workaround |
-|------------|------------|
-| **Wine overhead** | ~10-15% performance hit vs native |
-| **Hardware acceleration** | Limited — depends on Wine/Vulkan setup |
-| **HEVC/H.265 encoding** | May require `libva` + `ffmpeg` on host |
-| **Wayland** | Use `GDK_BACKEND=x11` if issues |
-| **Auto-updates** | Disabled — download new AppImage from releases |
+- **Auto-updates:** Disabled — download new AppImage from releases
 
 ## Building from Source
 
