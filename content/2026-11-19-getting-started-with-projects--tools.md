@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Projects & Tools
-description: Quick navigation guide and introduction to developer tools, CLI utilities, and libraries documented across this site.
+description: "Start here for a short tour of the docs. Find setup guides for Drawy, DrawX, ensor, forgit, LightCMS, and the QCADesigner-E AppImage."
 weight: 1
 draft: false
 slug: started-projects-tools
@@ -36,7 +36,7 @@ Collaborative and offline whiteboard tools built on Excalidraw:
 
 A quantum-dot cellular automata simulator that adds power-dissipation estimation to QCADesigner 2.0.3. The portable AppImage runs on Linux without compilation.
 
-- [QCADesigner-E guide](/qcadesigner-e-appimage/) — Install, run a simulation, and estimate energy dissipation.
+- [QCADesigner-E guide](/qcadesigner-qca-simulator-power-estimation-linux/) — Install, run a simulation, and estimate energy dissipation.
 
 ### LightCMS
 

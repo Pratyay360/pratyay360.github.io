@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: What this documentation site collects, what third parties may receive, and how to contact us.
+description: "How this documentation site handles analytics, third-party embeds, and local storage, plus how to contact Pratyay Mustafi with privacy questions."
 weight: 99
 date: 2026-11-17T10:25:42.235Z
 draft: false
@@ -22,7 +22,7 @@ To understand which pages are useful, the site loads lightweight measurement too
 
 These tools may collect technical and usage information (such as page URL, referrer, browser/device details, and interaction data) according to their own privacy policies.
 
-If you use the **Edit this page** link, you leave this site and interact with GitHub under GitHub's own privacy policy.
+Links to the source repository and issue tracker take you to GitHub, which handles your data under its own privacy policy.
 
 ## Hosting and Server Logs
 
@@ -42,7 +42,7 @@ We do not sell or share personal data with anyone — there is nothing to sell o
 
 We do not set tracking or advertising cookies, and there is no cookie-consent banner because there is nothing to consent to.
 
-Your browser may store purely functional, first-party preferences locally (for example, Starlight's light/dark theme choice). This stays on your device and is never sent to us.
+Your browser may store purely functional, first-party preferences locally (for example, the site's light/dark theme choice). This stays on your device and is never sent to us.
 
 Search (Pagefind) runs entirely in your browser against a prebuilt index.
 
@@ -52,4 +52,4 @@ This site is general technical documentation and is not directed at children. Si
 
 ## Changes to This Policy
 
-If this policy changes, we will update this page and the `Last updated` date above. Material changes will be visible in the page history on GitHub.
+If this policy changes, we will update this page and the date shown at the top of it. Material changes will be visible in the page history on GitHub.

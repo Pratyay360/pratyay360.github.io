@@ -180,7 +180,7 @@ bunx wrangler secret put SESSION_SECRET
 
 ## Privacy & Security
 
-### What Drawy stores
+### What Drawy Stores
 - **Account**: Username + password hash (≥2 chars, any hash)
 - **Canvas data**: Content, title, version history (50 snapshots max/canvas)
 - **Sharing settings**: Usernames with access, read-only link status

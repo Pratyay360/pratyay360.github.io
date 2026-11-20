@@ -1,6 +1,6 @@
 ---
 title: "ensor: Secret Detection & Redaction CLI"
-description: "Fast, interactive CLI to detect and redact hardcoded secrets in codebase."
+description: "ensor is a Go CLI that finds hardcoded secrets, redacts them with placeholders, and converts env files between dotenv, JSON, YAML, and TOML."
 date: 2026-11-17T10:25:51.812Z
 weight: 2
 draft: false

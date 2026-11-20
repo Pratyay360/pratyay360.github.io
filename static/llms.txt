@@ -1,26 +1,32 @@
 # Docs for projects by Pratyay Mustafi
 
-> Documentation for open-source developer tools by Pratyay Mustafi: setup guides,
-> configuration recipes, and technical reference for Ensor, Dynamic UPI QR, Drawy,
-> and Newsy. Built with Zola; all pages are Markdown and open source at
+> Setup guides, configuration notes, and technical reference for open-source tools by
+> Pratyay Mustafi: Drawy and DrawX whiteboards, the ensor secrets CLI, the forgit
+> multi-forge CLI, LightCMS, the QCADesigner-E AppImage, and VN Video Editor packaging.
+> Built with Zola; pages are Markdown in a public repository at
 > https://github.com/Pratyay360/pratyay360.github.io
 
-## Core pages
+## Start here
 
-- [Introduction](https://pratyay360.github.io/): What this documentation site covers.
-- [Getting Started](https://pratyay360.github.io/getting-started/): Quick navigation to every project guide.
-- [Drawy Documentation](https://pratyay360.github.io/drawy-documentation/): Overview of the Drawy web app and FAQ.
-- [Ensor Secrets Redaction](https://pratyay360.github.io/ensor-secret-detection-redaction-cli/): Go CLI for scanning a codebase for hardcoded secrets and redacting them.
-- [LightCMS](https://pratyay360.github.io/lightcms/): Git-based CMS for static sites.
+- [Project documentation and guides](https://pratyay360.github.io/): Site introduction and links to every guide.
+- [Getting Started with Projects & Tools](https://pratyay360.github.io/started-projects-tools/): Short tour of the projects documented here.
+- [Developer Documentation & Guides](https://pratyay360.github.io/developer-documentation-guides/): Featured projects and where to find each guide.
 
 ## Guides
 
-- [Drawy getting started](https://pratyay360.github.io/guides/drawy-getting-started/): Create an account, draw your first canvas, share it, and export your work.
-- [Drawy Libraries](https://pratyay360.github.io/guides/drawy-library/): Save and reuse Excalidraw libraries across canvases.
-- [Drawy Privacy and Security](https://pratyay360.github.io/guides/drawy-privacy/): What Drawy stores, what it does not store, and how to remove your data.
-- [Self-hosting Drawy](https://pratyay360.github.io/guides/drawy-selfhost/): Run your own instance with the TanStack Start app, the realtime worker and Postgres.
-- [DrawX](https://pratyay360.github.io/guides/drawx/): Offline desktop whiteboard for Linux, macOS, and Windows.
+- [Drawy: Self Hosted Collaborative Whiteboard](https://pratyay360.github.io/guides/drawy/): Setup, sharing, self-hosting on Cloudflare Workers, architecture, and privacy.
+- [DrawX: offline whiteboard](https://pratyay360.github.io/guides/drawx-100-private-offline-whiteboard-app/): Offline desktop whiteboard for Linux, macOS, and Windows.
+- [ensor: Secret Detection & Redaction CLI](https://pratyay360.github.io/guides/ensor/): Find hardcoded secrets, redact them, and convert env file formats.
 
-## Optional
+## Project pages
+
+- [forgit: One CLI for GitHub, GitLab, Gitea, and More](https://pratyay360.github.io/forgit-a-cli-for-all-the-gitforges/): Unified commands for repos, issues, pull requests, and releases.
+- [LightCMS: Git-Based CMS for Static Sites](https://pratyay360.github.io/lightcms/): Front matter editing and publishing backed by Git.
+- [QCADesigner-E Power Estimation on Linux](https://pratyay360.github.io/qcadesigner-qca-simulator-power-estimation-linux/): Install the AppImage and run a first power estimate.
+- [VN Video Editor on Linux](https://pratyay360.github.io/vn-video-editor-appimage/): Unofficial AppImage packaging via Wine.
+- [My Open-Source Toolkit](https://pratyay360.github.io/my-opensource-toolkit/): Short summaries of the tools above and how they fit together.
+
+## Other
 
 - [Privacy](https://pratyay360.github.io/privacy/): Site privacy policy.
+- [Blog](https://pratyay.online/): Writing on Linux, Tauri, and infrastructure.

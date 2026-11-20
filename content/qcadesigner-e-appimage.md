@@ -1,5 +1,5 @@
 ---
-title: "QCADesigner-E: QCA Simulator with Power Estimation on Linux"
+title: "QCADesigner-E Power Estimation on Linux"
 description: "A plain language guide to QCADesigner-E: what the QCA energy simulation does, how to install the Linux AppImage, and how to run your first power estimate."
 date: 2026-11-20T07:21:35.873Z
 draft: false

@@ -11,11 +11,13 @@
         {% for menu in config.extra.menu %}
         <li><a href="{{ get_url(path=menu.url, trailing_slash=true) | safe }}">{{ menu.name }}</a></li>
         {% endfor %}
+        <li><a href="https://pratyay.online/" rel="noopener noreferrer">Blog</a></li>
       </ul>
       {% else %}
       <ul>
         <li><a href="{{ config.base_url | safe }}">Home</a></li>
         <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
+        <li><a href="https://pratyay.online/" rel="noopener noreferrer">Blog</a></li>
       </ul>
       {% endif %}
     </nav>

@@ -1,5 +1,5 @@
 ---
-title: "VN Video Editor on Linux: Unofficial AppImage via Wine"
+title: "VN Video Editor on Linux: AppImage via Wine"
 description: "Run VN Video Editor on Linux with this unofficial AppImage. Packaged using Wine and pkgforge tooling. Supports 4K, keyframes, no ads. "
 date: 2026-11-19T15:52:35Z
 draft: false

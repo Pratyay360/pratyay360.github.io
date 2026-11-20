@@ -1,6 +1,6 @@
 ---
-title: "Forgit: One CLI for GitHub, GitLab, Gitea, and More"
-description: "Stop switching between different cli tools. forgit unifies repository, issue, PR, and release management across all major Git forges with one consistent command set."
+title: "forgit: One CLI for GitHub, GitLab, Gitea"
+description: "One CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, and SourceHut. Manage repos, issues, pull requests, and releases from a single command set."
 date: 2026-11-19T15:35:35Z
 weight: 0
 draft: false

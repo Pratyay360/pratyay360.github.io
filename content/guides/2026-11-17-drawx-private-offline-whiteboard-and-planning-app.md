@@ -1,7 +1,7 @@
 ---
-title: 'Drawx Private, offline Whiteboard and planning App'
+title: 'DrawX: Offline Whiteboard for Linux'
 description: >-
-  offline first desktop app for Linux, macOS, and Windows for planning, drawing and brainstorming.
+  DrawX is an offline-first whiteboard for Linux, macOS, and Windows. Draw, plan, and brainstorm locally with no cloud, account, or telemetry.
 date: '2026-11-17T10:24:05.403Z'
 keywords:
   - offline

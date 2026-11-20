@@ -1,5 +1,5 @@
 base_url = "https://pratyay360.github.io"
-title = "Docs for projects by pratyay"
+title = "Pratyay Docs"
 description = "Developer documentation, set up guides for projects by pratyay"
 default_language = "en"
 author = "pratyay"
@@ -34,7 +34,7 @@ url = "/"
 
 [[extra.menu]]
 name = "Getting Started"
-url = "getting-started"
+url = "started-projects-tools"
 
 [[extra.menu]]
 name = "Guides"

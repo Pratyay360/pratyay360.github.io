@@ -1,6 +1,6 @@
 ---
-title: "My Open-Source Toolkit: From QCA Simulators to Git Forge CLIs"
-description: "A practical guide to the open-source tools I've built and packaged: QCADesigner-E AppImage, Drawy collaborative whiteboard, ensor secrets CLI, forgit multi-forge CLI, Tauri app distribution, and bootc immutable OS workflows."
+title: "My Open-Source Toolkit: Build and Package"
+description: "An overview of the open-source tools I build and package, including Drawy, ensor, forgit, QCADesigner-E, Tauri AppImage builds, and bootc workflows."
 weight: 0
 draft: false
 date: 2026-11-19T17:02:39.678Z
@@ -14,314 +14,90 @@ keywords:
   - Git CLI
 ---
 
-I've spent the last few years building and packaging tools that solve specific problems I encountered as a developer — from quantum circuit simulation to secrets management to Git forge unification. This post walks through each project, why it exists, and how to use it.
+I build and package tools that solve problems I run into as a developer. A few started as scripts for my own machine and turned into releases other people use. This page is a short index of that work. Each item links to a fuller guide with install commands, configuration examples, and troubleshooting notes.
 
 ## TL;DR
 
 | Project | Category | One-Liner |
 | --------- | ---------- | ----------- |
-| **QCADesigner-E AppImage** | Scientific Computing | Portable QCA simulator with power-dissipation estimation |
-| **Drawy** | Collaborative Tools | Self-hostable, multi-tenant Excalidraw wrapper |
-| **ensor** | Security/DevOps | Interactive CLI to detect/redact secrets, convert env formats |
-| **forgit** | Developer Productivity | Unified CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, SourceHut |
-| **Tauri AppImage packaging** | App Distribution | Building portable Linux binaries for Tauri apps |
-| **bootc workflows** | Infrastructure | Immutable OS management via container images |
+| **QCADesigner-E AppImage** | Scientific computing | Portable QCA simulator with power-dissipation estimation |
+| **Drawy** | Collaborative tools | Self-hostable, multi-tenant Excalidraw workspace |
+| **DrawX** | Desktop apps | Offline whiteboard for Linux, macOS, and Windows |
+| **ensor** | Security and DevOps | CLI to detect and redact secrets, then convert env formats |
+| **forgit** | Developer productivity | One command set for six Git forges |
+| **Tauri AppImage builds** | App distribution | Portable Linux binaries for Tauri apps |
+| **bootc workflows** | Infrastructure | Immutable OS images built from containers |
 
----
+## QCADesigner-E AppImage
 
-## QCADesigner-E AppImage: Quantum Cellular Automata on Any Linux
+QCADesigner-E adds power-dissipation estimation to QCADesigner 2.0.3 using the Coherence Vector Simulation Engine. The upstream project ships source code only, so I package it as one AppImage that runs on current Linux distributions without a build step. The usual simulation engines and the `.qca` file format are preserved.
 
-**The problem:** QCADesigner-E (University of Bremen) adds power-dissipation estimation to QCADesigner 2.0.3 using the Coherence Vector Simulation Engine (CVSE) based on Timler & Lent's theoretical work. But it was only available as source code — researchers had to compile it manually with complex dependencies.
+[Read the QCADesigner-E guide](/qcadesigner-qca-simulator-power-estimation-linux/) for the download commands, a first energy run, and the papers behind the model. The [source repository](https://github.com/Pratyay360/QCADesigner-E) holds the packaging scripts.
 
-**My solution:** Repackaged it as an AppImage — a single portable binary that runs on any modern Linux distro without installation.
+## Drawy and DrawX
 
-```bash
-# Download and run (no install needed)
-wget https://appimage.github.io/QCADesigner-E/QCADesigner-E-latest-x86_64.AppImage
-chmod +x QCADesigner-E-latest-x86_64.AppImage
-./QCADesigner-E-latest-x86_64.AppImage
-```
+Drawy wraps Excalidraw in a multi-tenant web app. It adds live cursors, shared canvases, version history, and reusable libraries, with Postgres as the source of truth and a Cloudflare Worker relaying realtime updates. DrawX is the offline desktop alternative, built with Tauri v2, for people who want the same canvas with no network at all.
 
-**Why AppImage?** It bundles all dependencies (Qt, CVSE libraries, simulation engines) into one file. Researchers on Ubuntu, Fedora, Arch, or NixOS get identical behavior — critical for reproducible scientific computing.
+- [Drawy self-hosting and setup guide](/guides/drawy/)
+- [DrawX downloads and overview](/guides/drawx-100-private-offline-whiteboard-app/)
 
-**Key features preserved:**
+## ensor
 
-- Full QCA logic gate design and simulation
-- Timing analysis and verification
-- Power-dissipation estimation via CVSE module
-- Backward compatibility with QCADesigner 2.0.3 `.qca` files
+Hardcoded keys and tokens are still one of the most common ways a repository leaks credentials. ensor scans a codebase, shows you each finding, and writes the detected values into a `.env` file while replacing them with placeholders in your source. It also converts between dotenv, JSON, YAML, and TOML, and has a non-interactive mode for CI.
 
-**Links:**
+The [ensor guide](/guides/ensor/) covers installation on each platform, the config file, and how it compares with gitleaks and trufflehog.
 
-- 📦 AppImageHub: <https://appimage.github.io/QCADesigner-E/>
-- 📋 Portable Linux Apps: <https://portable-linux-apps.github.io/en/app/qcadesigner-e.html>
-- 🔬 Original authors: <https://github.com/FSillT/QCADesigner-E>
+## forgit
 
----
+Working across GitHub, GitLab, Gitea, Forgejo, Bitbucket, and SourceHut normally means learning six CLIs with different flags and auth flows. forgit puts repos, issues, pull requests, and releases behind one command set, with a single YAML file for forge tokens and contexts.
 
-## Drawy: Collaborative Whiteboard, Self-Hosted
+The [forgit page](/forgit-a-cli-for-all-the-gitforges/) has the command table, configuration example, and CI usage.
 
-**The problem:** Excalidraw is excellent but single-board by default. Self-hosting multi-tenant Excalidraw means managing separate instances, databases, and auth for each team — operational overhead most small teams can't justify.
+## Tauri AppImage builds
 
-**My solution:** Drawy wraps Excalidraw in a lightweight, multi-tenant architecture with Supabase backend. One deployment serves unlimited boards, teams, and users.
+Tauri v2 apps need separate handling for AppImage, DEB, RPM, and Flatpak targets. Most of the friction is in dependency metadata and glibc compatibility. I use `linuxdeploy` with the AppImage plugin, pin the `webkit2gtk` version in package dependencies, and sign release artifacts with GPG.
 
-**Architecture highlights:**
+For the bundle settings and CI details, see the [Tauri distribution docs](https://v2.tauri.app/distribute/).
 
-- **Frontend:** Excalidraw canvas (React, TypeScript)
-- **Backend:** Supabase (PostgreSQL + Realtime + Auth + Storage)
-- **Deployment:** Single container, serverless-friendly
-- **Auth:** Email/password, OAuth (GitHub, Google), magic links
-- **Real-time:** WebSocket sync via Supabase Realtime
+## bootc images
 
-**Getting started:**
+bootc makes OS updates transactional by treating the system as a container image. I build custom images with a Containerfile, test them locally with Podman, and switch machines with `bootc switch`. Rollback is a single command when an update goes badly.
 
-```bash
-# Clone and configure
-git clone https://github.com/Pratyay360/drawy
-cd drawy
-cp .env.example .env
-# Add your Supabase URL, anon key, service role key
+The [bootc project](https://github.com/bootc-dev/bootc) is the place to start if you want to try it.
 
-# Deploy (Docker)
-docker compose up -d
-```
+## How they fit together
 
-**Use cases:** Architecture diagrams, wireframes, brainstorming, technical documentation — all collaborative, all versioned.
+These tools are not isolated. They compose into a working setup:
 
-**Repo:** <https://github.com/Pratyay360/drawy>
+1. ensor keeps secrets out of repositories, with scans in CI.
+2. forgit handles issues and pull requests across forges from one terminal.
+3. A bootc image carries chezmoi and mise, which sync dotfiles and tool versions.
+4. Tauri and AppImage packaging ships the GUI tools without distro friction.
+5. Drawy documents the architecture visually; DrawX does the same offline.
+6. QCADesigner-E validates hardware designs on a workstation.
 
----
-
-## ensor: Secrets Detection & Redaction CLI
-
-**The problem:** Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Existing tools scan but don't remediate — you still manually rotate secrets and update `.env` files.
-
-**My solution:** `ensor` scans, detects, **and redacts** secrets in one interactive flow. It extracts discovered secrets into a `.env` file and replaces them with configurable placeholders across your project.
-
-```bash
-# Install
-mise use github:github.com/pratyay360/ensor@latest
-# or: brew install pratyay360/tap/ensor
-
-# Scan and redact interactively
-ensor scan --interactive
-```
-
-**Key capabilities:**
-
-- **Detection:** 50+ secret patterns (AWS, GitHub, Slack, Stripe, JWT, private keys, etc.)
-- **Redaction:** Replaces secrets with `{SECRET_NAME}` placeholders (customizable)
-- **Extraction:** Writes detected secrets to `.env` with descriptive keys
-- **Format conversion:** `.env` ↔ JSON ↔ YAML ↔ TOML
-- **CI/CD ready:** Non-interactive mode for pipelines
-
-**Example workflow:**
-
-```bash
-# Before: config.py has hardcoded API_KEY = "sk-live-abc123"
-ensor scan --interactive
-
-# After: config.py has API_KEY = "{STRIPE_API_KEY}"
-# .env has STRIPE_API_KEY=sk-live-abc123
-```
-
-**Built with:** Go, Bubble Tea (TUI), Huh (forms) — fast, terminal-native UX.
-
-**Links:**
-
-- 📦 Repo: <https://github.com/Pratyay360/ensor>
-- 📖 Docs: [/guides/ensor/](/guides/ensor/)
-- 🪟 WinGet: `winget install pratyay360.ensor`
-
----
-
-## forgit: One CLI for All Git Forges
-
-**The problem:** Working across GitHub, GitLab, Gitea, Forgejo, Bitbucket, and SourceHut means learning 6 different CLIs (`gh`, `glab`, `tea`, `forgejo-cli`, `bb`, `hut`) with different flags, auth flows, and output formats.
-
-**My solution:** `forgit` unifies them behind one consistent command set.
-
-```bash
-# Install
-mise use github:github.com/pratyay360/forgit@latest
-# or: brew install pratyay360/tap/forgit
-# or: scoop install pratyay360/forgit
-# or: winget install pratyay360.forgit
-
-# Same commands, any forge
-forgit repo list
-forgit issue create --title "Bug: login broken" --body "Details..."
-forgit pr create --base main --head feature/auth
-forgit release create --tag v1.0.0 --title "v1.0.0"
-```
-
-**Supported operations:**
-
-| Category | Commands |
-| ---------- | ---------- |
-| Repositories | `list`, `create`, `clone`, `delete`, `view` |
-| Issues | `list`, `create`, `view`, `comment`, `close` |
-| Pull/Merge Requests | `list`, `create`, `view`, `merge`, `checkout` |
-| Releases | `list`, `create`, `view`, `upload-assets` |
-| Authentication | `auth login`, `auth status`, `auth logout` |
-
-**Configuration:** Single `forgit.yaml` defines forge endpoints, tokens, and defaults. Switch contexts with `forgit context use github|gitlab|...`
-
-**Why Go?** Cross-compilation, single binary distribution, excellent CLI libraries (Cobra, Bubble Tea).
-
-**Repo:** <https://github.com/Pratyay360/forgit>
-
----
-
-## Tauri App Distribution: AppImage, DEB, RPM, Flatpak
-
-**The problem:** Tauri v2 apps need distribution across Linux formats. Each format has quirks: AppImage bundling, DEB/RPM metadata, Flatpak sandboxing, Snap confinement.
-
-**My approach:** Use `tauri.conf.json` with `linuxdeploy` plugins for automated multi-format builds.
-
-```json
-// tauri.conf.json (excerpt)
-{
-  "bundle": {
-    "linux": {
-      "appimage": {
-        "bundleMediaFramework": false
-      },
-      "deb": {
-        "depends": ["libwebkit2gtk-4.1-0", "libayatana-appindicator3-1"]
-      },
-      "rpm": {
-        "depends": ["webkit2gtk4.1", "libayatana-appindicator3-1"]
-      }
-    }
-  }
-}
-```
-
-**CI pipeline (Goreleaser + mise):**
-
-```yaml
-# .goreleaser.yaml
-builds:
-  - id: tauri-app
-    main: ./src-tauri/main.rs
-    binary: myapp
-    hooks:
-      post: tauri build --target $TARGET
-archives:
-  - format: appimage
-    name_template: "APPNAME-VERSION-OS-ARCH.AppImage"  # example pattern
-  - format: deb
-  - format: rpm
-```
-
-**Key tips:**
-
-- Use `linuxdeploy` with `appimage` plugin for AppImage (handles glibc compat)
-- Pin `webkit2gtk` versions in DEB/RPM deps to avoid runtime failures
-- Sign AppImages with GPG for trust: `goreleaser sign --artifact-filter "*.AppImage"`
-- Test on clean VMs (distrobox/toolbx) before release
-
-**Reference:** <https://v2.tauri.app/distribute/appimage/>
-
----
-
-## bootc: Immutable OS via Container Images
-
-**The problem:** Traditional Linux updates are imperative (dnf/apt upgrade), risky (partial failures), and hard to roll back. `bootc` (bootable containers) makes OS updates transactional, atomic, and container-native.
-
-**My workflow:** Build custom bootc images for reproducible workstations/servers.
-
-```dockerfile
-# Containerfile
-FROM quay.io/fedora/fedora-bootc:41
-RUN dnf install -y \
-    chezmoi \
-    mise \
-    git \
-    podman \
-    distrobox \
-    && dnf clean all
-
-# Add dotfiles
-COPY .chezmoi /etc/chezmoi
-RUN chezmoi init --apply /etc/chezmoi
-```
-
-```bash
-# Build and test
-podman build -t localhost/my-bootc:latest .
-podman run --rm -it --privileged localhost/my-bootc:latest
-
-# Deploy to machine
-sudo bootc switch localhost/my-bootc:latest
-# Reboot → new OS active
-# Rollback: sudo bootc rollback
-```
-
-**Benefits:**
-
-- **Atomic updates:** Image pull + switch = single transaction
-- **Rollback:** Instant revert to previous image
-- **Reproducible:** Same Containerfile = identical OS everywhere
-- **Layer caching:** Fast rebuilds, shared base layers
-
-**Resources:**
-
-- 📖 Fedora docs: <https://docs.fedoraproject.org/en-US/bootc/>
-- 🛠️ GitHub: <https://github.com/bootc-dev/bootc>
-
----
-
-## Connecting the Dots: A Cohesive Dev Environment
-
-These tools aren't isolated — they compose into a workflow:
-
-1. **ensor** keeps secrets out of repos (CI scans every PR)
-2. **forgit** manages issues/PRs across all forges from one terminal
-3. **chezmoi + mise** (in bootc image) syncs dotfiles and tool versions
-4. **Tauri + AppImage** ships GUI tools to users without distro friction
-5. **Drawy** documents architecture visually, stored in Supabase
-6. **QCADesigner-E AppImage** validates hardware designs offline
-
-**The meta-lesson:** Solve your own friction points. Package the solution so others don't hit the same wall. Automate the packaging so releases are non-events.
-
----
+The common thread is solving my own friction points, then packaging the solution so nobody else has to hit the same wall.
 
 ## Frequently Asked Questions
 
 ### Which project should I start with?
 
-If you manage secrets: **ensor**. If you work across Git forges: **forgit**. If you distribute Linux apps: **Tauri AppImage** or **bootc**.
+It depends on the problem. Use ensor if you manage secrets, forgit if you work across Git forges, and Tauri AppImage or bootc if you distribute Linux software. Each linked guide has a quick start.
 
 ### Are these production-ready?
 
-- **ensor**, **forgit**: Used in my daily workflow, CI-tested
-- **QCADesigner-E AppImage**: Validated by researchers at University of Bremen
-- **Drawy**: Running in production for small teams
-- **bootc workflows**: Personal workstation, not yet multi-node
+ensor and forgit are in my daily workflow and are CI tested. The QCADesigner-E AppImage is used by researchers at the University of Bremen. Drawy runs in production for small teams. My bootc setup is for personal machines rather than multi-node deployments.
+
+### Where do I get the binaries?
+
+Releases live on the GitHub repositories for [ensor](https://github.com/Pratyay360/ensor), [forgit](https://github.com/Pratyay360/forgit), and [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E). DrawX has platform installers on its [releases page](https://github.com/Pratyay360/drawx/releases).
 
 ### How do I contribute?
 
-All repos accept PRs. Check `CONTRIBUTING.md` or open an issue first for significant changes.
-
-### Where can I find pre-built binaries?
-
-- **ensor**: GitHub Releases, Homebrew, Scoop, WinGet, mise
-- **forgit**: GitHub Releases, Homebrew, Scoop, WinGet, mise
-- **QCADesigner-E**: AppImageHub, Portable Linux Apps
-- **Drawy**: Docker Hub (`ghcr.io/pratyay360/drawy`)
-
----
+Every repository accepts pull requests. Open an issue first for a larger change so we can agree on the approach.
 
 ## Conclusion
 
-Building tools for yourself is the fastest way to learn. Packaging them for others forces you to handle edge cases, document assumptions, and automate releases. The six projects above started as personal scripts — now they're installed on machines I'll never see.
+Building tools for yourself is a fast way to learn. Packaging them for other people forces you to handle edge cases, document assumptions, and automate releases. The projects above began as personal fixes and are now installed on machines I will never see.
 
-If any of these solve a problem you have, try them. Open an issue if they don't quite fit. That feedback loop is how open source gets better.
-
-**Next steps for me:** Multi-arch bootc images, forgit v1.0 with plugin API, ensor SAST integration.
-
----
-
-*Using any of these? Star the repos. Found a bug? File an issue. Want to chat? [GitHub Discussions](https://github.com/Pratyay360) or [Mastodon](https://mastodon.social/@realPratyay).*
+If one of them solves a problem for you, try it. If it almost fits, open an issue. That feedback loop is how open source gets better.

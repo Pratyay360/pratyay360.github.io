@@ -1,6 +1,6 @@
 ---
 title: "LightCMS: Git-Based CMS for Static Sites"
-description: "LightCMS is an interactive, Git-backed CMS that works with any static site generator supporting front matter. Write, manage, and publish content without leaving your repository."
+description: "LightCMS is a Git-backed CMS for static sites. Write and publish Markdown with front matter using Zola, Hugo, Astro, or Jekyll; every edit is a commit."
 date: 2026-11-17T10:27:07.328Z
 slug: lightcms
 draft: false
