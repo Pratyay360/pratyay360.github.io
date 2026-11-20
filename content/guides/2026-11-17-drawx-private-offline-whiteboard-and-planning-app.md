@@ -15,18 +15,18 @@ weight: 100
 draft: false
 slug: drawx-100-private-offline-whiteboard-app
 ---
-## What [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) is?
+## What [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) Is?
 
 [Drawx](https://github.com/Pratyay360/drawx) is an offline-first, native-like desktop application built with Tauri
-v2, bringing the full power of Excalidraw directly to Linux, macOS, and Windows offline.
+v2, bringing the full power of [Excalidraw](https://excalidraw.com/) directly to Linux, macOS, and Windows offline.
 
 Unlike cloud-based diagramming tools that upload your canvases to remote servers,
 [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) executes 100% locally on your machine. Drawings, plans, ideas, sensitive system architectures, product mockups, and personal brainstorming canvases never leave your computer unless you explicitly export them.
 
 ## Why Choose [Drawx](/guides/drawx-100-private-offline-whiteboard-app/)?
 
-- 🔒 **Zero Cloud. 100% Privacy Guaranteed**: No external network requests, analytics, or telemetry. Works completely air gapped without an internet connection.
-- ⚡ **Instant Launch &amp; Native Performance**: Lightweight desktop runtime with near-instant boot times and smooth 60fps canvas panning and zooming.
+- 🔒 Zero Cloud. 100% offline: No external network requests, analytics, or telemetry. Works completely air gapped without an internet connection.
+- ⚡ Instant Launch &amp; Native Performance: Lightweight desktop runtime with near-instant boot times and smooth 60fps canvas panning and zooming.
 - 🔄 **Seamless Auto Updates**: Built with CrabNebula Cloud integration to ensure smooth, secure, and automatic background updates across all operating systems.
 - 📦 **Standard File Formats**: Save, open, and export files in native `.excalidraw` format, vector SVG, or high resolution PNG.
 

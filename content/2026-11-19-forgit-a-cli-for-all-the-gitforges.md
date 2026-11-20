@@ -1,6 +1,6 @@
 ---
-title: "forgit: One CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, SourceHut"
-description: Stop context-switching between gh, glab, tea, and forgejo-cli. forgit unifies repository, issue, PR, and release management across all major Git forges with one consistent command set.
+title: "Forgit: One CLI for GitHub, GitLab, Gitea, and More"
+description: "Stop switching between different cli tools. forgit unifies repository, issue, PR, and release management across all major Git forges with one consistent command set."
 date: 2026-11-19T15:35:35Z
 weight: 0
 draft: false
@@ -18,7 +18,7 @@ isCJKLanguage: false
 slug: forgit-a-cli-for-all-the-gitforges
 ---
 
-I work across GitHub, a self-hosted GitLab, and a Gitea instance. For months I juggled `gh`, `glab`, and `tea` — three CLIs, three auth flows, three different flag conventions for "create a PR." It was exhausting.
+I work across GitHub, a self hosted GitLab, and a Gitea instance. For months I juggled `gh`, `glab`, and `tea` — three CLIs, three auth flows, three different flag conventions for "create a PR." It was exhausting.
 
 **forgit** solves this: one CLI, one command set, six forges.
 
@@ -54,7 +54,7 @@ scoop bucket add pratyay360 https://github.com/Pratyay360/scoop-bucket
 scoop install pratyay360/forgit
 ```
 
-### WinGet (Windows)
+#### WinGet (Windows)
 
 ```powershell
 winget install pratyay360.forgit
@@ -154,14 +154,6 @@ Non-interactive mode for pipelines:
     forgit release create --tag vvX.Y.Z --title "vvX.Y.Z"
 ```
 
-## Roadmap
-
-- [ ] Plugin API for custom forge integrations
-- [ ] Webhook management commands
-- [ ] Bulk operations (multi-repo issue creation)
-- [ ] Shell completions (bash, zsh, fish, PowerShell)
-- [ ] v1.0 stable release
-
 ## Contributing
 
 ```bash
@@ -175,11 +167,11 @@ Open an issue first for significant changes. PRs welcome for bug fixes, document
 
 ## Links
 
-- 📦 **GitHub**: <https://github.com/Pratyay360/forgit>
-- 📦 **Releases**: <https://github.com/Pratyay360/forgit/releases>
-- 🐛 **Issues**: <https://github.com/Pratyay360/forgit/issues>
+- 📦 **GitHub**: [https://github.com/Pratyay360/forgit](https://github.com/Pratyay360/forgit)
+- 📦 **Releases**: [https://github.com/Pratyay360/forgit/releases](https://github.com/Pratyay360/forgit/releases)
+- 🐛 **Issues**: [https://github.com/Pratyay360/forgit/issues](https://github.com/Pratyay360/forgit/issues)
 - 📜 **License**: Apache-2.0
 
 ---
 
-*If forgit saves you context-switching, [give it a star](https://github.com/Pratyay360/forgit). Found a bug? [File an issue](https://github.com/Pratyay360/forgit/issues).*
+*If forgit saves you juggling 10 different cli tools, [give it a star](https://github.com/Pratyay360/forgit). Found a bug? [File an issue](https://github.com/Pratyay360/forgit/issues).*

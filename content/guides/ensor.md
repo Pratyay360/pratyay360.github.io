@@ -1,6 +1,6 @@
 ---
 title: "ensor: Secret Detection & Redaction CLI"
-description: "Fast, interactive CLI to detect and redact hardcoded secrets (API keys, tokens, credentials) in your codebase. Replaces leaks with environment variable references. Converts between .env, JSON, YAML, TOML."
+description: "Fast, interactive CLI to detect and redact hardcoded secrets in codebase."
 date: 2026-11-17T10:25:51.812Z
 weight: 2
 draft: false
@@ -157,7 +157,7 @@ custom_patterns:
 - **Go** — Single binary, cross-platform
 - **Bubble Tea** — Terminal UI framework
 - **Huh** — Forms/prompts for TUI
-- **gitleaks/betterleaks** — Detection engine
+- **git leaks/better leaks** — Detection engine
 - **Cobra** — CLI structure
 
 ## Links

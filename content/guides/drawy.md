@@ -1,6 +1,6 @@
 ---
-title: "Drawy: Self-Hosted Collaborative Whiteboard"
-description: "Complete guide to Drawy — a multi-tenant Excalidraw wrapper with real-time collaboration, version history, and libraries. Covers getting started, self-hosting on Cloudflare Workers, privacy, and architecture."
+title: "Drawy: Self Hosted Collaborative Whiteboard"
+description: Drawy, a multi tenant Excalidraw with real time collaboration and version history. Covers setup, self-hosting on Cloudflare Workers, and architecture.
 date: 2026-11-19T14:41:56.828Z
 weight: 1
 draft: false
@@ -16,9 +16,9 @@ keywords:
 
 Drawy is a collaborative drawing workspace built on Excalidraw. It gives you the full Excalidraw editor — infinite canvas, shapes, arrows, freehand, frames, images — plus the collaboration features most teams need: live cursors, shared canvases, version history, and reusable libraries. Everything runs on your infrastructure.
 
-## Quick Start (5 minutes)
+## Quick Start (5 Minutes)
 
-### 1. Create an account
+### 1. Create an Account
 
 No email required. Just a username and password.
 
@@ -88,7 +88,7 @@ Six themes across light/dark mode. Choice persists per device (localStorage), ap
 
 ---
 
-## Self-Hosting Drawy
+## Self Hosting Drawy
 
 Drawy has three components: front end (TanStack Start), realtime worker (Cloudflare Durable Objects), and data store (Postgres). All deploy together via `wrangler deploy`.
 
@@ -254,12 +254,10 @@ The TanStack Start app builds to static assets + Cloudflare Worker. For other pl
 
 ## Resources & Links
 
-- 🌐 **Hosted instance**: <https://drawy.pratyay.online/login>
-- 📦 **GitHub**: <https://github.com/Pratyay360/drawy>
-- 📦 **DrawX repo**: <https://github.com/Pratyay360/drawx>
-- 📖 **DrawX downloads**: <https://github.com/Pratyay360/drawx/releases>
+- 🌐 **Hosted instance**: [https://drawy.pratyay.online](https://drawy.pratyay.online)
+- 📦 **GitHub**: [https://github.com/Pratyay360/drawy](https://github.com/Pratyay360/drawy)
+- 📦 **DrawX repo**: [https://github.com/Pratyay360/drawx](https://github.com/Pratyay360/drawx)
+- 📖 **DrawX downloads**: [https://github.com/Pratyay360/drawx/releases](https://github.com/Pratyay360/drawx/releases)
 - 🏗️ **Self-hosting guide**: This page (Self-Hosting section)
 - 🔒 **Privacy details**: Privacy & Security section above
-- 💬 **Help center**: <https://drawy.pratyay.online/help>
-- 📧 **Contact**: <https://drawy.pratyay.online/contact>
-- 🐛 **Issues**: <https://github.com/Pratyay360/drawy/issues>
+- 🐛 **Issues**: [https://github.com/Pratyay360/drawy/issues](https://github.com/Pratyay360/drawy/issues)

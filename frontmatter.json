@@ -44,6 +44,16 @@
           "title": "keywords",
           "name": "keywords",
           "type": "string"
+        },
+        {
+          "title": "weight",
+          "name": "weight",
+          "type": "number"
+        },
+        {
+          "title": "sort_by",
+          "name": "sort_by",
+          "type": "string"
         }
       ]
     }
