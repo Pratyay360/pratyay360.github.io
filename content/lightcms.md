@@ -1,5 +1,5 @@
 ---
-title: "LightCMS: Git-Based CMS for Static Sites"
+title: "LightCMS: Git Based CMS for Static Sites"
 description: "LightCMS is a Git-backed CMS for static sites. Write and publish Markdown with front matter using Zola, Hugo, Astro, or Jekyll; every edit is a commit."
 date: 2026-11-17T10:27:07.328Z
 slug: lightcms
@@ -17,7 +17,7 @@ tags:
 
 LightCMS is an easy-to-use, interactive, Git-based CMS built to help you discover the hidden writer in you and fall in love with writing again.
 
-Compatible with **any static site generator (SSG) that supports front matter** — Zola, Hugo, Astro, Jekyll, Eleventy, Next.js, Nuxt, and more. LightCMS makes creating, managing, and publishing content effortless.
+Compatible with any static site generator (SSG) that supports front matter schema Zola, Hugo, Astro, Jekyll, Eleventy, Next.js, Nuxt, and more. LightCMS makes creating, managing, and publishing content effortless.
 
 Whether you're sharing experiences, documenting your journey, or putting thoughts into words, LightCMS turns ideas into published pages without the friction.
 

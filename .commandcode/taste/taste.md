@@ -1,6 +1,0 @@
-- User initiates SEO work with a brief command ("seo audit"), expecting the assistant to run a full audit workflow (fetching homepage, sitemap, robots.txt, sample pages, and checking indexation) without further prompting. Confidence: 0.9
-- User prefers the assistant to proactively research the codebase and live site to understand the project portfolio before creating content (e.g., fetching Drawy, ensor, forgit guide pages and GitHub repos). Confidence: 0.85
-- User wants SEO content that showcases their own open-source projects as a cohesive toolkit, with each project getting a dedicated section including problem/solution, code examples, and links. Confidence: 0.9
-- User favors practical, developer-focused content with real commands, configuration snippets, and installation instructions over abstract descriptions. Confidence: 0.85
-- User expects the assistant to apply SEO best practices automatically: primary/secondary keyword targeting, H1/H2 structure, FAQ for featured snippets, internal/external linking, schema-ready structure, and E-E-A-T signals from first-hand experience. Confidence: 0.9
-- User wants the content deployed to the Zola site (content/ folder) and validated via the standard mise/zola build/check pipeline. Confidence: 0.9

@@ -1,16 +1,16 @@
 {
-	"$schema": "https://frontmatter.codes/frontmatter.schema.json",
-	"frontMatter.content.pageFolders": [
-		{
-			"title": "content",
-			"path": "[[workspace]]/content"
-		},
-		{
-			"title": "guides",
-			"path": "[[workspace]]/content/guides"
-		}
-	],
-	"frontMatter.taxonomy.contentTypes": [
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
+    },
+    {
+      "title": "guides",
+      "path": "[[workspace]]/content/guides"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
       "pageBundle": false,
@@ -71,6 +71,11 @@
               "type": "boolean"
             }
           ]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
         }
       ]
     }
