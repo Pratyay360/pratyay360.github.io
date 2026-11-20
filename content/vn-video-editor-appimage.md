@@ -1,10 +1,10 @@
 ---
 title: "VN Video Editor on Linux: AppImage via Wine"
-description: "Run VN Video Editor on Linux with this unofficial AppImage. Packaged using Wine and pkgforge tooling. Supports 4K, keyframes, no ads. "
+description: "Run VN Video Editor on Linux with this unofficial AppImage. Packaged using Wine and pkgforge tooling. Supports 4K, keyframes, no ads"
 date: 2026-11-19T15:52:35Z
 draft: false
 slug: vn-video-editor-appimage
-keywords:
+tags:
   - AppImage
   - VlogNow
   - VN Video Editor
@@ -65,13 +65,9 @@ APPIMAGE_EXTRACT_AND_RUN=1 ./vn.AppImage
 ## Building from Source
 
 ```bash
-# Requires: pkgforge, Docker
 git clone https://github.com/Pratyay360/vn-appimage
 cd vn-appimage
-pkgforge build --recipe recipe.yml
 ```
-
-The recipe uses `pkgforge`'s Wine AppImage template with custom `dnf`/`apt` dependencies for multimedia codecs.
 
 ## Legal & Disclaimer
 
