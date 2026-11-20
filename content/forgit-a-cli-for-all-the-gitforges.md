@@ -86,7 +86,7 @@ stew install pratyay360/forgit
 
 ## Configuration
 
-One `$HOME/.config/forgit/config.toml` defines all your forges:
+One  `$HOME/.config/forgit/config.toml` defines all your forges:
 
 ```yaml
 # $HOME/.config/forgit/config.toml
@@ -134,26 +134,7 @@ token = "echo $GITGUD_PAT"
 | Create PR/MR       | `gh pr create`      | `glab mr create`      | `tea pr create`      | `forgit pr create`      |
 | Create release     | `gh release create` | `glab release create` | `tea release create` | `forgit release create` |
 | **Auth per forge** | `gh auth login`     | `glab auth login`     | `tea login`          | **One config file**     |
-| **Context switch** | Manual env vars     | Manual env vars       | Manual env vars      | `forgit context use`    |
 
-
-## CI/CD Integration
-
-Non-interactive mode for pipelines:
-
-```yaml
-# .github/workflows/release.yml
-- name: Create release on all forges
-  env:
-    GITHUB_TOKEN: ${GITHUB_TOKEN_SECRET}
-    GITLAB_TOKEN: ${GITLAB_TOKEN_SECRET}
-    GITEA_TOKEN: ${GITEA_TOKEN_SECRET}
-  run: |
-    forgit context use github
-    forgit release create --tag vvX.Y.Z --title "vvX.Y.Z"
-    forgit context use gitlab
-    forgit release create --tag vvX.Y.Z --title "vvX.Y.Z"
-```
 
 ## Contributing
 
