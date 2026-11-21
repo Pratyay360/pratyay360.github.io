@@ -154,7 +154,7 @@ ensor convert env.yaml env.toml
 
 [![asciicast](https://asciinema.org/a/1270273.svg)](https://asciinema.org/a/1270273)
 
-<video src="https://github.com/user-attachments/assets/e817c8d7-f4eb-4eee-9cf1-f26c14f055c0" controls preload></video>
+<video src="https://github.com/user-attachments/assets/e817c8d7-f4eb-4eee-9cf1-f26c14f055c0" controls preload   style="width: 640px; max-width: 100%; height: auto;"></video>
 
 
 [![ensor](https://img.youtube.com/vi/3d1xLYkeVsA/hqdefault.jpg)](http://www.youtube.com/watch?v=3d1xLYkeVsA "ensor cli")
