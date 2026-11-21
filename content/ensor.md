@@ -46,9 +46,9 @@ ensor scan --interactive
 ## Key Features
 
 - **50+ secret patterns**: AWS, GitHub, Slack, Stripe, JWT, private keys, database URLs, generic high-entropy strings
-- **Interactive redaction**: TUI prompts for each finding — accept suggested name, customize, or skip
-- **Smart .env mapping**: If a detected value matches an existing `.env` entry, uses that key automatically
-- **Placeholder format**: `{SECRET_NAME}` (customizable via config)
+- **Interactive redaction**: TUI prompts for each piece of finding — accept suggested name, customize, or skip
+- **Smart .env mapping**: If a detected value matches existing `.env` entry, uses that key automatically
+- **Zero configuration by default.**
 - **Format conversion**: `ensor convert` — `.env` ↔ JSON ↔ YAML ↔ TOML
 - **Safe defaults**: Skips `.env*`, `.git/*`, `node_modules/`, `vendor/` by default
 - **CI/CD ready**: `ensor scan --json` for pipeline integration
@@ -73,55 +73,23 @@ ensor scan --interactive
 ### Scan &amp; redact (interactive)
 
 ```bash
-ensor scan --interactive
-```
-
-**Before:** `config.py` contains `API_KEY = "sk-live-abc123"`  
-**After:** `config.py` contains `API_KEY = "{STRIPE_API_KEY}"`  
-**New `.env`:** `STRIPE_API_KEY=sk-live-abc123`
-
-### Non-interactive (CI/CD)
-
-```bash
-# Exit code 1 if secrets found, 0 if clean
-ensor scan --json > ensor-report.json
+ensor
 ```
 
 ### Convert environment formats
 
 ```bash
 # .env → JSON
-ensor convert --from dotenv --to json --input .env --output config.json
+ensor convert .env env.json
 
 # JSON → YAML
-ensor convert --from json --to yaml --input config.json --output config.yaml
+ensor convert env.json env.yaml
 
 # YAML → TOML
-ensor convert --from yaml --to toml --input config.yaml --output config.toml
+ensor convert env.yaml env.toml
 ```
 
-### Configuration
-
-`~/.config/ensor/config.yaml`:
-
-```yaml
-# Custom placeholder format
-placeholder_format: "{NAME}"  # example
-
-# Additional paths to skip
-skip_paths:
-  - "*.min.js"
-  - "dist/"
-  - "build/"
-
-# Custom secret patterns (regex)
-custom_patterns:
-  - name: "INTERNAL_API_KEY"
-    regex: "internal-[a-z0-9]{32}"
-    description: "Internal service API key"
-```
-
-## How It Works
+### How It Works
 
 1. **Scan** — Walks project files (respects `.gitignore`, configurable skip paths)
 2. **Detect** — Runs gitleaks/betterleaks engine + custom patterns
