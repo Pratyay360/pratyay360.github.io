@@ -110,13 +110,13 @@ token = "echo $GITGUD_PAT"
 ## Comparison: forgit vs. forge specific CLIs
 
 
-| Task               | `gh`                | `glab`                | `tea` (Gitea)        | `forgit`                |
-| ------------------ | ------------------- | --------------------- | -------------------- | ----------------------- |
-| List repos         | `gh repo list`      | `glab repo list`      | `tea repos`          | `forgit repo list`      |
-| Create issue       | `gh issue create`   | `glab issue create`   | `tea issue create`   | `forgit issue create`   |
-| Create PR/MR       | `gh pr create`      | `glab mr create`      | `tea pr create`      | `forgit pr create`      |
-| Create release     | `gh release create` | `glab release create` | `tea release create` | `forgit release create` |
-| **Auth per forge** | `gh auth login`     | `glab auth login`     | `tea login`          | **One config file**     |
+| Task               | `gh`                | `glab`                | `tea` (Gitea)        | `forgit`            |
+| ------------------ | ------------------- | --------------------- | -------------------- | ------------------- |
+| List repos         | `gh repo list`      | `glab repo list`      | `tea repos`          | `forgit repos`      |
+| Create issue       | `gh issue create`   | `glab issue create`   | `tea issue create`   | `forgit issue`      |
+| Create PR/MR       | `gh pr create`      | `glab mr create`      | `tea pr create`      | `forgit pr`         |
+| Create release     | `gh release create` | `glab release create` | `tea release create` | `forgit release`    |
+| **Auth per forge** | `gh auth login`     | `glab auth login`     | `tea login`          | **One config file** |
 
 
 ## Contributing
