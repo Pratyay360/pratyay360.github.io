@@ -16,29 +16,28 @@ tags:
   - hugo
   - astro
 ---
-LightCMS is an easy to use, interactive, Git based CMS built to help you discover the hidden writer in you and fall in love with writing again.
+[LightCMS](https://www.lightcms.me/) Is an easy to use, interactive, Git based CMS built to help you discover the hidden writer in you and fall in love with writing again.
 
-Compatible with any static site generator (SSG) that supports front matter schema Zola, Hugo, Astro, Jekyll, Eleventy, Next.js, Nuxt, and more. LightCMS makes creating, managing, and publishing content effortless.
+Compatible with any static site generator (SSG) that supports front matter schema Zola, Hugo, Astro, Jekyll, Eleventy, Next.js, Nuxt, and more. [LightCMS](https://www.lightcms.me/) Makes creating, managing, and publishing content effortless.
 
 Whether you're sharing experiences, documenting your journey, or putting thoughts into words, LightCMS turns ideas into published pages without the friction.
 
 ## Why LightCMS?
 
 
-| Problem             | LightCMS Approach                                                                 |
-| ------------------- | --------------------------------------------------------------------------------- |
-| CMS lock in         | Your content lives in your Git repo as markdown files so no lockin                |
-| Complex setup       | Connect repo → configure front matter fields → write                              |
-| No local preview    | Built in preview renders your actual SSG templates                                |
-| Vendor hosting      | Deploy anywhere: Netlify, Vercel, Cloudflare Pages, GitHub Pages, your own server |
-| Content stuck in DB | Every edit is a Git commit — full history, diffs, rollback                        |
+| Problem             | LightCMS Approach                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| CMS for you         | Your content lives in your Git repo as markdown files which can be edited by any text editor |
+| No local preview    | The built‑in WYSIWYG editor displays your content exactly as it will appear.                 |
+| Independent hosting | Deploy anywhere: Netlify, Vercel, Cloudflare Pages, GitHub Pages, your own server, s3 bucket |
+| Not stuck in DB     | Every edit is a Git commit — full history, diffs, rollback                                   |
 
 
 ## Core Features
 
 ### Git Native Content Storage
 
-- Content = markdown files + front matter schema
+- Content = Markdown files + front matter schema
 - Every save = Git commit (signed, if you configure it)
 - Branches = drafts, PRs = editorial workflow
 - No database, no vendor lock-in
@@ -52,7 +51,7 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 ### AI Writing Assistant (optional)
 
 - Inline completions, rephrasing, summarization
-- Runs via openai compatible API (OpenAI, openrouter)
+- Runs via OpenAI compatible API (OpenAI, openrouter)
 - Your content never leaves your infrastructure unless you choose
 
 ### Speech to Text
@@ -61,19 +60,9 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 - Powered by Whisper compatible API or cloud APIs
 - Useful for capturing thoughts faster than typing
 
-### Multi-SSG Support
+### Multiple SSG Support (Static Site Generator Neutral)
 
-
-| SSG           | Front Matter | Status   |
-| ------------- | ------------ | -------- |
-| Zola          | TOML         | ✅ Native |
-| Hugo          | YAML/TOML    | ✅ Native |
-| Astro         | YAML         | ✅ Native |
-| Jekyll        | YAML         | ✅ Native |
-| Eleventy      | YAML/JSON    | ✅ Native |
-| Next.js (MDX) | YAML         | ✅ Native |
-| Nuxt (MDC)    | YAML         | ✅ Native |
-
+LightCMS is designed with the vision of remaining independent of any specific static site generator, providing a configuration free experience.
 
 ### Team Collaboration
 
