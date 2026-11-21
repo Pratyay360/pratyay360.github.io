@@ -1,11 +1,14 @@
 ---
-title: "ensor: Secret Detection & Redaction CLI"
-description: "ensor is a Go CLI that finds hardcoded secrets, redacts them with placeholders, and converts env files between dotenv, JSON, YAML, and TOML."
-date: 2026-11-17T10:25:51.812Z
+title: ensor Secret Detection & Redaction CLI
+description: >-
+  ensor is a CLI tool built in golang that finds hardcoded secrets, redacts them
+  with placeholders, and converts env files between dotenv, JSON, YAML, and
+  TOML.
+date: '2026-11-17T10:25:51.812Z'
 weight: 2
 draft: false
 slug: ensor
-keywords:
+tags:
   - secret detection
   - secret redaction
   - CLI
@@ -15,7 +18,6 @@ keywords:
   - environment variables
   - Go
 ---
-
 Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Most tools scan and stop there — you still manually rotate secrets and update `.env` files.
 
 **ensor** scans, detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` file and replaces them with configurable placeholders across your project.
@@ -31,13 +33,15 @@ ensor scan --interactive
 
 ## Why ensor?
 
-| Problem | ensor Approach |
-|---------|----------------|
-| **Scanners only detect** | Detects **and remediates** in one pass |
+
+| Problem                    | ensor Approach                              |
+| -------------------------- | ------------------------------------------- |
+| **Scanners only detect**   | Detects **and remediates** in one pass      |
 | **Manual .env management** | Auto-generates `.env` with descriptive keys |
-| **Format fragmentation** | Converts `.env` ↔ JSON ↔ YAML ↔ TOML |
-| **CI/CD integration** | Non-interactive mode for pipelines |
-| **False positive fatigue** | Interactive review before redaction |
+| **Format fragmentation**   | Converts `.env` ↔ JSON ↔ YAML ↔ TOML        |
+| **CI/CD integration**      | Non-interactive mode for pipelines          |
+| **False positive fatigue** | Interactive review before redaction         |
+
 
 ## Key Features
 
@@ -51,20 +55,22 @@ ensor scan --interactive
 
 ## Installation
 
-| Method | Command |
-|--------|---------|
-| **mise** | `mise use github:github.com/pratyay360/ensor@latest` |
-| **Homebrew** | `brew tap pratyay360/tap && brew install pratyay360/tap/ensor` |
-| **Go install** | `go install github.com/pratyay360/ensor@latest` |
-| **Shell script** | `curl -sSL https://raw.githubusercontent.com/Pratyay360/ensor/main/install.sh \| sh` |
-| **goblin** | `curl -sf http://goblin.run/github.com/pratyay360/ensor \| PREFIX=~/.local/bin sh` |
-| **Scoop (Windows)** | `scoop bucket add pratyay360 https://github.com/pratyay360/scoop-bucket && scoop install pratyay360/ensor` |
-| **Stew** | `stew install pratyay360/ensor` |
-| **Prebuilt** | [GitHub Releases](https://github.com/Pratyay360/ensor/releases) — `.deb`, `.rpm`, `.apk`, Linux/macOS/Windows/FreeBSD binaries |
+
+| Method              | Command                                                                                                                        |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **mise**            | `mise use github:github.com/pratyay360/ensor@latest`                                                                           |
+| **Homebrew**        | `brew tap pratyay360/tap && brew install pratyay360/tap/ensor`                                                                 |
+| **Go install**      | `go install github.com/pratyay360/ensor@latest`                                                                                |
+| **Shell script**    | `curl -sSL https://raw.githubusercontent.com/Pratyay360/ensor/main/install.sh \| sh`                                           |
+| **goblin**          | `curl -sf http://goblin.run/github.com/pratyay360/ensor \| PREFIX=~/.local/bin sh`                                             |
+| **Scoop (Windows)** | `scoop bucket add pratyay360 https://github.com/pratyay360/scoop-bucket && scoop install pratyay360/ensor`                     |
+| **Stew**            | `stew install pratyay360/ensor`                                                                                                |
+| **Prebuilt**        | [GitHub Releases](https://github.com/Pratyay360/ensor/releases) — `.deb`, `.rpm`, `.apk`, Linux/macOS/Windows/FreeBSD binaries |
+
 
 ## Usage
 
-### Scan & redact (interactive)
+### Scan &amp; redact (interactive)
 
 ```bash
 ensor scan --interactive
@@ -127,11 +133,13 @@ custom_patterns:
 
 ## Demo
 
-| Demo | Link |
-|------|------|
-| Video walkthrough | [YouTube](https://www.youtube.com/watch?v=3d1xLYkeVsA) |
-| Secret scan & redact | [asciinema](https://asciinema.org/a/1264776) |
-| Env file conversion | [asciinema](https://asciinema.org/a/1264777) |
+
+| Demo                     | Link                                                   |
+| ------------------------ | ------------------------------------------------------ |
+| Video walkthrough        | [YouTube](https://www.youtube.com/watch?v=3d1xLYkeVsA) |
+| Secret scan &amp; redact | [asciinema](https://asciinema.org/a/1264776)           |
+| Env file conversion      | [asciinema](https://asciinema.org/a/1264777)           |
+
 
 ## Best Practices
 
@@ -142,15 +150,17 @@ custom_patterns:
 
 ## Comparison: ensor vs. gitleaks vs. trufflehog
 
-| Feature | ensor | gitleaks | trufflehog |
-|---------|-------|----------|------------|
-| **Detection** | ✅ (gitleaks engine) | ✅ | ✅ |
-| **Interactive redaction** | ✅ | ❌ | ❌ |
-| **Auto .env generation** | ✅ | ❌ | ❌ |
-| **Format conversion** | ✅ | ❌ | ❌ |
-| **TUI/Interactive** | ✅ (Bubble Tea) | ❌ | ❌ |
-| **CI/CD JSON output** | ✅ | ✅ | ✅ |
-| **Custom patterns** | ✅ | ✅ | ✅ |
+
+| Feature                   | ensor               | gitleaks | trufflehog |
+| ------------------------- | ------------------- | -------- | ---------- |
+| **Detection**             | ✅ (gitleaks engine) | ✅        | ✅          |
+| **Interactive redaction** | ✅                   | ❌        | ❌          |
+| **Auto .env generation**  | ✅                   | ❌        | ❌          |
+| **Format conversion**     | ✅                   | ❌        | ❌          |
+| **TUI/Interactive**       | ✅ (Bubble Tea)      | ❌        | ❌          |
+| **CI/CD JSON output**     | ✅                   | ✅        | ✅          |
+| **Custom patterns**       | ✅                   | ✅        | ✅          |
+
 
 ## Built With
 
@@ -162,11 +172,11 @@ custom_patterns:
 
 ## Links
 
-- 📦 **GitHub**: <https://github.com/Pratyay360/ensor>
-- 📦 **Releases**: <https://github.com/Pratyay360/ensor/releases>
+- 📦 **GitHub**: [https://github.com/Pratyay360/ensor](https://github.com/Pratyay360/ensor)
+- 📦 **Releases**: [https://github.com/Pratyay360/ensor/releases](https://github.com/Pratyay360/ensor/releases)
 - 📖 **Docs**: This guide
-- 🐛 **Issues**: <https://github.com/Pratyay360/ensor/issues>
-- 💬 **Discussions**: <https://github.com/Pratyay360/ensor/discussions>
+- 🐛 **Issues**: [https://github.com/Pratyay360/ensor/issues](https://github.com/Pratyay360/ensor/issues)
+- 💬 **Discussions**: [https://github.com/Pratyay360/ensor/discussions](https://github.com/Pratyay360/ensor/discussions)
 - 📜 **License**: MIT
 
 ---
