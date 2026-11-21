@@ -1,5 +1,5 @@
 ---
-title: QCADesigner-E on Linux
+title: QCADesigner-E available on Linux
 description: >-
   QCADesigner-E with estimation for Quantum dot Cellular Automata (QCA)
   circuits. Is now available as a portable Linux AppImage, so researchers can
@@ -22,7 +22,11 @@ AppImages can be downloaded and run directly, without any installation or root p
 
 ![a](https://i.ibb.co/27pyyC7X/image-png.png)
 
+
+
 [![QCADesigner-E AppImage](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)
+
+![]()
 
 [![]()](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
