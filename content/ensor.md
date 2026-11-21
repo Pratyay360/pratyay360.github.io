@@ -92,7 +92,7 @@ ensor convert env.yaml env.toml
 ### How It Works
 
 1. **Scan** — Walks project files (respects `.gitignore`, configurable skip paths)
-2. **Detect** — Runs gitleaks/betterleaks engine + custom patterns
+2. **Detect** — Runs git leaks/better leaks engine + custom patterns
 3. **Map or prompt** —
    - Match found in `.env`? → Use existing key
    - New secret? → Suggest name (e.g., `STRIPE_SECRET_KEY`) or prompt
