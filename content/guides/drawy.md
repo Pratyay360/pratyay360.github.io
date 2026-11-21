@@ -1,7 +1,9 @@
 ---
-title: "Drawy: Self Hosted Collaborative Whiteboard"
-description: Drawy, a multi tenant Excalidraw with real time collaboration and version history. Covers setup, self-hosting on Cloudflare Workers, and architecture.
-date: 2026-11-19T14:41:56.828Z
+title: Drawy Self hostable Collaborative Whiteboard
+description: >-
+  Drawy, a multi tenant capable with real time collaboration and version
+  history. Covers setup, self hosting on Cloudflare Workers, and architecture.
+date: '2026-11-19T14:41:56.828Z'
 weight: 1
 draft: false
 slug: drawy
@@ -13,7 +15,6 @@ keywords:
   - real-time collaboration
   - Drawy
 ---
-
 Drawy is a collaborative drawing workspace built on Excalidraw. It gives you the full Excalidraw editor — infinite canvas, shapes, arrows, freehand, frames, images — plus the collaboration features most teams need: live cursors, shared canvases, version history, and reusable libraries. Everything runs on your infrastructure.
 
 ## Quick Start (5 Minutes)
@@ -38,15 +39,17 @@ Click **New canvas** in the sidebar. Canvases group by last-edit date so recent 
 
 Drawy autosaves as you draw. After a short pause the header shows **Saved**. The **Save** button in the editor header forces an immediate save.
 
-### 3. Share & collaborate
+### 3. Share &amp; collaborate
 
 Open **Share canvas** to choose access:
 
-| Option | Who can open | Best for |
-| -------- | ------------- | ---------- |
-| **Private** (default) | Only you | Work in progress |
-| **Invite by username** | Specific Drawy user | Editing together in real time |
-| **Read-only link** | Anyone with the link | Publishing finished drawings, collecting feedback |
+
+| Option                 | Who can open         | Best for                                          |
+| ---------------------- | -------------------- | ------------------------------------------------- |
+| **Private** (default)  | Only you             | Work in progress                                  |
+| **Invite by username** | Specific Drawy user  | Editing together in real time                     |
+| **Read-only link**     | Anyone with the link | Publishing finished drawings, collecting feedback |
+
 
 Revoke access anytime without deleting the canvas.
 
@@ -84,7 +87,7 @@ Drawy has three components: front end (TanStack Start), realtime worker (Cloudfl
 - **Cloudflare account** — Durable Objects live in the same Worker as the app
 - **Bun** — `curl -fsSL https://bun.sh/install \| bash`
 
-### 1. Clone & install
+### 1. Clone &amp; install
 
 ```bash
 git clone https://github.com/Pratyay360/drawy.git
@@ -94,12 +97,14 @@ mise deps
 
 ### 2. Configure environment
 
-| Variable | Required | Purpose |
-| ---------- | ---------- | --------- |
-| `DATABASE_URL` | yes | Postgres connection string (pooled URL preferred) |
-| `SESSION_SECRET` | yes | Signs session cookie — `openssl rand -hex 32` |
-| `VITE_SITE_URL` | no | Canonical app URL (defaults to `https://drawyparty.pratyay.online`) |
-| `SENTRY_AUTH_TOKEN` | no | Uploads source maps during build (optional) |
+
+| Variable            | Required | Purpose                                                             |
+| ------------------- | -------- | ------------------------------------------------------------------- |
+| `DATABASE_URL`      | yes      | Postgres connection string (pooled URL preferred)                   |
+| `SESSION_SECRET`    | yes      | Signs session cookie — `openssl rand -hex 32`                       |
+| `VITE_SITE_URL`     | no       | Canonical app URL (defaults to `https://drawyparty.pratyay.online`) |
+| `SENTRY_AUTH_TOKEN` | no       | Uploads source maps during build (optional)                         |
+
 
 Copy `.env.example` to `.env` and fill in values.
 
@@ -148,14 +153,16 @@ bunx wrangler secret put SESSION_SECRET
 
 ## Architecture (for developers)
 
-| Layer | Technology | Role |
-| ------- | ------------ | ------ |
-| Canvas & editor | Excalidraw | Drawing surface, tools, element model |
-| App shell & routing | TanStack Start + Router | Application framework & routes |
-| API | oRPC | Typed API between client & server |
-| Realtime | PartyServer on Cloudflare Durable Objects | Presence & Yjs sync for live collaboration |
-| Storage | Postgres via Drizzle ORM | Persistent canvas storage |
-| UI | Astryx | Component library & theming |
+
+| Layer                   | Technology                                | Role                                           |
+| ----------------------- | ----------------------------------------- | ---------------------------------------------- |
+| Canvas &amp; editor     | Excalidraw                                | Drawing surface, tools, element model          |
+| App shell &amp; routing | TanStack Start + Router                   | Application framework &amp; routes             |
+| API                     | oRPC                                      | Typed API between client &amp; server          |
+| Realtime                | PartyServer on Cloudflare Durable Objects | Presence &amp; Yjs sync for live collaboration |
+| Storage                 | Postgres via Drizzle ORM                  | Persistent canvas storage                      |
+| UI                      | Astryx                                    | Component library &amp; theming                |
+
 
 **Data flow:**
 
@@ -166,7 +173,7 @@ bunx wrangler secret put SESSION_SECRET
 
 ---
 
-## Privacy & Security
+## Privacy &amp; Security
 
 ### What Drawy Stores
 
@@ -189,7 +196,7 @@ Pasted/uploaded images may go to an external host (imgcdn.dev by default). The s
 
 Saved libraries live in **browser localStorage**, not on the Drawy server. Not tied to account, don't sync across devices/browsers.
 
-### Sessions & error tracking
+### Sessions &amp; error tracking
 
 May use Sentry (when enabled) for error tracking — collects technical details per its own policy.
 
@@ -218,11 +225,11 @@ Need 100% offline, zero-cloud whiteboard? **DrawX** is a Tauri v2 desktop app (L
 
 ### Do I need an email to sign up?
 
-No. Username + password only.
+1. Username + password only.
 
 ### Will I lose work if I close the tab?
 
-No. Changes save as you draw. Header shows "Saved" when synced.
+1. Changes save as you draw. Header shows "Saved" when synced.
 
 ### Who can see my drawings?
 
@@ -246,21 +253,23 @@ The TanStack Start app builds to static assets + Cloudflare Worker. For other pl
 
 ### What's the difference between Drawy and DrawX?
 
-| | Drawy | DrawX |
-| -- | ------- | ------- |
-| **Platform** | Web (self-hosted) | Desktop (Tauri v2) |
+
+|                   | Drawy                 | DrawX                |
+| ----------------- | --------------------- | -------------------- |
+| **Platform**      | Web (self-hosted)     | Desktop (Tauri v2)   |
 | **Collaboration** | Real-time, multi-user | Single-user, offline |
-| **Storage** | Postgres (your infra) | Local filesystem |
-| **Network** | Required | None (air-gapped) |
+| **Storage**       | Postgres (your infra) | Local filesystem     |
+| **Network**       | Required              | None (air-gapped)    |
+
 
 ---
 
-## Resources & Links
+## Resources &amp; Links
 
 - 🌐 **Hosted instance**: [https://drawy.pratyay.online](https://drawy.pratyay.online)
 - 📦 **GitHub**: [https://github.com/Pratyay360/drawy](https://github.com/Pratyay360/drawy)
 - 📦 **DrawX repo**: [https://github.com/Pratyay360/drawx](https://github.com/Pratyay360/drawx)
 - 📖 **DrawX downloads**: [https://github.com/Pratyay360/drawx/releases](https://github.com/Pratyay360/drawx/releases)
 - 🏗️ **Self-hosting guide**: This page (Self-Hosting section)
-- 🔒 **Privacy details**: Privacy & Security section above
+- 🔒 **Privacy details**: Privacy &amp; Security section above
 - 🐛 **Issues**: [https://github.com/Pratyay360/drawy/issues](https://github.com/Pratyay360/drawy/issues)
