@@ -172,9 +172,8 @@ bunx wrangler secret put SESSION_SECRET
 **Data flow:**
 
 1. Client renders Excalidraw inside TanStack Start app
-2. Account/canvas/sharing/library calls go through typed oRPC procedures (shared client/server types)
-3. Live cursors/selections/strokes sync via Yjs over Durable Objects
-4. Canvases persist to Postgres → enables autosave + version history
+2. Live cursors/selections/strokes sync via Cloudflare Durable Objects
+3. Canvases persist to Postgres → enables autosave + version history
 
 ---
 
