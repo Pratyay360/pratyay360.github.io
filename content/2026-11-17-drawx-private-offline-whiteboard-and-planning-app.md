@@ -1,10 +1,20 @@
 ---
-title: "DrawX: Offline Whiteboard for Linux"
-description: DrawX is an offline-first whiteboard for Linux, macOS, and Windows. Draw, plan, and brainstorm locally with no cloud, account, or telemetry.
-date: 2026-11-17T10:24:05.403Z
-keywords: 'offline, whiteboard, planning, offline first, desktop app, Tauri, Excalidraw'
+title: Drawx Offline Whiteboard for Linux
+description: >-
+  DrawX is an offline first whiteboard for Linux, macOS, and Windows. Draw,
+  plan, and brainstorm locally with no cloud, account, or telemetry.
+date: '2026-11-17T10:24:05.403Z'
+tags:
+  - offline
+  - whiteboard
+  - planning
+  - offline first
+  - desktop app
+  - Tauri
+  - Excalidraw
 weight: 100
 draft: false
+slug: 2026-11-17-drawx-private-offline-whiteboard-and-planning-app
 ---
 ## What [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) Is?
 
@@ -25,6 +35,7 @@ Unlike cloud-based diagramming tools that upload your canvases to remote servers
 
 Ready-to-use binaries are available for all major platforms:
 
+
 | Operating System             | Package Type      | Download Link                                                                                              |
 | :---------------------------- | :----------------- | :---------------------------------------------------------------------------------------------------------- |
 | **Ubuntu / Debian / Mint**   | `.deb` (x86\_64)  | [Download debian-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/debian-x86_64) |
@@ -35,6 +46,7 @@ Ready-to-use binaries are available for all major platforms:
 | **macOS (Intel)**            | `.dmg` (x86\_64)  | [Download dmg-x86\_64](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/dmg-x86_64)       |
 | **Windows Installer**        | NSIS Setup (.exe) | [Download NSIS Installer](https://cdn.crabnebula.app/download/pratyay/drawx/latest/platform/nsis-x86_64)   |
 | **Windows Portable**         | Standalone (.exe) | [Get via GitHub Releases](https://github.com/Pratyay360/drawx/releases)                                    |
+
 
 [![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
 
