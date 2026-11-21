@@ -1,7 +1,9 @@
 ---
-title: "VN Video Editor on Linux: AppImage via Wine"
-description: "Run VN Video Editor on Linux with this unofficial AppImage. Packaged using Wine and pkgforge tooling. Supports 4K, keyframes, no ads"
-date: 2026-11-19T15:52:35Z
+title: 'VN Video Editor on Linux: AppImage'
+description: >-
+  Run VN Video Editor on Linux with this unofficial AppImage. Supports 4K,
+  keyframes, ad free
+date: '2026-11-19T15:52:35.000Z'
 draft: false
 slug: vn-video-editor-appimage
 tags:
@@ -9,7 +11,6 @@ tags:
   - VlogNow
   - VN Video Editor
 ---
-
 VN Video Editor (VlogNow) is a popular free video editor for YouTube and Shorts with 4K support, advanced keyframes, and zero ads. Official Linux build doesn't exist. This unofficial AppImage packages the Windows version via Wine and pkgforge tooling so it runs on Linux.
 
 > ⚠️ **UNOFFICIAL COMMUNITY PROJECT**  
@@ -34,12 +35,14 @@ APPIMAGE_EXTRACT_AND_RUN=1 ./vn.AppImage
 
 ## What's Inside
 
-| Component | Version/Details |
-|-----------|-----------------|
-| **Base** | VN Video Editor Windows build |
-| **Compatibility layer** | Wine (latest stable) |
-| **Packaging** | pkgforge AppImage tooling |
-| **Architecture** | x86_64 (runs on x86_64 Linux) |
+
+| Component               | Version/Details                 |
+| ----------------------- | ------------------------------- |
+| **Base**                | VN Video Editor Windows build   |
+| **Compatibility layer** | Wine (latest stable)            |
+| **Packaging**           | pkgforge AppImage tooling       |
+| **Architecture**        | x86\_64 (runs on x86\_64 Linux) |
+
 
 ## Features Preserved
 
@@ -63,7 +66,7 @@ git clone https://github.com/Pratyay360/vn-appimage
 cd vn-appimage
 ```
 
-## Legal & Disclaimer
+## Legal &amp; Disclaimer
 
 - VN Video Editor is a property of Ubiquiti Labs / Ubiquity (or respective copyright holders)
 - This repository is an **unofficial community project** for **educational purposes only**
@@ -73,9 +76,10 @@ cd vn-appimage
 
 **Copyright concerns?** Email [pratyaymustafi](mailto:pratyaymustafi@outlook.com) or [open an issue](https://github.com/Pratyay360/vn-appimage/issues/new).
 
-## Downloads & Links
+## Downloads &amp; Links
 
-| Platform | Link |
-|----------|------|
-| **GitHub Releases** | [https://github.com/Pratyay360/vn-appimage/releases](https://github.com/Pratyay360/vn-appimage/releases) |
-| **VN official site** | [https://vlognow.me/](https://vlognow.me/) |
+
+| Platform             | Link                                                                                                     |
+| -------------------- | -------------------------------------------------------------------------------------------------------- |
+| **GitHub Releases**  | [https://github.com/Pratyay360/vn-appimage/releases](https://github.com/Pratyay360/vn-appimage/releases) |
+| **VN official site** | [https://vlognow.me/](https://vlognow.me/)                                                               |
