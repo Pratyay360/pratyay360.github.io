@@ -22,6 +22,8 @@ But, Official Linux build doesn't exist. This unofficial AppImage packages the W
 
 ![](https://i.ibb.co/BH9Kqndv/image-png.png)
 
+
+
 ![](https://i.ibb.co/RGVxLzph/image-png.png "vlognow video editor")
 
 > ⚠️ **UNOFFICIAL COMMUNITY PROJECT**  
@@ -30,6 +32,8 @@ But, Official Linux build doesn't exist. This unofficial AppImage packages the W
 $callout💡
 Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, &amp; BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on the fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
 $
+
+
 
 
 
@@ -99,4 +103,11 @@ The application includes a `.zsync` File, enabling seamless updates when used 
 | **VN official site** | [https://vlognow.me/](https://vlognow.me/)                                                               |
 
 
+
+
 [![](https://i.ibb.co/cGRcDgd/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://portable-linux-apps.github.io/en/app/vn.html)
+
+  
+
+
+![](https://i.ibb.co/C5RgW6Ny/Screenshot-20261121-184340-png.png)
