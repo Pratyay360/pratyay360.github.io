@@ -18,7 +18,7 @@ VN Video Editor (VlogNow) is a popular easy to use and free video editor availab
 
 But, Official Linux build doesn't exist. This unofficial AppImage packages the Windows version via Wine so it runs on Linux.
 
-![](https://i.ibb.co/Ck0sRmB/image-png.png "Your Media Caption")
+![](https://i.ibb.co/Ck0sRmB/image-png.png "vn dashboard")
 
 ![](https://i.ibb.co/BH9Kqndv/image-png.png)
 
@@ -26,6 +26,12 @@ But, Official Linux build doesn't exist. This unofficial AppImage packages the W
 
 > ⚠️ **UNOFFICIAL COMMUNITY PROJECT**  
 > This repository is an independent, community driven effort to create a portable AppImage wrapper for VN Video Editor on Linux. It is not affiliated with, endorsed by, or sponsored by Ubiquity Labs, VlogNow, or the official developers of VN Video Editor.
+
+$callout💡
+Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, &amp; BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on the fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
+$
+
+
 
 ## Quick Start
 
@@ -44,7 +50,7 @@ chmod +x vn-editor-0.6.3-anylinux-x86_64.AppImage
 APPIMAGE_EXTRACT_AND_RUN=1 ./vn-editor-0.6.3-anylinux-x86_64.AppImage
 ```
 
-It is suggested to use with some app image manager like [gear leaver](http://gearlever.mijorus.it/) or [appimage launcher](https://assassinate-you.net/tags/appimagelauncher/)
+It is suggested to use with some app image manager like [gear-leaver](http://gearlever.mijorus.it/) or [App image launcher](https://assassinate-you.net/tags/appimagelauncher/)
 
 
 
@@ -54,7 +60,7 @@ It is suggested to use with some app image manager like [gear leaver](http://gea
 | Component               | Version/Details                              |
 | ----------------------- | -------------------------------------------- |
 | **Base**                | [Vlog now video editor](https://vlognow.me/) |
-| **Compatibility layer** | Wine                                         |
+| **Compatibility layer** | [Wine](https://www.winehq.org/)              |
 | **Architecture**        | x86\_64                                      |
 
 
