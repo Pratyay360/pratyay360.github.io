@@ -1,23 +1,20 @@
 [tools]
-action-validator = "latest"
-biome = "latest"
+aube = "latest"
 "github:sass/dart-sass" = "latest"
-harper-cli = "latest"
-harper-ls = "latest"
 imagemagick = "latest"
-"npm:pagefind" = "1.6.0"
-superhtml = "latest"
+node = "latest"
+"npm:pagefind" = "latest"
 zola = "latest"
 
 [settings]
 experimental = true
 
 [tasks.build]
-run = "zola build && pagefind --site dist"
+run = "zola build && pagefind --site ./dist"
 description = "Build the site with Zola and index it for search"
 
 [tasks.search]
-run = "zola build && pagefind --site dist --serve"
+run = "zola build && pagefind --site ./dist --serve"
 description = "Build, index and preview the site with search at http://localhost:1414"
 
 [tasks.serve]
