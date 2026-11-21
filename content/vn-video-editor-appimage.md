@@ -61,7 +61,6 @@ It is suggested to use with some app image manager like [gear-leaver](http://gea
 | ----------------------- | -------------------------------------------- |
 | **Base**                | [Vlog now video editor](https://vlognow.me/) |
 | **Compatibility layer** | [Wine](https://www.winehq.org/)              |
-| **Architecture**        | x86\_64                                      |
 
 
 ## Features
@@ -74,6 +73,8 @@ It is suggested to use with some app image manager like [gear-leaver](http://gea
 - Audio editing (volume, fade, split)
 - Export presets for YouTube, Shorts, TikTok
 - No watermarks, no ads
+
+The application includes a `.zsync` File, enabling seamless updates when used with AppImage utilities such as [Gearlever](http://gearlever.mijorus.it/).
 
 ## Building from Source
 
