@@ -195,11 +195,7 @@ bunx wrangler secret put SESSION_SECRET
 
 ### Images
 
-Pasted/uploaded images may go to an external host (imgcdn.dev by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host. To request removal: [Drawy contact page](https://drawy.pratyay.online/contact).
-
-### Libraries
-
-Saved libraries live in **browser localStorage**, not on the Drawy server. Not tied to account, don't sync across devices/browsers.
+Pasted/uploaded images may go to an external host (imgbb.com by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host. To request removal: [Drawy contact page](https://drawy.pratyay.online/contact).
 
 ### Sessions &amp; error tracking
 
@@ -211,63 +207,7 @@ May use Sentry (when enabled) for error tracking — collects technical details 
 - **Uploaded images**: May persist on external host until removed there
 - **Account removal**: [Contact page](https://drawy.pratyay.online/contact)
 
-### Security issues
 
-Report privately via [security form](https://app.youform.com/forms/8kgi7jvm) or public [GitHub issue](https://github.com/Pratyay360/drawy/issues/new). Include reproduction steps.
-
----
-
-## DrawX: Offline Desktop Alternative
-
-Need 100% offline, zero-cloud whiteboard? **DrawX** is a Tauri v2 desktop app (Linux/macOS/Windows) running Excalidraw locally. No network requests, no analytics, air-gapped capable.
-
-- 📦 [DrawX downloads](https://github.com/Pratyay360/drawx/releases) — .deb, .rpm, AppImage, .dmg, NSIS, Flatpak
-- 🔒 Zero telemetry, works completely offline
-
----
-
-## FAQ
-
-### Do I need an email to sign up?
-
-1. Username + password only.
-
-### Will I lose work if I close the tab?
-
-1. Changes save as you draw. Header shows "Saved" when synced.
-
-### Who can see my drawings?
-
-Only you — until you invite someone or publish a read-only link.
-
-### Can I stop sharing a drawing?
-
-Yes. Revoke access anytime. The drawing itself isn't deleted.
-
-### Can I get my drawings out of Drawy?
-
-Yes. Export as `.excalidraw`, PNG, or SVG. Import `.excalidraw` files back in.
-
-### Can I undo a big mistake after autosave?
-
-Yes. Version history → roll back to any of the last 50 snapshots.
-
-### How do I self-host on a different platform?
-
-The TanStack Start app builds to static assets + Cloudflare Worker. For other platforms: build the client (`bun run build`), deploy the worker separately, ensure WebSocket upgrades on `/parties` work.
-
-### What's the difference between Drawy and DrawX?
-
-
-|                   | Drawy                 | DrawX                |
-| ----------------- | --------------------- | -------------------- |
-| **Platform**      | Web (self-hosted)     | Desktop (Tauri v2)   |
-| **Collaboration** | Real-time, multi-user | Single-user, offline |
-| **Storage**       | Postgres (your infra) | Local filesystem     |
-| **Network**       | Required              | None (air-gapped)    |
-
-
----
 
 ## Resources &amp; Links
 
