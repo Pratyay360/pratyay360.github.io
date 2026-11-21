@@ -4,7 +4,7 @@ description: "Start here for a short tour of the docs. Find setup guides for Dra
 weight: 1
 draft: false
 slug: started-projects-tools
-keywords:
+tags:
     - project
     - pratyay
 ---

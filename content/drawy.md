@@ -194,7 +194,7 @@ bunx wrangler secret put SESSION_SECRET
 
 ### Images
 
-Pasted/uploaded images may go to an external host (imgbb.com by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host. To request removal: [Drawy contact page](https://drawy.pratyay.online/contact).
+Pasted/uploaded images may go to an external host (imgbb.com by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host.
 
 ### Sessions &amp; error tracking
 
