@@ -64,13 +64,7 @@ Whether you're sharing experiences, documenting your journey, or putting thought
 
 LightCMS is designed with the vision of remaining independent of any specific static site generator, providing a configuration free experience.
 
-### Team Collaboration
-
-- Multi user role based access powered by git
-- Review workflow via GitHub/GitLab PRs
-- Comments and suggestions on drafts
-
-## Getting Started
+### Getting Started
 
 ### 1. Try the hosted demo
 
