@@ -1,5 +1,5 @@
 ---
-title: ensor Secret Detection & Redaction CLI
+title: Ensor Secret Detection & Redaction
 description: >-
   ensor is a CLI tool built in golang that finds hardcoded secrets, redacts them
   with placeholders, and converts env files between dotenv, JSON, YAML, and
