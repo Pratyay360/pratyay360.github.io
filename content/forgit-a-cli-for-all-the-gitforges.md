@@ -1,5 +1,5 @@
 ---
-title: forgit One CLI for all the git forges
+title: 'Forgit, one cli for all the git forges'
 description: >-
   One CLI for GitHub, GitLab, Gitea, Forgejo, Bitbucket, and SourceHut. Manage
   repos, issues, pull requests, and releases from a single command set.
@@ -76,7 +76,7 @@ stew install pratyay360/forgit
 
 ## Configuration
 
-One    `$HOME/.config/forgit/config.toml` defines all your forges:
+One     `$HOME/.config/forgit/config.toml` defines all your forges:
 
 ```yaml
 ## $HOME/.config/forgit/config.toml
@@ -106,7 +106,6 @@ url = "https://gitgud.io"
 token = "echo $GITGUD_PAT"
 
 ```
-
 
 ## Comparison: forgit vs. forge specific CLIs
 
