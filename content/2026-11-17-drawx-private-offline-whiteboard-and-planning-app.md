@@ -55,7 +55,15 @@ Ready to install binaries are available for all major platforms:
 
 
 
+&nbsp;
+
 [![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
+
+
+
+[![](https://i.ibb.co/gZVLMMZp/68747470733a2f2f666c61747061726b2e6f72672f6261646765732f6765742d69742d6f6e2d666c61747061726b2e737667.jpg)](https://flatpark.org/apps/io.github.pratyay360.drawx/)
+
+
 
 [Crab nebula cloud: https://web.crabnebula.cloud/pratyay/drawx/releases](https://web.crabnebula.cloud/pratyay/drawx/releases)
 
