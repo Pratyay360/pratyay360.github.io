@@ -7,13 +7,18 @@ date: '2026-11-19T14:41:56.828Z'
 weight: 1
 draft: false
 slug: drawy
-keywords:
-  - collaborative whiteboard
+tags:
   - Excalidraw
   - self-hosting
   - Cloudflare Workers
   - real-time collaboration
   - Drawy
+  - postgres
+  - collaborative
+  - whiteboard
+  - collaboration
+  - opensource
+  - wrangler
 ---
 Drawy is a collaborative drawing workspace built on Excalidraw. It gives you the full Excalidraw editor — infinite canvas, shapes, arrows, freehand, frames, images — plus the collaboration features most teams need: live cursors, shared canvases, version history, and reusable libraries. Everything runs on your infrastructure.
 
@@ -31,13 +36,13 @@ open https://drawy.pratyay.online/login
 ```
 
 - Usernames: letters, numbers, underscores, hyphens (lowercased)
-- No email, no confirmation link, no password reset — **keep credentials safe**
+- No email, no confirmation link, no password reset **keep credentials safe**
 
 ### 2. Start a canvas
 
 Click **New canvas** in the sidebar. Canvases group by last-edit date so recent work stays visible.
 
-Drawy autosaves as you draw. After a short pause the header shows **Saved**. The **Save** button in the editor header forces an immediate save.
+Drawy autosaves as you draw. After a short pause the header shows **Saved**. The **Save** Button in the editor header forces an immediate save.
 
 ### 3. Share &amp; collaborate
 
@@ -61,7 +66,7 @@ Revoke access anytime without deleting the canvas.
 
 Multiple people edit the same canvas simultaneously. Live cursors, selections, and strokes appear as they happen — point at a shape instead of describing it.
 
-Powered by Yjs and Cloudflare Durable Objects. The worker relays updates between users.
+Powered by Cloudflare’s Durable Objects. The worker relays updates between users.
 
 ### Version history
 
@@ -71,14 +76,14 @@ Drawy keeps the 50 most recent snapshots per canvas. Open version history → cl
 
 Reusable shape collections (icons, diagram pieces, UI mockups) that work across canvases.
 
-- **Public catalog**: Browse [libraries.excalidraw.com](https://libraries.excalidraw.com) from the Libraries sidebar. Search, preview, **Save** to your personal library.
-- **Personal library**: Saved libraries live in browser localStorage — available across canvases in the same browser, not tied to your account.
+- **Public catalog**: Browse [libraries.excalidraw.com](https://libraries.excalidraw.com) From the Libraries sidebar. Search, preview, **Save** to your personal library.
+- **Personal library**: Saved libraries live in browser local Storage — available across canvases in the same browser, not tied to your account.
 - **From canvas**: Select shapes in the editor → add to library via Excalidraw's library panel.
 - **Import from Excalidraw.com**: "Add to library" links on excalidraw.com open directly in Drawy.
 
 ## Self Hosting Drawy
 
-Drawy has three components: front end (TanStack Start), realtime worker (Cloudflare Durable Objects), and data store (Postgres). All deploy together via `wrangler deploy`.
+Drawy has three components: front end (TanStack Start), real time worker (Cloudflare Durable Objects), and data store (Postgres). All deploy together via `wrangler deploy`.
 
 ### Prerequisites
 
