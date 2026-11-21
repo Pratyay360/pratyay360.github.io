@@ -27,8 +27,7 @@ Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause
 mise use github:github.com/pratyay360/ensor@latest
 # or: brew install pratyay360/tap/ensor
 
-# Scan and redact interactively
-ensor scan --interactive
+ensor
 ```
 
 ## Why ensor?
