@@ -147,6 +147,8 @@ ensor convert env.yaml env.toml
 - 💬 **Discussions**: [https://github.com/Pratyay360/ensor/discussions](https://github.com/Pratyay360/ensor/discussions)
 - 📜 **License**: Apache 2.0
 
+[![asciicast](https://asciinema.org/a/1270301.svg)](https://asciinema.org/a/1270301)
 
+[![asciicast](https://asciinema.org/a/1270303.svg)](https://asciinema.org/a/1270303)
 
-&nbsp;
+[![asciicast](https://asciinema.org/a/1270273.svg)](https://asciinema.org/a/1270273)
