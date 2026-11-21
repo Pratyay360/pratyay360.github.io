@@ -1,9 +1,11 @@
 ---
-title: "My Open-Source Toolkit: Build and Package"
-description: "An overview of the open-source tools I build and package, including Drawy, ensor, forgit, QCADesigner-E, Tauri AppImage builds, and bootc workflows."
+title: My Open Build and Package
+description: >-
+  An overview of the open-source tools I build and package, including Drawy,
+  ensor, forgit, QCADesigner-E, Tauri AppImage builds, and bootc workflows.
 weight: 0
 draft: false
-date: 2026-11-19T17:02:39.678Z
+date: '2026-11-19T17:02:39.678Z'
 keywords:
   - open-source tools
   - Linux app distribution
@@ -12,21 +14,23 @@ keywords:
   - bootc
   - secrets management
   - Git CLI
+slug: 2026-11-19-my-opensource-toolkit
 ---
-
 I build and package tools that solve problems I run into as a developer. A few started as scripts for my own machine and turned into releases other people use. This page is a short index of that work. Each item links to a fuller guide with install commands, configuration examples, and troubleshooting notes.
 
 ## TL;DR
 
-| Project | Category | One-Liner |
-| --------- | ---------- | ----------- |
-| **QCADesigner-E AppImage** | Scientific computing | Portable QCA simulator with power-dissipation estimation |
-| **Drawy** | Collaborative tools | Self-hostable, multi-tenant Excalidraw workspace |
-| **DrawX** | Desktop apps | Offline whiteboard for Linux, macOS, and Windows |
-| **ensor** | Security and DevOps | CLI to detect and redact secrets, then convert env formats |
-| **forgit** | Developer productivity | One command set for six Git forges |
-| **Tauri AppImage builds** | App distribution | Portable Linux binaries for Tauri apps |
-| **bootc workflows** | Infrastructure | Immutable OS images built from containers |
+
+| Project                    | Category               | One-Liner                                                  |
+| -------------------------- | ---------------------- | ---------------------------------------------------------- |
+| **QCADesigner-E AppImage** | Scientific computing   | Portable QCA simulator with power-dissipation estimation   |
+| **Drawy**                  | Collaborative tools    | Self-hostable, multi-tenant Excalidraw workspace           |
+| **DrawX**                  | Desktop apps           | Offline whiteboard for Linux, macOS, and Windows           |
+| **ensor**                  | Security and DevOps    | CLI to detect and redact secrets, then convert env formats |
+| **forgit**                 | Developer productivity | One command set for six Git forges                         |
+| **Tauri AppImage builds**  | App distribution       | Portable Linux binaries for Tauri apps                     |
+| **bootc workflows**        | Infrastructure         | Immutable OS images built from containers                  |
+
 
 ## QCADesigner-E AppImage
 
@@ -43,7 +47,7 @@ Drawy wraps Excalidraw in a multi-tenant web app. It adds live cursors, shared c
 
 ## ensor
 
-Hardcoded keys and tokens are still one of the most common ways a repository leaks credentials. ensor scans a codebase, shows you each finding, and writes the detected values into a `.env` file while replacing them with placeholders in your source. It also converts between dotenv, JSON, YAML, and TOML, and has a non-interactive mode for CI.
+Hardcoded keys and tokens are still one of the most common ways a repository leaks credentials. ensor scans a codebase, shows you each piece of finding, and writes the detected values into a `.env` file while replacing them with placeholders in your source. It also converts between dotenv, JSON, YAML, and TOML, and has a non-interactive mode for CI.
 
 The [ensor guide](/guides/ensor/) covers installation on each platform, the config file, and how it compares with gitleaks and trufflehog.
 
