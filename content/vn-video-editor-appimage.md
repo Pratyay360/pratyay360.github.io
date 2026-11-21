@@ -1,5 +1,5 @@
 ---
-title: 'VN Video Editor on Linux: AppImage'
+title: VN(vlognow) Video Editor for Linux
 description: >-
   Run VN Video Editor on Linux with this unofficial AppImage. Supports 4K,
   keyframes, ad free
