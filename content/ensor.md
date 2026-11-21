@@ -18,7 +18,7 @@ tags:
   - environment variables
   - Go
 ---
-Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Most tools scan and stop there — you still manually rotate secrets and update `.env` files.
+Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Most tools scan and stop there — you still manually rotate secrets and update `.env` Files.
 
 **ensor** scans, detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` file and replaces them with configurable placeholders across your project.
 
