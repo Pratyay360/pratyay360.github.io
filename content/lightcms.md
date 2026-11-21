@@ -142,11 +142,8 @@ Every edition is fully featured no artificial limits.
 - 🌐 **Live demo**: [https://www.lightcms.me/](https://www.lightcms.me/)
 - 📦 **GitHub**: [https://github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
 - 📖 **Docs**: [https://lightcms.me/docs](https://lightcms.me/docs)
-- 💬 **Discord**: [https://discord.gg/lightcms](https://discord.gg/lightcms)
+- 💬 **Discord**: [https://discord.gg/sm4S8src7V](https://discord.gg/sm4S8src7V)
 - 🐛 **Issues**: [https://github.com/light-cms/lightcms/issues](https://github.com/light-cms/lightcms/issues)
 - 📜 **License**: Apache 2.0
 
 **LightCMS is built by developers who got tired of fighting CMSs. If it helps you write, [star the repo](https://github.com/light-cms/lightcms).**
-
-
-<a href="https://www.producthunt.com/products/lightcms-2?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-lightcms-2" target="_blank" rel="noopener noreferrer"><img alt="LightCMS - Git backed CMS for static site generators | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1298924&amp;theme=dark&amp;t=1793393067873"></a>
