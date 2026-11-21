@@ -1,4 +1,5 @@
 [tools]
+action-validator = "latest"
 biome = "latest"
 "github:sass/dart-sass" = "latest"
 harper-cli = "latest"
