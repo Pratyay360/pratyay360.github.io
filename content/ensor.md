@@ -111,12 +111,12 @@ ensor convert env.yaml env.toml
 
 ## Best Practices
 
-- Run `ensor scan --interactive` before committing changes that may include credentials
-- Keep generated `.env` files out of version control (add to `.gitignore`)
+- Run `ensor` Before committing changes that may include credentials
+- Keep generated `.env` Files out of version control (add to `.gitignore`)
 - Review redactions — confirm placeholders match your app's configuration
-- Use `ensor convert` when migrating config formats across tools/projects
+- Use `ensor convert` When migrating configuration formats across tools/projects
 
-## Comparison: ensor vs. gitleaks vs. trufflehog
+## Comparison: ensor vs. git leaks vs. trufflehog
 
 
 | Feature                   | ensor               | gitleaks | trufflehog |
@@ -145,8 +145,8 @@ ensor convert env.yaml env.toml
 - 📖 **Docs**: This guide
 - 🐛 **Issues**: [https://github.com/Pratyay360/ensor/issues](https://github.com/Pratyay360/ensor/issues)
 - 💬 **Discussions**: [https://github.com/Pratyay360/ensor/discussions](https://github.com/Pratyay360/ensor/discussions)
-- 📜 **License**: MIT
+- 📜 **License**: Apache 2.0
 
----
 
-*ensor is my daily driver for secret hygiene. If it catches a leak for you, [star the repo](https://github.com/Pratyay360/ensor). Found a false positive? [File an issue](https://github.com/Pratyay360/ensor/issues/new).*
+
+&nbsp;
