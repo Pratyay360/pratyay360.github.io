@@ -11,11 +11,11 @@ zola = "latest"
 experimental = true
 
 [tasks.build]
-run = "zola build && pagefind --site ./dist && npm run build"
+run = "zola build && mise run search && aube install && aube run build"
 description = "Build the site with Zola, index it for search, and optimize all HTML"
 
 [tasks.search]
-run = "zola build && pagefind --site ./dist --serve"
+run = "zola build && pagefind --site ./dist"
 description = "Build, index and preview the site with search at http://localhost:1414"
 
 [tasks.serve]
