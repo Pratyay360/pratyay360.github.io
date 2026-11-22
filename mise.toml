@@ -4,14 +4,15 @@ aube = "latest"
 imagemagick = "latest"
 node = "latest"
 "npm:pagefind" = "latest"
+"npm:parcel" = "latest"
 zola = "latest"
 
 [settings]
 experimental = true
 
 [tasks.build]
-run = "zola build && pagefind --site ./dist"
-description = "Build the site with Zola and index it for search"
+run = "zola build && pagefind --site ./dist && npm run build"
+description = "Build the site with Zola, index it for search, and optimize all HTML"
 
 [tasks.search]
 run = "zola build && pagefind --site ./dist --serve"
