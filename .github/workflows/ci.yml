@@ -19,6 +19,13 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@main
+      - name: cache mise
+        uses: actions/cache@main
+        with:
+          path: /root/.local/share/mise
+          key: ${{ runner.os }}-mise
+          restore-keys: |
+            ${{ runner.os }}-mise
 
       - name: Install dependencies & building
         run: |
