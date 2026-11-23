@@ -22,7 +22,7 @@ jobs:
       - name: cache mise
         uses: actions/cache@main
         with:
-          path: /root/.local/share/mise
+          path: ${{ github.workspace }}/.local/share/mise
           key: ${{ runner.os }}-mise
           restore-keys: |
             ${{ runner.os }}-mise

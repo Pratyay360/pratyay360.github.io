@@ -93,5 +93,12 @@
     type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }},"description":{{ config.description | json_encode() | safe }},"inLanguage":"en"}</script>
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ ptitle | json_encode() | safe }},"description":{{ pdesc | json_encode() | safe }},"url":{{ purl | json_encode() | safe }},"isPartOf":{"@type":"WebSite","name":{{ config.title | json_encode() | safe }},"url":{{ config.base_url | json_encode() | safe }}}}</script>
+
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M3NNRZ4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
   {% endif %}
 </head>
