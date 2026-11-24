@@ -30,13 +30,14 @@ jobs:
             ${{ runner.os }}-mise
 
       - name: Install dependencies & building
+        shell: bash
         run: |
           mise deps
           mise install
           mise run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
+        uses: actions/upload-artifact@main
         with:
           path: ./dist
 
