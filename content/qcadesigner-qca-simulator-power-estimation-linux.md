@@ -26,15 +26,14 @@ AppImages can be downloaded and run directly, without any installation or root p
 
 [![QCADesigner-E AppImage](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)
 
-![]()
 
-[![]()](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
+![qcadesigner-e](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
 ![QCADesigner-E AppImage](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
 I repackaged [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) To make life easier for users. I just repackaged the entire app into an isolated containerized app image file which can be downloaded and run, without installing on the system.
 
-![](https://i.ibb.co/ZzXzj142/image-png.png "qcadesigner-e")
+![qcadesigner-e](https://i.ibb.co/ZzXzj142/image-png.png)
 
 [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) is available as an [AppImage](https://appimage.org/) Which means "one app = one file", which can be downloaded and run on latest systems while you don't need a package manager and nothing gets changed in your system. Awesome!
 
@@ -42,7 +41,7 @@ AppImages are single-file applications that run on most Linux distributions. Dow
 
 [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) Is a free tool for drawing quantum-dot cellular automata (QCA) circuits and estimating how much power they dissipate. Think of it as QCADesigner 2.0.3 with one extra simulation module strapped on. Same canvas, same file format, plus a way to measure energy. That's the short version.
 
-## Any restrictions?
+### Any restrictions?
 
 Not as such it's just an open source repackaging of the original [QCADesigner-E](https://fsillt.github.io/QCADesigner-E/) Project. [The original project is still owned by the original authors](https://fsillt.github.io/QCADesigner-E/).
 
@@ -52,7 +51,7 @@ chmod +x QCADesignerE-x86_64.AppImage
 ./QCADesignerE-x86_64.AppImage
 ```
 
-## Where to get it
+### Where to get it
 
 
 |                     |                                                                                                                                    |
@@ -98,6 +97,6 @@ Because AppImages don’t touch the core system, users can try new versions with
 
 
 
-[![](https://i.ibb.co/q3q9W2qV/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://appimage.github.io/QCADesigner-E/)
+[![appimage](https://i.ibb.co/q3q9W2qV/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://appimage.github.io/QCADesigner-E/)
 
-[![](https://i.ibb.co/q3q9W2qV/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://portable-linux-apps.github.io/en/app/qcadesigner-e.html)
+[![portable-linux-apps](https://i.ibb.co/q3q9W2qV/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://portable-linux-apps.github.io/en/app/qcadesigner-e.html)
