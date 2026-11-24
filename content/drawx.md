@@ -16,14 +16,14 @@ weight: 100
 draft: false
 slug: drawx
 ---
-## What [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) Is?
+## What [Drawx](https://github.com/Pratyay360/drawx) Is?
 
 [Drawx](https://github.com/Pratyay360/drawx) Is an offline first, native like desktop application built with Tauri, bringing the full power of [Excalidraw](https://excalidraw.com/) Directly to Linux, macOS, and Windows offline.
 
 Unlike cloud-based diagramming tools that upload your canvases to remote servers,
-[Drawx](/guides/drawx-100-private-offline-whiteboard-app/) Executes 100% locally on your machine. Drawings, plans, ideas, sensitive system architectures, product mockups, and personal brainstorming canvases never leave your computer unless you explicitly export them.
+[Drawx](https://github.com/Pratyay360/drawx) Executes 100% locally on your machine. Drawings, plans, ideas, sensitive system architectures, product mockups, and personal brainstorming canvases never leave your computer unless you explicitly export them.
 
-## Why Choose [Drawx](/guides/drawx-100-private-offline-whiteboard-app/)?
+## Why Choose [Drawx](https://github.com/Pratyay360/drawx)?
 
 - 🔒 Zero Cloud. 100% offline: No external network requests, analytics, or telemetry. Works completely air gapped without an internet connection.
 - ⚡ Instant Launch &amp; Native Performance: Lightweight desktop runtime with near-instant boot times and smooth 60fps canvas panning and zooming.
@@ -32,9 +32,9 @@ Unlike cloud-based diagramming tools that upload your canvases to remote servers
 
 
 
-![](https://i.ibb.co/TqMqk6Zt/image-png.png)
+![draw](https://i.ibb.co/TqMqk6Zt/image-png.png)
 
-![](https://i.ibb.co/fYTptBgN/image-png.png)
+![portable-linux-apps](https://i.ibb.co/fYTptBgN/image-png.png)
 
 ## Download [Drawx](/guides/drawx-100-private-offline-whiteboard-app/) for Your Operating System
 
@@ -52,10 +52,6 @@ Ready to install binaries are available for all major platforms:
 | **Windows Installer**        | NSIS Setup (.exe) |
 | **Windows Portable**         | Standalone (.exe) |
 
-
-
-
-&nbsp;
 
 [![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
 

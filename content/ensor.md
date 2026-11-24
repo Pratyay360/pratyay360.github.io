@@ -20,7 +20,7 @@ tags:
 ---
 Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Most tools scan and stop there — you still manually rotate secrets and update `.env` Files.
 
-**ensor** detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` File and replaces them with configurable placeholders across your project.
+_ensor_ detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` File and replaces them with configurable placeholders across your project.
 
 ```bash
 # Install
