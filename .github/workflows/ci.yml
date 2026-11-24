@@ -6,13 +6,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
-  artifact-metadata: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  ci:
+  build:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/jdx/mise:debian
@@ -21,6 +24,7 @@ jobs:
         uses: actions/checkout@main
         with:
           submodules: recursive
+
       - name: cache mise
         uses: actions/cache@main
         with:
@@ -35,14 +39,6 @@ jobs:
           mise deps
           mise install
           mise run build
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@main
-        with:
-          path: ./dist
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@main
 
       - name: index now (bing)
         env:
@@ -98,3 +94,19 @@ jobs:
               exit 1
               ;;
           esac
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@main
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
