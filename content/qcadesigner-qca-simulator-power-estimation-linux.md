@@ -65,7 +65,7 @@ chmod +x QCADesignerE-x86_64.AppImage
 
 ### Can I Use It for Free?
 
-Yes. The original code belongs to its authors — see the project page [here](https://fsillt.github.io/QCADesigner-E/). I have simply repackaged the application; details of the repackaging are available on my [GitHub repository](https://github.com/Pratyay360/QCADesigner-E).  
+Yes. The original code belongs to its authors see the project page [here](https://fsillt.github.io/QCADesigner-E/). I have simply repackaged the application; details of the repackaging are available on my [GitHub repository](https://github.com/Pratyay360/QCADesigner-E).  
 
 The simulator and the underlying energy model were developed by the University of Bremen team. This AppImage is my packaging effort and is not affiliated with them. If you encounter any issues with the package, please [open an issue](https://github.com/Pratyay360/QCADesigner-E/issues).
 
