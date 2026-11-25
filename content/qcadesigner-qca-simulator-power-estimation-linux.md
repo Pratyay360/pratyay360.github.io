@@ -48,7 +48,7 @@ chmod +x QCADesignerE-x86_64.AppImage
 |                     |                                                                                                                                    |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | appimagehub         | [https://appimage.github.io/QCADesigner-E/](https://appimage.github.io/QCADesigner-E/)                                             |
-| portable linux apps | [https://portable-linux-apps.github.io/en/app/qcadesigner-e.html](https://portable-linux-apps.github.io/en/app/qcadesigner-e.html) |
+| portable Linux apps | [https://portable-linux-apps.github.io/en/app/qcadesigner-e.html](https://portable-linux-apps.github.io/en/app/qcadesigner-e.html) |
 | original website    | [https://fsillt.github.io/QCADesigner-E/](https://fsillt.github.io/QCADesigner-E/)                                                 |
 | sourceforge         | [https://sourceforge.net/projects/qcadesigner-e/](https://sourceforge.net/projects/qcadesigner-e/)                                 |
 | repackage repo      | [https://github.com/Pratyay360/QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E)                                         |
