@@ -18,7 +18,7 @@ keywords:
 >
 > Trusted. AppImage format is ideal for upstream packaging, which means that you get the software directly from the original author(s) without any intermediaries, exactly in the way the author(s) intended. And quickly.
 
-AppImages can be downloaded and run directly, without any installation or root privileges required.
+AppImages can be downloaded and run directly, without any installation or higher privileges required apps just works on your user space.
 
 ![a](https://i.ibb.co/27pyyC7X/image-png.png)
 
