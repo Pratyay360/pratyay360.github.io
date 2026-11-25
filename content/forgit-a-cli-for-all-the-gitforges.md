@@ -76,7 +76,7 @@ stew install pratyay360/forgit
 
 ## Configuration
 
-One     `$HOME/.config/forgit/config.toml` defines all your forges:
+One      `$HOME/.config/forgit/config.toml` defines all your forges:
 
 ```yaml
 ## $HOME/.config/forgit/config.toml
@@ -128,11 +128,4 @@ mise deps
 mise run test
 ```
 
-Open an issue first for significant changes. PRs welcome for bug fixes, documentation, new forge integrations.
-
-## Links
-
-- 📦 **GitHub**: [https://github.com/Pratyay360/forgit](https://github.com/Pratyay360/forgit)
-- 📦 **Releases**: [https://github.com/Pratyay360/forgit/releases](https://github.com/Pratyay360/forgit/releases)
-- 🐛 **Issues**: [https://github.com/Pratyay360/forgit/issues](https://github.com/Pratyay360/forgit/issues)
-- 📜 **License**: Apache-2.0
+[Please feel free to suggest any changes you feel important.](https://github.com/Pratyay360/forgit)
