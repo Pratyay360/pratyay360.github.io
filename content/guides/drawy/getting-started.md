@@ -1,7 +1,14 @@
 ---
 title: Getting started
 description: Create an account, draw your first canvas and invite someone to join it.
+date: 2026-11-04T18:43:35.221Z
 order: 1
+tags:
+  - pratyay
+  - docs
+  - drawy
+  - cloudflare
+  - excalidraw
 ---
 
 Drawy is a collaborative drawing workspace built on Excalidraw. Make an account,
@@ -13,7 +20,7 @@ An account is a username and a password. There is no email address, no
 confirmation link and no password reset email, so keep your credentials
 somewhere safe.
 
-1. Open the [login page](/login).
+1. Open the [login page](https://drawy.pratyay.online).
 2. Pick a username and a password.
 3. Submit the form. You are signed in straight away.
 
@@ -34,18 +41,18 @@ you own, and every canvas someone shared with you, appears in the sidebar.
 Select the canvas title at the top of the editor, type a new name and confirm.
 Collaborators can rename a canvas too, and everyone sees the new title.
 
-## Delete a canvas
+### Delete a canvas
 
 Use the delete action on the canvas in the sidebar. Only the owner can delete a
 canvas, and deleting it also removes its saved history.
 
-## Invite someone
+### Invite someone
 
 Open **Share canvas** to publish a read-only link or give another Drawy user
 edit access. Both are covered in
-[Sharing and collaboration](/docs/sharing).
+[Sharing and collaboration](sharing).
 
-## Export your work
+#### Export your work
 
 The menu in the canvas header exports the current canvas in three formats:
 
@@ -60,7 +67,7 @@ move between Drawy and the Excalidraw app in either direction.
 
 ## Where to go next
 
-- [Sharing and collaboration](/docs/sharing) — public links, invites, version history
-- [Libraries](/docs/libraries) — reuse shapes across canvases
-- [Privacy and security](/docs/privacy-and-security) — what is stored and for how long
-- [Self-hosting](/docs/selfhost) — run your own instance
+- [Sharing and collaboration](sharing) — public links, invites, version history
+- [Libraries](libraries) — reuse shapes across canvases
+- [Privacy and security](privacy-and-security) — what is stored and for how long
+- [Self hosting](selfhost) — run your own instance

@@ -1,15 +1,13 @@
 ---
 title: Drawx Offline Whiteboard for Linux
-description: >-
-  DrawX is an offline first whiteboard for Linux, macOS, and Windows. Draw,
-  plan, and brainstorm locally with no cloud, account, or telemetry.
-date: '2026-11-17T10:24:05.403Z'
+description: |-
+  
+  DrawX is an offline first whiteboard for Linux, macOS, and Windows. Draw, plan, and brainstorm locally with no cloud, account, or telemetry.
+date: 2026-11-17T10:24:05.403Z
 tags:
   - offline
   - whiteboard
   - planning
-  - offline first
-  - desktop app
   - Tauri
   - Excalidraw
 weight: 100
@@ -53,7 +51,7 @@ Ready to install binaries are available for all major platforms:
 | **Windows Portable**         | Standalone (.exe) |
 
 
-[![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)
+[![download on Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/store/detail/9MT3RCXNDBT4?cid=DevShareMCLPCS)![68747470733a2f2f666c61747061726b2e6f72672f6261646765732f6765742d69742d6f6e2d666c61747061726b2e737667.jpg](https://i.ibb.co/gZVLMMZp/68747470733a2f2f666c61747061726b2e6f72672f6261646765732f6765742d69742d6f6e2d666c61747061726b2e737667.jpg)
 
 
 
@@ -67,4 +65,4 @@ Ready to install binaries are available for all major platforms:
 
 Need real time collaboration with teammates? Check out the web edition:
 
-- [Drawy](/guides/drawy/) — Collaborative web drawing workspace with live cursors, shared canvases, and version history.
+- [Drawy](drawy) — Collaborative web drawing workspace with live cursors, shared canvases, and version history.

@@ -8,6 +8,14 @@
     {
       "title": "guides",
       "path": "[[workspace]]/content/guides"
+    },
+    {
+      "title": "forgit",
+      "path": "[[workspace]]/content/guides/forgit"
+    },
+    {
+      "title": "forgit",
+      "path": "[[workspace]]/content/guides/forgit"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -76,6 +84,21 @@
           "title": "tags",
           "name": "tags",
           "type": "tags"
+        },
+        {
+          "title": "isCJKLanguage",
+          "name": "isCJKLanguage",
+          "type": "boolean"
+        },
+        {
+          "title": "name",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "title": "order",
+          "name": "order",
+          "type": "number"
         }
       ]
     }

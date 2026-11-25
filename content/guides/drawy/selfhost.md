@@ -1,23 +1,20 @@
 ---
 title: Self hosting Drawy
-description: >-
-  Run your own instance of drawy the TanStack Start app, the real time worker
-  and Postgres
-date: '1111-11-11T11:11:00Z'
+description: Run your own instance of drawy the TanStack Start app, the real time worker and Postgres
+date: 2026-11-04T18:43:35.221Z
 draft: false
 tags:
   - self
   - hosting
-  - self hosting
   - drawy
   - partyserver
-  - cloudflare workers
   - durable
   - worker
 isCJKLanguage: false
 headless: false
 order: 5
 ---
+
 Drawy has three components, front end, back end, and data store which holds the  
 drawings. This page walks through all three.
 
@@ -124,14 +121,9 @@ connects there directly for real time sync.
 you would rather keep objects on your own storage.
 - The session cookie is only marked `Secure` when `NODE_ENV=production`, so
 serve the app over HTTPS.
-- Lint and format are mise tasks: `mise run lint` (oxlint) and `mise run format`
-(oxfmt).
+- Lint and format are mise tasks: `mise run lint` (oxlint) and `mise run format`.
 
 ## Related
 
-- [Privacy and security](/docs/privacy-and-security) — what your instance stores
-- [Getting started](/docs/getting-started) — using Drawy as an end user
-
-
-
-&nbsp;
+- [Privacy and security](privacy-and-security) — what your instance stores
+- [Getting started](getting-started) — using Drawy as an end user

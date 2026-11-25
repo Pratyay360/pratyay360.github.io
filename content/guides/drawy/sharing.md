@@ -1,7 +1,14 @@
 ---
 title: Sharing and collaboration
 description: Share a canvas with a public link or another Drawy user, and follow the live edits.
+date: 2026-11-04T18:43:35.221Z
 order: 2
+tags:
+  - drawy
+  - collaboration
+  - self-hosting
+  - collaborative
+  - cloudflare
 ---
 
 A canvas can be shared two ways: with a public read-only link, or with an invite
@@ -9,16 +16,15 @@ to another Drawy user.
 
 ## Public view links
 
-In **Share canvas**, turn on **Anyone with the link can view** and copy the
+In Share canvas, turn on Anyone with the link can view and copy the
 link. Anyone who has it can open the canvas in a read-only view without an
 account. Turning the toggle off revokes the link immediately.
 
 ## Inviting by username
 
-Enter the person's Drawy username under **Share** and submit. They get edit
+Enter the person's Drawy username under Share and submit. They get edit
 access straight away — there is nothing to accept — and the canvas appears in
 their sidebar the next time it loads.
-
 - The username has to exist already.
 - Only the owner can add or remove people.
 - Adding the same person twice does nothing.
@@ -52,10 +58,10 @@ people the canvas is shared with can restore a version.
 ## Revoking access
 
 Open **Share canvas** and remove a collaborator, or switch the public link off.
-Both take effect immediately — a revoked public link stops working at once, and
+Both take effect immediately a revoked public link stops working at once, and
 a removed collaborator loses edit access on their next load.
 
 ## Related
 
-- [Getting started](/docs/getting-started) — create a canvas to share
-- [Privacy and security](/docs/privacy-and-security) — what a public link exposes
+- [Getting started](getting-started) — create a canvas to share
+- [Privacy and security](privacy-and-security) — what a public link exposes

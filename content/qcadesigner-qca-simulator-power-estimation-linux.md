@@ -8,7 +8,7 @@ description: >-
 date: '2026-11-20T07:21:35.873Z'
 draft: false
 slug: qcadesigner-qca-simulator-power-estimation-linux
-keywords:
+tags:
   - qcadesigner-e
   - qca
   - appimage

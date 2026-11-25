@@ -1,9 +1,19 @@
 {
   "taxonomy": {
     "tags": [
+      "AppImage",
+      "VlogNow",
+      "app",
       "cli",
+      "forgejo",
       "forgit",
-      "qcad"
+      "git",
+      "gitea",
+      "github",
+      "gitlab",
+      "sourcehut",
+      "qcad",
+      "video editor"
     ]
   }
 }

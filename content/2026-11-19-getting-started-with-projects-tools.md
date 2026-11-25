@@ -1,45 +1,48 @@
 ---
 title: Getting Started with Projects & Tools
-description: "Start here for a short tour of the docs. Find setup guides for Drawy, DrawX, ensor, forgit, LightCMS, and the QCADesigner-E AppImage."
+description: Start here for a short tour of the docs. Find setup guides for Drawy, DrawX, ensor, forgit, LightCMS, and the QCADesigner-E AppImage.
 weight: 1
 draft: false
 slug: started-projects-tools
 tags:
-    - project
-    - pratyay
+  - project
+  - pratyay
+  - collaboration
+  - forgit
+  - ai
+  - lightcms
 ---
+Welcome to the docs. Use the links below to find setup guides, instructions, diagrams, and examples for each project.
 
-Welcome to the docs hub. Use the links below to find setup steps, how-to guides, diagrams, and examples for each project.
-
-## Project guides and quickstarts
+## Project guides
 
 ### 1. Dynamic UPI QR code generator
 
-Create UPI payment QR codes and deep links in the browser. The app runs client-side and uses WebAssembly built from Rust.
+Create UPI QR codes for payments and links that open payment apps in your browser. The app runs in the browser and uses WebAssembly built with Rust.
 
 - [Dynamic UPI getting started guide](https://dynamic-upi-qr.netlify.app/)
 
-### 2. Ensor secrets management and redaction CLI
+### 2. Ensor: find and hide secrets
 
-An interactive CLI built with Go, Huh, and Bubbletea. It scans for hardcoded secrets, helps redact them, and can convert environment files between `.env`, JSON, YAML, and TOML.
+An interactive command-line tool built with Go, Huh, and Bubbletea. It finds secrets written in code, helps hide or remove them, and changes environment files between `.env`, JSON, YAML, and TOML.
 
-- [Ensor documentation and installation guide](/guides/ensor/)
+- [Ensor documentation and installation guide](ensor)
 
-### 3. Drawy whiteboard ecosystem
+### 3. Drawy whiteboard tools
 
-Collaborative and offline whiteboard tools built on Excalidraw:
+Whiteboard tools for teamwork and offline use, built on Excalidraw:
 
-- [Drawy web app guide](/guides/drawy/) — Collaborative workspace overview, features, self-hosting notes, and privacy.
-- [DrawX desktop app](/guides/drawx-100-private-offline-whiteboard-app/) — Private, offline whiteboard for Linux, macOS, and Windows.
+- [Drawy web app guide](drawy) — Guide to the shared workspace, features, self hosting, and privacy.
+- [DrawX desktop app](drawx-100-private-offline-whiteboard-app) — Private whiteboard that works offline on Linux, macOS, and Windows.
 
 ### 4. QCADesigner-E AppImage
 
-A quantum-dot cellular automata simulator that adds power-dissipation estimation to QCADesigner 2.0.3. The portable AppImage runs on Linux without compilation.
+A simulator for quantum dot cellular automata. It adds power dissipation estimates to QCADesigner 2.0.3. The AppImage runs on Linux without a build step.
 
-- [QCADesigner-E guide](/qcadesigner-qca-simulator-power-estimation-linux/) — Install, run a simulation, and estimate energy dissipation.
+- [QCADesigner-E guide](qcadesigner-qca-simulator-power-estimation-linux) — Install, run a simulation, and estimate energy dissipation.
 
 ### LightCMS
 
-A Git-based CMS for writing and managing content on static sites that use front matter.
+A Git based tool for writing and handling content on static sites that use front matter.
 
-- [LightCMS overview](/lightcms/)
+- [LightCMS overview](lightcms)

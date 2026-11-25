@@ -1,17 +1,13 @@
 ---
 title: Drawy Self hostable Collaborative Whiteboard
-description: >-
-  Drawy, a multi tenant capable with real time collaboration and version
-  history. Covers setup, self hosting on Cloudflare Workers, and architecture.
-date: '2026-11-19T14:41:56.828Z'
+description: Drawy, a multi tenant capable with real time collaboration and version history. Covers setup, self hosting on Cloudflare Workers, and architecture.
+date: 2026-11-19T14:41:56.828Z
 weight: 1
 draft: false
 slug: drawy
 tags:
   - Excalidraw
   - self-hosting
-  - Cloudflare Workers
-  - real-time collaboration
   - Drawy
   - postgres
   - collaborative
@@ -19,8 +15,10 @@ tags:
   - collaboration
   - opensource
   - wrangler
+headless: false
+isCJKLanguage: false
 ---
-Drawy is a collaborative drawing workspace built on Excalidraw. It gives you the full Excalidraw editor — infinite canvas, shapes, arrows, freehand, frames, images — plus the collaboration features most teams need: live cursors, shared canvases, version history, and reusable libraries. Everything runs on your infrastructure.
+Drawy is a shared drawing workspace powered by Excalidraw. It includes the complete editor—with an infinite canvas, shapes, arrows, freehand tools, frames, and images—alongside essential team collaboration: live cursors, shared canvases, version history, and reusable libraries. It all runs on your own infrastructure.
 
 ## Quick Start (5 Minutes)
 

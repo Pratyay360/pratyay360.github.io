@@ -31,4 +31,3 @@ mise run build     # zola build + pagefind
 mise run check
 ```
 
-Search is provided by [Pagefind](https://pagefind.app/) on `/search/`; its index is generated at build time.
