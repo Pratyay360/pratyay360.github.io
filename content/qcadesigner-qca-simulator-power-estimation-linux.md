@@ -34,15 +34,9 @@ I repackaged [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) To mak
 
 ![qcadesigner-e](https://i.ibb.co/ZzXzj142/image-png.png)
 
-[QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) is available as an [AppImage](https://appimage.org/) Which means "one app = one file", which can be downloaded and run on latest systems while you don't need a package manager and nothing gets changed in your system. Awesome!
+QCADesigner‑E is available as an AppImage, which means “one app = one file”. It can be downloaded and run on the latest systems without needing a package manager, and nothing gets changed in your system. AppImages are single file applications that run on most Modern Systems. Download a file make it executable, and run. No extra step needed. Most appImages runs on any linux distributions natively also it works with BSD, mac and windows like systems.  
 
-AppImages are single-file applications that run on most Linux distributions. Download an application, make it executable, and run! No need to install. No system libraries or system preferences are altered. Most [AppImages](https://appimage.org/) Run on recent versions of Arch Linux, CentOS, Debian, Fedora, openSUSE, Red Hat, Ubuntu, and other common desktop distributions.
-
-[QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) Is a free tool for drawing quantum-dot cellular automata (QCA) circuits and estimating how much power they dissipate. Think of it as QCADesigner 2.0.3 with one extra simulation module strapped on. Same canvas, same file format, plus a way to measure energy. That's the short version.
-
-### Any restrictions?
-
-Not as such it's just an open source repackaging of the original [QCADesigner-E](https://fsillt.github.io/QCADesigner-E/) Project. [The original project is still owned by the original authors](https://fsillt.github.io/QCADesigner-E/).
+Any restrictions? Not as such it’s just repackaging of the original QCADesigner‑E project. The original project is open source and the repackaging introduces no amount of modification to the original software.
 
 ```bash
 wget https://github.com/Pratyay360/QCADesigner-E/releases/download/main/QCADesignerE-x86_64.AppImage
