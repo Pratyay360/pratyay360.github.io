@@ -26,17 +26,17 @@ Managing code across multiple Git forges has become a pain point. While we rely 
 **forgit** Tries to Solve this: one CLI, one command set for all the forges.
 
 ```bash
-forgit repo list
-forgit issue create --title "Bug: login broken" --body "Details..."
-forgit pr create --base main --head feature/auth
-forgit release create --tag v1.0.0 --title "v1.0.0"
+forgit repos
+forgit issue list
+forgit prs
+forgit repo create testrepo --instance github --public
 ```
 
 ## Installation
 
 Pick your package manager:
 
-### mise ([https://mise.jdx.dev/](https://mise.jdx.dev/))
+### Mise ([https://mise.jdx.dev/](https://mise.jdx.dev/))
 
 ```bash
 mise use github:github.com/pratyay360/forgit@latest
@@ -110,13 +110,12 @@ token = "echo $GITGUD_PAT"
 ## Comparison: forgit vs. forge specific CLIs
 
 
-| Task               | `gh`                | `glab`                | `tea` (Gitea)        | `forgit`            |
-| ------------------ | ------------------- | --------------------- | -------------------- | ------------------- |
-| List repos         | `gh repo list`      | `glab repo list`      | `tea repos`          | `forgit repos`      |
-| Create issue       | `gh issue create`   | `glab issue create`   | `tea issue create`   | `forgit issue`      |
-| Create PR/MR       | `gh pr create`      | `glab mr create`      | `tea pr create`      | `forgit pr`         |
-| Create release     | `gh release create` | `glab release create` | `tea release create` | `forgit release`    |
-| **Auth per forge** | `gh auth login`     | `glab auth login`     | `tea login`          | **One config file** |
+| Task               | `gh`                             | `glab`                             | `fj`                                   | `forgit`                                                              |
+| ------------------ | -------------------------------- | ---------------------------------- | -------------------------------------- | --------------------------------------------------------------------- |
+| List repos         | `gh repo list`                   | `glab repo list`                   | `fj repo list --hostname codeberg.org` | `forgit repos`                                                        |
+| **Auth per forge** | `gh auth login`                  | `glab auth login`                  | `fj auth login`                        | **One config file**                                                   |
+| create repo        | `gh repo create test --public`   | `glab repo create demo --public`   | `fj repo create test --public`         | `forgit repo create --instance bitbucket --owner pratyay360 testrepo` |
+| delete repo        | `gh repo delete Pratyay360/test` | `glab repo delete Pratyay360/demo` | `fj repo delete <owner>/<repo>`<br>    | `forgit repo delete --instance sourcehut pratyaymustafi/testrepo`     |
 
 
 ## Contributing
@@ -128,4 +127,4 @@ mise deps
 mise run test
 ```
 
-[Please feel free to suggest any changes you feel important.](https://github.com/Pratyay360/forgit)
+[Please feel free to suggest any changes you feel important.](https://github.com/Pratyay360/forgit) Any kind of contribution is heavily admired.
