@@ -28,12 +28,10 @@ But, Official Linux build doesn't exist. This unofficial AppImage packages the W
 
 > ⚠️ **UNOFFICIAL COMMUNITY PROJECT**  
 > This repository is an independent, community driven effort to create a portable AppImage wrapper for VN Video Editor on Linux. It is not affiliated with, endorsed by, or sponsored by Ubiquity Labs, VlogNow, or the official developers of VN Video Editor.
-
-$callout💡
-Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, &amp; BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on the fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
-$
-
-
+>
+> ---
+>
+> Wine (originally an acronym for “Wine Is Not an Emulator”) is a compatibility layer that enables Windows applications to run on various POSIX compliant operating systems, including Linux, macOS, and BSD. Rather than simulating Windows internals like a virtual machine or emulator, Wine dynamically translates Windows API calls into native POSIX calls. This approach eliminates the performance and memory overhead typical of other methods, allowing Windows software to integrate seamlessly and efficiently into your desktop environment.
 
 
 
@@ -107,7 +105,6 @@ The application includes a `.zsync` File, enabling seamless updates when used 
 
 [![](https://i.ibb.co/cGRcDgd/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://portable-linux-apps.github.io/en/app/vn.html)
 
-  
 
 
 ![](https://i.ibb.co/C5RgW6Ny/Screenshot-20261121-184340-png.png)
