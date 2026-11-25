@@ -26,7 +26,6 @@ AppImages can be downloaded and run directly, without any installation or root p
 
 [![QCADesigner-E AppImage](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)](https://i.ibb.co/CdHy7k1/Screenshot-20260928-002154-png.png)
 
-
 ![qcadesigner-e](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
 ![QCADesigner-E AppImage](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
@@ -64,38 +63,40 @@ chmod +x QCADesignerE-x86_64.AppImage
 | original repo       | [https://github.com/FSillT/QCADesigner-E](https://github.com/FSillT/QCADesigner-E)                                                 |
 
 
-### Can I Use It for free?
+### Can I Use It for Free?
 
-Yes, [The code is owned by the original authors](https://fsillt.github.io/QCADesigner-E/). I have just repackaged the app. [You can learn about that here.](https://github.com/Pratyay360/QCADesigner-E)
+Yes. The original code belongs to its authors — see the project page [here](https://fsillt.github.io/QCADesigner-E/). I have simply repackaged the application; details of the repackaging are available on my [GitHub repository](https://github.com/Pratyay360/QCADesigner-E).  
 
-The simulator and the energy model are the work of the University of Bremen team. The AppImage is my packaging effort and isn't affiliated with them. If something breaks in the package, [open an issue](https://github.com/Pratyay360/QCADesigner-E/issues).
+The simulator and the underlying energy model were developed by the University of Bremen team. This AppImage is my packaging effort and is not affiliated with them. If you encounter any issues with the package, please [open an issue](https://github.com/Pratyay360/QCADesigner-E/issues).
 
-This effort aims to make the tool accessible on any modern system without relying on host specific dependencies.
+The goal of this project is to make the tool readily available on any modern Linux system without relying on host‑specific dependencies.
 
-# **AppImage: One File, Any Linux Distro**
+---
 
-Linux packaging has a long-standing problem: developers don’t just build for “Linux”—they end up building for Ubuntu, Debian, Fedora, openSUSE, and every other distribution. Each ships different library versions, different packaging rules, and different release cycles. For users, that often means being stuck with older app versions on a stable distro. For developers, it means extra work just to reach the same audience.
-
-AppImage takes a different approach: **one app = one file**.
-
-### **What Is an AppImage?**
-
-An AppImage bundles an application, its dependencies, and the resources it needs at runtime into a single executable file. Just download it, make it executable, and run it. No installation, no root permissions, and no changes to the base system.
-
-That simplicity is the point. AppImages are designed to run in three steps at most, and they work across most major desktop Linux distributions.
-
-### **Why Users Like AppImages**
-
-AppImages solve several everyday problems:
-
-- Run the latest version of an app on a stable distribution that ships an older one.
-- Keep multiple versions of the same app side by side.
-- Carry apps and data on a USB disk and use them on different Linux machines.
-- Run software in corporate or university environments without install permissions.
-
-Because AppImages don’t touch the core system, users can try new versions without risk. If a new release has bugs, delete it and keep using the old one. That also makes AppImages handy for testing nightly or continuous builds.
-
-
+> ## AppImage: One File, Any Linux Distro
+>
+> Linux packaging has long suffered from fragmentation: developers must build separate packages for Ubuntu, Debian, Fedora, openSUSE, and many other distributions, each with its own library versions, packaging rules, and release cycles. For users, this often means being stuck with outdated versions on stable distros; for developers, it means extra work just to reach the same audience.
+>
+> **AppImage takes a different approach: one app = one file.**
+>
+> ### What Is an AppImage?
+>
+> An AppImage bundles an application, its runtime dependencies, and all required resources into a single executable file. To use it, you simply:
+>
+> 1. Download the file.
+> 2. Make it executable.
+> 3. Run it.
+>
+> No installation, no root permissions, and no modifications to the host system are required.
+>
+> ### Why Users Prefer AppImages
+>
+> - **Run the latest version** On a stable distribution that otherwise ships an older one.    
+>
+> - **Portability:** Carry the app and its data on a USB drive and run it on any Linux machine.  
+> - **No admin rights needed** in app images app stays on the user space.
+>
+> Since AppImages run entirely outside the core system in an isolated manner, one can safely experiment with multiple versions. If a newer build proves buggy, simply delete it and revert to the previous version making AppImages an ideal solution for testing nightly or continuous builds.
 
 [![appimage](https://i.ibb.co/q3q9W2qV/648652562-4bf17a28-cbb7-46d4-be38-a79f4bcc4513-png.png)](https://appimage.github.io/QCADesigner-E/)
 
