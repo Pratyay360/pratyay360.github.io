@@ -21,7 +21,7 @@ tags:
 isCJKLanguage: false
 slug: forgit-a-cli-for-all-the-gitforges
 ---
-Managing code across multiple Git forges has become a pain point. While we rely on the Git CLI for version control, we lack a unified interface for essential tasks such as creating repositories. Consequently, teams have to juggle a disparate set of CLIs—`gh`, `glab`, `tea`, `hut`, `fj` etc. each with its own authentication flow and differing flag conventions for actions like creating a pull request. This fragmentation is exhausting and inefficient.
+Managing code across multiple Git forges has become a pain point. While we rely on the Git CLI for version control, we lack a unified interface for essential tasks such as creating repositories. Consequently, teams have to juggle a disparate set of CLIs `gh`, `glab`, `tea`, `hut`, `fj` etc. each with its own authentication flow and differing flag conventions for actions like creating a pull request. This fragmentation is exhausting and inefficient.
 
 **forgit** Tries to Solve this: one CLI, one command set for all the forges.
 
