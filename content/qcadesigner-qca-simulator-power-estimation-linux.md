@@ -28,8 +28,6 @@ AppImages can be downloaded and run directly, without any installation or root p
 
 ![qcadesigner-e](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
 
-![QCADesigner-E AppImage](https://i.ibb.co/Gvrw30yb/Screenshot-2026-09-28-at-02-05-51-QCADesigner-E-App-Images-png.png)
-
 I repackaged [QCADesigner-E](https://github.com/Pratyay360/QCADesigner-E) To make life easier for users. I just repackaged the entire app into an isolated containerized app image file which can be downloaded and run, without installing on the system.
 
 ![qcadesigner-e](https://i.ibb.co/ZzXzj142/image-png.png)
