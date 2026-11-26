@@ -37,7 +37,7 @@ pre[data-linenos] {
 }
 pre table td {
 	padding: 0 0.25rem;
-	color: white;
+	color: var(--pf-background);
 	border: 0;
 	border-right: 1px solid variables.$default-tint;
 }

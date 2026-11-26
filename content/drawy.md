@@ -18,7 +18,8 @@ tags:
 headless: false
 isCJKLanguage: false
 ---
-Drawy is a shared drawing workspace powered by Excalidraw. It includes the complete editor—with an infinite canvas, shapes, arrows, freehand tools, frames, and images—alongside essential team collaboration: live cursors, shared canvases, version history, and reusable libraries. It all runs on your own infrastructure.
+
+Drawy is a shared drawing workspace powered by Excalidraw. It includes the complete editor—with an infinite canvas, shapes, arrows, freehand tools, frames, and images alongside essential team collaboration: live cursors, shared canvases, version history, and reusable libraries. It all runs on your own infrastructure.
 
 ## Quick Start (5 Minutes)
 
@@ -33,18 +34,18 @@ open https://drawy.pratyay.online/login
 # Or self-host (see Self-Hosting section below)
 ```
 
-- Usernames: letters, numbers, underscores, hyphens (lowercased)
-- No email, no confirmation link, no password reset **keep credentials safe**
+- Usernames: letters, numbers, underscores, hyphens 
+- No email, no confirmation link, no password reset keep credentials safe
 
 ### 2. Start a canvas
 
-Click **New canvas** in the sidebar. Canvases group by last-edit date so recent work stays visible.
+Click **New canvas** in the sidebar. Canvases group by last edit date so recent work stays visible.
 
 Drawy autosaves as you draw. After a short pause the header shows **Saved**. The **Save** Button in the editor header forces an immediate save.
 
 ### 3. Share &amp; collaborate
 
-Open **Share canvas** to choose access:
+Open Share canvas to choose access:
 
 
 | Option                 | Who can open         | Best for                                          |
@@ -53,14 +54,11 @@ Open **Share canvas** to choose access:
 | **Invite by username** | Specific Drawy user  | Editing together in real time                     |
 | **Read-only link**     | Anyone with the link | Publishing finished drawings, collecting feedback |
 
-
 Revoke access anytime without deleting the canvas.
-
----
 
 ## Core Features
 
-### Real-time collaboration
+### Real time collaboration
 
 Multiple people edit the same canvas simultaneously. Live cursors, selections, and strokes appear as they happen — point at a shape instead of describing it.
 
@@ -88,14 +86,13 @@ Drawy has three components: front end (TanStack Start), real time worker (Cloudf
 - **mise** (version/task manager) — `curl https://mise.run \| sh`
 - **PostgreSQL** — Neon, Supabase, or any remote Postgres (pooled URL preferred)
 - **Cloudflare account** — Durable Objects live in the same Worker as the app
-- **Bun** — `curl -fsSL https://bun.sh/install \| bash`
 
 ### 1. Clone &amp; install
 
 ```bash
 git clone https://github.com/Pratyay360/drawy.git
 cd drawy
-mise deps
+mise trust && mise deps
 ```
 
 ### 2. Configure environment
@@ -148,9 +145,9 @@ bunx wrangler secret put SESSION_SECRET
 **Operational notes:**
 
 - Reverse proxy must forward WebSocket upgrades on `/parties`
-- Image uploads go to imgcdn.dev via `src/lib/s3.ts` — replace if you want own storage
+- Image uploads go to via `src/lib/s3.ts` — replace if you want own storage
 - Session cookie marked `Secure` only when `NODE_ENV=production` — serve over HTTPS
-- Lint/format: `mise run lint` (oxlint), `mise run format` (oxfmt)
+- Lint/format: `mise run lint`, `mise run format` 
 
 ---
 
@@ -187,19 +184,18 @@ bunx wrangler secret put SESSION_SECRET
 
 - No email addresses
 - No advertising cookies
-- No third-party ad profiles
+- No third party ad profiles
 - No analytics/tracking
 
 ### Images
 
 Pasted/uploaded images may go to an external host (imgbb.com by default). The saved URL stays with the canvas. Once uploaded, the image lives on that host.
 
-### Sessions &amp; error tracking
+### Sessions & error tracking
 
 May use Sentry (when enabled) for error tracking — collects technical details per its own policy.
 
 ### Data removal
-
 - **Delete canvas**: Remove from sidebar → deletes canvas + version history
 - **Uploaded images**: May persist on external host until removed there
 - **Account removal**: [Contact page](https://drawy.pratyay.online/contact)
@@ -212,6 +208,6 @@ May use Sentry (when enabled) for error tracking — collects technical details 
 - 📦 **GitHub**: [https://github.com/Pratyay360/drawy](https://github.com/Pratyay360/drawy)
 - 📦 **DrawX repo**: [https://github.com/Pratyay360/drawx](https://github.com/Pratyay360/drawx)
 - 📖 **DrawX downloads**: [https://github.com/Pratyay360/drawx/releases](https://github.com/Pratyay360/drawx/releases)
-- 🏗️ **Self-hosting guide**: This page (Self-Hosting section)
+- 🏗️ **Self hosting guide**: This page (Self-Hosting section)
 - 🔒 **Privacy details**: Privacy &amp; Security section above
 - 🐛 **Issues**: [https://github.com/Pratyay360/drawy/issues](https://github.com/Pratyay360/drawy/issues)

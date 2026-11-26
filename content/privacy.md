@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: How this documentation site handles analytics, third-party embeds, and local storage, plus how to contact Pratyay Mustafi with privacy questions.
+description: How this documentation site handles analytics and how to contact Pratyay Mustafi.
 weight: 99
 date: 2026-11-17T10:25:42.235Z
 draft: false
@@ -8,7 +8,7 @@ extra:
   comments: false
 ---
 
-> **TL;DR** This is a static documentation site with no accounts or sign-ups. We do not run advertising or cross-site tracking for ad targeting. The site uses lightweight analytics/measurement and a few third-party embeds to understand usage and keep pages working.
+> This is a static documentation site with no accounts or sign ups. We do not run advertising or cross site tracking for ad targeting. The site uses lightweight analytics/measurement and a few third-party embeds to understand usage and keep pages working.
 
 ## What This Site Is
 
@@ -35,19 +35,9 @@ Like most websites, hosting providers and CDNs may record basic technical logs (
 These pages include or link to a small number of third parties. They only see your data if your browser loads them or you click through:
 
 - **Contact form (Youform):** The `Contact us` button in the footer links to [https://app.youform.com/forms/8kgi7jvm](https://app.youform.com/forms/8kgi7jvm). Anything you type there is handled by Youform, not by us. Only contact us there if you are comfortable with that.
-- **Comments (giscus):** Article pages load a comment widget from [giscus.app](https://giscus.app/) backed by GitHub Discussions. Loading the widget sends standard request information to giscus; signing in, reacting, or commenting is handled through GitHub.
-- **Website Carbon badge:** The footer loads a badge script from `jsDelivr.net` (`website-carbon-badges`). That CDN will see a standard request (IP, user agent) when the footer loads, same as any CDN hosted script.
-- **External links:** GitHub, `pratyay.online`, jsDelivr (used by some guide examples such as `upiqrcode`), and similar outbound links are governed by those sites' own policies once you click them.
+- Comments (giscus): Article pages load a comment widget from [giscus.app](https://giscus.app/) backed by GitHub Discussions. Loading the widget sends standard request information to giscus; signing in, reacting, or commenting is handled through GitHub.
 
-We do not sell or share personal data with anyone — there is nothing to sell or share.
-
-### Cookies and Local Storage
-
-We do not set tracking or advertising cookies, and there is no cookie-consent banner because there is nothing to consent to.
-
-Your browser may store purely functional, first-party preferences locally (for example, the site's light/dark theme choice). This stays on your device and is never sent to us.
-
-Search (Pagefind) runs entirely in your browser against a prebuilt index.
+We do not sell or share personal data with anyone — as there is nothing to sell or share.
 
 ## Children's Privacy
 

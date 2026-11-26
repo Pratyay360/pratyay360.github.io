@@ -22,9 +22,7 @@ account. Turning the toggle off revokes the link immediately.
 
 ## Inviting by username
 
-Enter the person's Drawy username under Share and submit. They get edit
-access straight away — there is nothing to accept — and the canvas appears in
-their sidebar the next time it loads.
+Enter the person's Drawy username under Share and submit. They get edit access straight away there is nothing to accept and the canvas appears in their sidebar the next time it loads.
 - The username has to exist already.
 - Only the owner can add or remove people.
 - Adding the same person twice does nothing.
