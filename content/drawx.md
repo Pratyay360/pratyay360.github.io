@@ -1,14 +1,15 @@
 ---
 title: Drawx Offline Whiteboard for Linux
-description: "DrawX is an offline first whiteboard for Linux, macOS, and Windows. Draw, plan, and brainstorm locally with no cloud, account, or telemetry."
-date: 2026-11-17T10:24:05.403Z
+description: >-
+  DrawX is an offline first whiteboard for Linux, macOS, and Windows. Draw,
+  plan, and brainstorm locally with no cloud, account, or telemetry.
+date: '2026-11-17T10:24:05.403Z'
 tags:
   - offline
   - whiteboard
   - planning
   - Tauri
   - Excalidraw
-weight: 100
 draft: false
 slug: drawx
 ---
