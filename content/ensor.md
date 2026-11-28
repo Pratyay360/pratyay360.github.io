@@ -1,7 +1,10 @@
 ---
 title: Ensor Secret Detection & Redaction
-description: ensor is a CLI tool built in golang that finds hardcoded secrets, redacts them with placeholders, and converts env files between dotenv, JSON, YAML, and TOML.
-date: 2026-11-17T10:25:51.812Z
+description: >-
+  ensor is a CLI tool built in golang that detects hardcoded secrets, redacts
+  them with placeholders, and converts env files between dotenv, JSON, YAML, and
+  TOML.
+date: '2026-11-17T10:25:51.812Z'
 weight: 2
 draft: false
 slug: ensor
@@ -17,7 +20,7 @@ isCJKLanguage: false
 ---
 Hardcoded secrets in codebases (API keys, database URLs, tokens) are a top cause of breaches. Most tools scan and stop there — you still manually rotate secrets and update `.env` Files.
 
-_ensor_ detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` File and replaces them with configurable placeholders across your project.
+*ensor* detects, **and redacts** in one interactive flow. It extracts discovered secrets into a `.env` File and replaces them with configurable placeholders across your project.
 
 ```bash
 # Install
@@ -151,7 +154,6 @@ ensor convert env.yaml env.toml
 
 [![asciicast](https://asciinema.org/a/1270273.svg)](https://asciinema.org/a/1270273)
 
-<video src="https://github.com/user-attachments/assets/e817c8d7-f4eb-4eee-9cf1-f26c14f055c0" controls preload   style="width: 640px; max-width: 100%; height: auto;"></video>
 
 
 [![ensor|662](https://img.youtube.com/vi/3d1xLYkeVsA/hqdefault.jpg)](http://www.youtube.com/watch?v=3d1xLYkeVsA "ensor cli")
